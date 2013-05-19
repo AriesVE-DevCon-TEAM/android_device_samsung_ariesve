@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Setări Galaxy S Plus</string>
+    
+    <string name="category_screen_title">Ecran</string>
+    <string name="category_touchkey_title">Tastele sensibile la atingere</string>
+
+    <string name="g_sensor_title">Calibrare orizontală</string>
+    <string name="g_sensor_summary">Calibrare orizontală utilizând accelerometrul</string>
+    <string name="gsensor_ready">Poziţionaţi dispozitivul pe o suprafaţă netedă şi atingeţi Calibrare</string>
+    <string name="gsensor_calibrating">Se calibrează. Nu mişcaţi dispozitivul. Aşteptaţi...</string>
+    <string name="gsensor_nofile">Imposibil de găsit fişierul offset de calibrare. Încercaţi din nou</string>
+    <string name="gsensor_end">Calibrat</string>
+    <string name="gsensor_button1">terminat</string>
+    <string name="gsensor_button2">Calibrare</string>
+
+    <string name="category_vibration_title">Vibrare</string>
+    <string name="vibration_title_head">Vibrare</string>
+    <string name="vibration_summary_head">Control intensitate vibraţii</string>
+    <string name="vibration_title">Intesitate vibraţii</string>
+    <string name="vibration_test_title">Testaţi</string>
+
+    <string name="button_reset_title">Resetați</string>
+</resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Galaxy S Plus-instellingen</string>
+
+    <string name="category_screen_title">Scherm</string>
+    <string name="category_touchkey_title">Aanraakknoppen</string>
+	
+    <string name="g_sensor_title">Horizontale kalibratie</string>
+    <string name="g_sensor_summary">Horizontaal kalibreren met acceleratiemeter</string>
+    <string name="gsensor_ready">Plaats op een vlakke ondergrond en tik op Kalibreren</string>
+    <string name="gsensor_calibrating">Kalibreren. Verplaats apparaat niet. Even geduld...</string>
+    <string name="gsensor_nofile">Kan margebestand niet vinden. Probeer het opnieuw</string>
+    <string name="gsensor_end">Gekalibreerd</string>
+    <string name="gsensor_button1">Voltooid</string>
+    <string name="gsensor_button2">Kalibreren</string>
+
+    <string name="category_vibration_title">Trillen</string>
+    <string name="vibration_title_head">Trillen</string>
+    <string name="vibration_summary_head">Trilintensiteit instellen</string>
+    <string name="vibration_title">Trilintensiteit</string>
+    <string name="vibration_test_title">Test</string>
+</resources>

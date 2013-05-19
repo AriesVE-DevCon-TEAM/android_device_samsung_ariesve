@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Galaxy S Plus Beállítások</string>
+
+    <string name="category_screen_title">Screen</string>
+    <string name="category_touchkey_title">Érintő Gombok</string>
+
+    <string name="g_sensor_title">Vízszintes kalibrálás</string>
+    <string name="g_sensor_summary">Vízszintes kalibrálás a gyorsulásméró segítségével</string>
+    <string name="gsensor_ready">Helyezze a készüléket egy sík felületre és érintse meg a Kalibrálás gombot</string>
+    <string name="gsensor_calibrating">Kalibrálás. Ne mozgassa a készüléket. Kérjük, várjon...</string>
+    <string name="gsensor_nofile">A fájl nem található. Próbálja újra</string>
+    <string name="gsensor_end">Kalibrálva</string>
+    <string name="gsensor_button1">Kész</string>
+    <string name="gsensor_button2">Kalibrálás</string>
+	
+    <string name="category_fast_charge_title">Gyors Töltés Támogatás</string>
+    <string name="force_fast_charge_head">Gyors Töltés kényszerítése</string>
+    <string name="force_fast_charge_summary_head">Észlelje az USB-n csatlakoztatott PC-t USB-s Fali Töltőként a gyorsabb töltési módért</string>
+</resources>

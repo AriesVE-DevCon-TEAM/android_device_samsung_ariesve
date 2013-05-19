@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Impostazioni Galaxy S Plus</string>
+	
+    <string name="category_screen_title">Display</string>
+    <string name="category_touchkey_title">Tasti a sfioramento</string>
+    <string name="backlight_title_head">Impostazioni Retroilluminazione</string>
+    <string name="backlight_summary_head">Impostazioni Notifica Retroilluminazione (applicazione esterna)</string>
+
+    <string name="g_sensor_title">Calibrazione orizzontale</string>
+    <string name="g_sensor_summary">Calibra il dispositivo con l’accelerometro</string>
+    <string name="gsensor_ready">Posizionate il dispositivo su una superficie piana e toccate Calibra</string>
+    <string name="gsensor_calibrating">Calibrazione in corso. Non muovere il dispositivo. Attendere...</string>
+    <string name="gsensor_nofile">Impossibile trovare il file offset. Riprovare</string>
+    <string name="gsensor_end">Calibrazione avvenuta</string>
+    <string name="gsensor_button1">Completo</string>
+    <string name="gsensor_button2">Calibra</string>
+	
+    <string name="category_fast_charge_title">Supporto caricamento rapido</string>
+    <string name="force_fast_charge_head">Forza caricamento rapido</string>
+    <string name="force_fast_charge_summary_head">Rileva i PC connessi alla porta USB come semplici caricatori USB, per un più rapido caricamento della batteria</string>
+
+    <string name="category_vibration_title">Vibrazione</string>
+    <string name="vibration_title_head">Vibrazione</string>
+    <string name="vibration_summary_head">Controllo intensità vibrazione</string>
+    <string name="vibration_title">Intensità vibrazione</string>
+    <string name="vibration_test_title">Prova</string>
+
+    <string name="button_reset_title">Ripristina</string>
+</resources>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	<!-- Touchkey backlight-->
+	<PreferenceCategory
+    	    android:title="@string/category_touchkey_title">
+	    <Preference 
+	    android:key="backlight"
+	    android:title="@string/backlight_title_head"
+	    android:summary="@string/backlight_summary_head" />
+	</PreferenceCategory>
+
+        <!-- GSensor calibration -->
+	<PreferenceCategory
+    	    android:title="@string/category_screen_title">
+	    <Preference 
+	    android:key="gsensor"
+	    android:title="@string/g_sensor_title"
+	    android:summary="@string/g_sensor_summary"
+	    >
+	    <intent android:action="com.cyanogenmod.settings.device.GSensor"/>
+	    </Preference>
+	</PreferenceCategory>
+
+        <!-- Fastcharge -->
+	<PreferenceCategory
+    	    android:title="@string/category_fast_charge_title">
+	    <CheckBoxPreference 
+	    android:key="force_fast_charge"
+	    android:title="@string/force_fast_charge_head"
+	    android:summary="@string/force_fast_charge_summary_head"
+  	    android:defaultValue="false" />
+	</PreferenceCategory>
+
+        <!-- Vibration -->
+        <PreferenceCategory
+            android:title="@string/category_vibration_title">
+            <com.cyanogenmod.settings.device.VibrationPreference
+            android:key="vibration"
+            android:title="@string/vibration_title_head"
+            android:summary="@string/vibration_summary_head" />
+        </PreferenceCategory>
+</PreferenceScreen>

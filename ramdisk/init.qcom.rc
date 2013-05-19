@@ -1,0 +1,302 @@
+import init.qcom.usb.rc
+
+on early-init
+    mount debugfs debugfs /sys/kernel/debug
+    chmod 666 /proc/cmdline
+
+on init
+    export EXTERNAL_STORAGE /storage/sdcard0
+    export SECONDARY_STORAGE /storage/sdcard1
+
+    mkdir /storage 0050 system sdcard_r
+    mkdir /storage/sdcard0 0000 system system
+    mkdir /storage/sdcard1 0000 system system
+    mkdir /storage/usbdisk 0000 system system
+
+    # for backwards compatibility
+    symlink /storage/sdcard0 /sdcard
+    symlink /storage/sdcard0 /mnt/sdcard
+    symlink /storage/sdcard1 /external_sd
+    symlink /storage/sdcard1 /mnt/external_sd
+    symlink /storage/usbdisk /usbdisk
+    symlink /storage/usbdisk /mnt/usbdisk
+
+on early-boot
+    # set RLIMIT_MEMLOCK to 64MB
+    setrlimit 8 67108864 67108864
+
+on boot
+    # Disable idle power collapse during boot.
+    # These features will be enabled at the end of boot
+    write /sys/module/pm2/parameters/idle_sleep_mode 3
+
+    chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
+    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
+    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
+    chown bluetooth bluetooth /proc/bluetooth/sleep/proto
+    chown system system /sys/module/sco/parameters/disable_esco
+    chmod 0660 /sys/module/bluetooth_power/parameters/power
+    chmod 0660 /sys/class/rfkill/rfkill0/state
+    chmod 0660 /proc/bluetooth/sleep/proto
+    chown bluetooth bluetooth /sys/devices/platform/msm_serial_hs.0/clock
+    chmod 0660 /sys/devices/platform/msm_serial_hs.0/clock
+
+    setprop ro.bt.bdaddr_path "/data/.bt.info"
+
+    # Bluetooth LPM
+    chmod 0220 /proc/bluetooth/sleep/lpm
+    chmod 0220 /proc/bluetooth/sleep/btwrite
+    chown bluetooth net_bt_stack /proc/bluetooth/sleep/lpm
+    chown bluetooth net_bt_stack /proc/bluetooth/sleep/btwrite
+
+    chmod 0444 /sys/devices/platform/msm_hsusb/gadget/usb_state
+
+    # Force Power Down
+    chmod 0660 /sys/class/sec/pm/power_down
+    chown root system /sys/class/sec/pm/power_down
+
+    # To prevent out of order acknowledgements from making
+    # connection tracking to treat them as not belonging to
+    # the connection they belong to.
+    # Otherwise, a weird issue happens in which some long
+    # connections on high-throughput links get dropped when
+    # an ack packet comes out of order
+    write /proc/sys/net/netfilter/nf_conntrack_tcp_be_liberal 1
+
+    chown root system /proc/net/ip_conntrack
+
+    # geomagnetic
+    chown system input /sys/class/input/input4/enable
+    chown system input /sys/class/input/input4/delay
+    chown system input /sys/class/input/input4/filter_enable
+    chown system input /sys/class/input/input4/filter_len
+    chown system input /sys/class/input/input4/data
+    chown system input /sys/class/input/input4/status
+    chown system input /sys/class/input/input4/wake
+    chown system input /sys/class/input/input4/position
+
+    # geomagnetic raw
+    chown system input /sys/class/input/input5/enable
+    chown system input /sys/class/input/input5/delay
+    chown system input /sys/class/input/input5/data
+    chown system input /sys/class/input/input5/threshold
+    chown system input /sys/class/input/input5/distortion
+    chown system input /sys/class/input/input5/shape
+    chown compass input /sys/class/input/input5/offsets
+
+    # accelerometer
+    chown system input /sys/class/input/input6/enable
+    chown system input /sys/class/input/input6/delay
+    chown system input /sys/class/input/input6/position
+    chown system input /sys/class/input/input6/threshold
+    chown system input /sys/class/input/input6/wake
+    chown system input /sys/class/input/input6/data
+    chown system input /sys/class/input/input6/calibration
+
+    # orientation
+    chown system input /sys/class/input/input7/enable
+    chown system input /sys/class/input/input7/delay
+    chown system input /sys/class/input/input7/wake
+    chown system input /sys/class/input/input7/data
+    chown system input /sys/class/input/input7/status
+
+    # proximity
+    chown system input /sys/class/input/input8/enable
+    chown system input /sys/class/input/input8/delay
+    chown system input /sys/class/input/input8/wake
+    chown system input /sys/class/input/input8/data
+    chown system input /sys/class/input/input8/status
+
+    # light sensor
+    chown system input /sys/class/input/input9/enable
+    chown system input /sys/class/input/input9/delay
+    chown system input /sys/class/input/input9/wake
+    chown system input /sys/class/input/input9/raw_data
+    chown system input /sys/class/input/input9/status
+    chown system input /sys/class/input/input9/testmode
+
+    write /sys/class/input/input5/threshold 1
+    write /sys/class/input/input5/distortion " 15 15 15"
+
+    chown system system /sys/devices/platform/msm_sdcc.1/polling
+    chown system system /sys/devices/platform/msm_sdcc.2/polling
+    chown system system /sys/devices/platform/msm_hsusb/gadget/wakeup
+
+    # for Jig
+    chmod 0664 /sys/devices/virtual/jig/jig/jig
+
+    # for jack control
+    chown system system /sys/class/jack/jack_selector/select_jack
+
+    # Amp Tun (YDA165)
+    chown system audio /sys/devices/virtual/misc/amp/mode
+    chown system audio /sys/devices/virtual/misc/amp/in1_gain
+    chown system audio /sys/devices/virtual/misc/amp/in2_gain
+    chown system audio /sys/devices/virtual/misc/amp/hp_att
+    chown system audio /sys/devices/virtual/misc/amp/hp_gainup
+    chown system audio /sys/devices/virtual/misc/amp/sp_att
+    chown system audio /sys/devices/virtual/misc/amp/sp_gainup
+    chown system audio /sys/devices/virtual/misc/amp/gain_all
+    chown system audio /sys/devices/virtual/misc/amp/save
+
+     # Permissions for kernel
+    chown radio system sys/devices/virtual/graphics/fb1/video_mode
+    chown radio radio sys/devices/virtual/gammaset/switch_gammaset/gammaset_file_cmd
+    chown radio radio sys/devices/virtual/aclset/switch_aclset/aclset_file_cmd
+    chown radio system sys/devices/virtual/sec/sec_lcd/lcd_power
+    chown radio system sys/devices/virtual/sec/sec_lcd/lcdtype_file_cmd
+    chown radio system sys/devices/virtual/misc/melfas_touchkey/enable_disable
+    chown radio system sys/devices/virtual/misc/melfas_touchkey/brightness
+    chown radio system sys/devices/virtual/misc/melfas_touchkey/touch_update
+    chown radio system sys/devices/virtual/misc/melfas_touchkey/touch_version
+    chown radio system sys/devices/virtual/sec/switch/usb_state
+    chown radio system sys/devices/virtual/sec/switch/disable_vbus
+    chown radio system sys/devices/virtual/sec/switch/usb_sel
+    chown radio system sys/devices/platform/msm_sdcc.2/polling
+    chown radio system sys/devices/platform/msm_sdcc.1/polling
+    chown radio system sys/devices/platform/android_usb/tethering
+    chown radio system sys/devices/virtual/graphics/fb1/hpd
+    chown system system sys/class/misc/notification/led
+    chown system system sys/class/misc/notification/bl_timeout
+    chown system system sys/class/misc/notification/wakelock
+    chown system system sys/class/vibetonz/immDuty/pwmvalue_intensity
+
+    # for silent reset
+    chown system system /proc/dump_enable
+    chown system system /proc/silent
+    chown system system /proc/nosim_handler
+    copy /data/dump_enable /proc/dump_enable
+
+    chown system system /sys/devices/system/cpu/cpufreq/ondemand/boostfreq
+    chmod 0664 /sys/devices/system/cpu/cpufreq/ondemand/boostfreq
+    chown system system /sys/devices/system/cpu/cpufreq/ondemand/boostpulse
+    chmod 0664 /sys/devices/system/cpu/cpufreq/ondemand/boostpulse
+    chown system system /sys/devices/system/cpu/cpufreq/ondemand/boosttime
+    chmod 0664 /sys/devices/system/cpu/cpufreq/ondemand/boosttime
+    chown system system /sys/devices/system/cpu/cpufreq/ondemand/sampling_rate
+    chmod 0664 /sys/devices/system/cpu/cpufreq/ondemand/sampling_rate
+    chown system system /sys/devices/system/cpu/cpufreq/ondemand/io_is_busy
+    chmod 0664 /sys/devices/system/cpu/cpufreq/ondemand/io_is_busy
+    chown system system /sys/devices/system/cpu/cpufreq/ondemand/down_differential
+    chmod 0664 /sys/devices/system/cpu/cpufreq/ondemand/down_differential
+    chown system system /sys/devices/system/cpu/cpufreq/ondemand/powersave_bias
+    chmod 0664 /sys/devices/system/cpu/cpufreq/ondemand/powersave_bias
+    chown system system /sys/devices/system/cpu/cpufreq/ondemand/sampling_down_factor
+    chmod 0664 /sys/devices/system/cpu/cpufreq/ondemand/sampling_down_factor
+    chown system system /sys/devices/system/cpu/cpufreq/ondemand/up_threshold
+    chmod 0664 /sys/devices/system/cpu/cpufreq/ondemand/up_threshold
+
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 245760
+
+    # Don't disable dmesg access for apps
+    write /proc/sys/kernel/dmesg_restrict 0
+
+    # Flash storage isn't a good entropy source, and only causes locking
+    # overhead in the kernel. Turn it off.
+    write /sys/block/mmcblk0/queue/add_random 0
+
+on fs
+    chmod 0666 /dev/block/mmcblk0p14
+
+    mount_all fstab.qcom
+
+    setprop ro.crypto.tmpfs_options size=128m,mode=0771,uid=1000,gid=1000
+
+on post-fs-data
+    # create log system
+    mkdir /data/log 0775 system log
+
+    mkdir /data/misc/radio 0775 radio system
+    mkdir /data/radio 0770 radio radio
+
+    mkdir /data/misc/bluetooth 0770 bluetooth bluetooth
+
+    mkdir /data/misc/wifi/sockets 0770 wifi wifi
+    mkdir /data/misc/dhcp 0770 dhcp dhcp
+    chown dhcp dhcp /data/misc/dhcp
+
+    setprop vold.post_fs_data_done 1
+
+service wpa_supplicant /system/bin/wpa_supplicant \
+    -iwlan0 -Dnl80211 -c/data/misc/wifi/wpa_supplicant.conf -e/data/misc/wifi/entropy.bin
+    class main
+    socket wpa_wlan0 dgram 660 wifi wifi
+    disabled
+    oneshot
+
+service dhcpcd_wlan0 /system/bin/dhcpcd -aABDKL
+    class main
+    disabled
+    oneshot
+
+service dhcpcd_bnep0 /system/bin/dhcpcd -ABKL
+    class main
+    disabled
+    oneshot
+
+service iprenew_wlan0 /system/bin/dhcpcd -n
+    class main
+    disabled
+    oneshot
+
+service iprenew_bnep0 /system/bin/dhcpcd -n
+    class main
+    disabled
+    oneshot
+
+service rmt_storage /system/bin/rmt_storage
+    class core
+    user root
+    disabled
+
+on property:ro.boot.emmc=true
+    start rmt_storage
+
+service get_macaddrs /system/bin/get_macaddrs
+    class main
+    user root
+    oneshot
+    disabled
+
+# create filesystems if necessary
+service setup_fs /system/bin/setup_fs /dev/block/mmcblk0p16 /dev/block/mmcblk0p17
+    class core
+    user root
+    group root
+    oneshot
+
+service orientationd /system/bin/orientationd
+    class main
+    user compass
+    group input
+
+service geomagneticd /system/bin/geomagneticd
+    class main
+    user compass
+    group system input
+
+service playlpm /system/bin/playlpm
+    class charger
+    user root
+    oneshot
+
+service lpmkey /system/bin/charging_mode
+    class charger
+    user root
+    oneshot
+
+on property:init.svc.ril-daemon=running
+    start get_macaddrs
+    chown bluetooth bluetooth /data/.bt.info
+
+on property:sys.radio.shutdown=true
+    write /sys/devices/platform/rs300000a7.65536/force_sync 1
+
+on property:init.svc.playlpm=running
+    chmod 666 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+    chmod 666 /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor powersave
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 122880
+
+on property:sys.boot_completed=1
+    write /sys/module/pm2/parameters/idle_sleep_mode 1

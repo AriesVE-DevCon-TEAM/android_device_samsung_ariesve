@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Configurações do Galaxy S Plus</string>
+
+    <string name="category_screen_title">Tela</string>
+    <string name="category_touchkey_title">Botões Touch</string>
+
+    <string name="g_sensor_title">Calibração horizontal</string>
+    <string name="g_sensor_summary">Calibrar horizontalmente utilizando o acelerómetro</string>
+    <string name="gsensor_ready">Coloque o dispositivo numa superfície de nível e toque em Calibrar</string>
+    <string name="gsensor_calibrating">A calibrar. Não desloque o dispositivo. Aguarde...</string>
+    <string name="gsensor_nofile">Impossível encontrar ficheiro de deslocamento. Tente novamente</string>
+    <string name="gsensor_end">Calibrada</string>
+    <string name="gsensor_button1">Concluída</string>
+    <string name="gsensor_button2">Calibrar</string>
+
+    <string name="category_vibration_title">Vibração</string>
+    <string name="vibration_title_head">Vibração</string>
+    <string name="vibration_summary_head">Controlar Intensidade de Vibração</string>
+    <string name="vibration_title">Intensidade da Vibraçao</string>
+    <string name="vibration_test_title">Testar</string>
+
+    <string name="button_reset_title">Resetar</string>
+</resources>

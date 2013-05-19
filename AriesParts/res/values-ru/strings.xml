@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Настройки Galaxy S Plus</string>
+
+    <string name="category_screen_title">Экран</string>
+    <string name="category_touchkey_title">Сенсорные кнопки</string>
+   
+    <string name="g_sensor_title">Горизонтальная калибровка</string>
+    <string name="g_sensor_summary">Калибровать по горизонтали с помощью акселерометра</string>
+    <string name="gsensor_ready">Положите устройство на ровную поверхность и нажмите \"Калибровка\"</string>
+    <string name="gsensor_calibrating">Выполняется калибровка. Не перемещайте устройство. Подождите...</string>
+    <string name="gsensor_nofile">Не удается найти файл погрешностей. Повторите попытку</string>
+    <string name="gsensor_end">Откалибровано</string>
+    <string name="gsensor_button1">Завершено</string>
+    <string name="gsensor_button2">Калибровка</string>
+
+    <string name="category_vibration_title">Вибрация</string>
+    <string name="vibration_title_head">Интенсивность</string>
+    <string name="vibration_summary_head">Настройка интенсивности вибрации</string>
+    <string name="vibration_title">Интенсивность вибрации</string>
+    <string name="vibration_test_title">Тест</string>
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Galaxy S Plus Einstellungen</string>
+
+    <string name="category_touchkey_title">Touch Tasten</string>
+    <string name="backlight_title_head">BLN</string>
+    <string name="backlight_summary_head">Backlight Notification Einstellugnen (externe App)</string>
+
+    <string name="category_screen_title">Anzeige</string>
+    <string name="g_sensor_title">Horizontale Kalibrierung</string>
+    <string name="g_sensor_summary">Horizontale Kalibrierung mit Accelerometer</string>
+    <string name="gsensor_ready">Platziere das Gerät auf einer flachen Ebene und drücke "Kalibrieren"</string>
+    <string name="gsensor_calibrating">Kalibriere. Gerät nicht bewegen. Bitte warten...</string>
+    <string name="gsensor_nofile">Offset Datei nicht gefunden. Erneut versuchen</string>
+    <string name="gsensor_end">Kalibriert</string>
+    <string name="gsensor_button1">Fertig</string>
+    <string name="gsensor_button2">Kalibrieren</string>
+	
+    <string name="category_fast_charge_title">Ladeeinstellungen</string>
+    <string name="force_fast_charge_head">Schnelles Laden</string>
+    <string name="force_fast_charge_summary_head">Erkenne den über USB angeschlossenen PC als Aufladestecker, um schneller zu laden</string>
+
+    <string name="category_vibration_title">Vibrationseinstellungen</string>
+    <string name="vibration_title_head">Vibration</string>
+    <string name="vibration_summary_head">Setze die Vibrationsstärke fest</string>
+    <string name="vibration_title">Vibrationsstärke</string>
+    <string name="vibration_test_title">Test</string>
+
+    <string name="button_reset_title">Reset</string>
+</resources>

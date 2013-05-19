@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Galaxy S Plus Settings</string>
+
+    <string name="category_touchkey_title">Touch Keys</string>
+    <string name="backlight_title_head">Backlight Settings</string>
+    <string name="backlight_summary_head">Backlight Notification Settings (external application)</string>
+
+    <string name="category_screen_title">Screen</string>
+    <string name="g_sensor_title">Horizontal calibration</string>
+    <string name="g_sensor_summary">Calibrate horizontally using accelerometer</string>
+    <string name="gsensor_ready">Place device on a level surface and tap Calibrate</string>
+    <string name="gsensor_calibrating">Calibrating. Do not move device. Please wait...</string>
+    <string name="gsensor_nofile">Unable to find offset file. Try again</string>
+    <string name="gsensor_end">Calibrated</string>
+    <string name="gsensor_button1">Complete</string>
+    <string name="gsensor_button2">Calibrate</string>
+	
+    <string name="category_fast_charge_title">Fast Charge Support</string>
+    <string name="force_fast_charge_head">Force Fast Charge</string>
+    <string name="force_fast_charge_summary_head">Detect USB-connected PC as USB Wall Charger, for faster charging mode</string>
+
+    <string name="category_vibration_title">Vibration</string>
+    <string name="vibration_title_head">Vibration</string>
+    <string name="vibration_summary_head">Control vibration intensity</string>
+    <string name="vibration_title">Vibration intensity</string>
+    <string name="vibration_test_title">Test</string>
+
+    <string name="button_reset_title">Reset</string>
+</resources>
