@@ -6,6 +6,7 @@ rild.libargs=-d /dev/smd0
 
 ro.ril.hsxpa=1
 ro.ril.gprsclass=10
+ro.ril.disable.power.collapse=1
 ro.telephony.ril_class=SamsungRIL
 ro.telephony.ril.v3=datacall,icccardstatus
 
