@@ -1204,7 +1204,12 @@ int camera_get_camera_info(int camera_id, struct camera_info *info)
     android::SEC_getCameraInfo(camera_id, &cameraInfo);
 
     info->facing = cameraInfo.facing;
-    info->orientation = cameraInfo.orientation;
+    //info->orientation = cameraInfo.orientation;
+    if(info->facing == 1) {
+        info->orientation = 270;
+    } else {
+        info->orientation = 90;
+    }
 
     ALOGI("%s: id:%i faceing:%i orientation: %i", __FUNCTION__,camera_id, info->facing, info->orientation);
 
