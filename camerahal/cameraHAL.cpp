@@ -465,6 +465,9 @@ void CameraHAL_FixupParams(android::CameraParameters &camParams, priv_camera_dev
         camParams.set(CameraParameters::KEY_MAX_ZOOM, "12");
         camParams.set(CameraParameters::KEY_ZOOM_RATIOS, "100,125,150,175,200,225,250,275,300,325,350,375,400");
         camParams.set(CameraParameters::KEY_ZOOM_SUPPORTED, CameraParameters::TRUE);
+
+        camParams.set(CameraParameters::KEY_SUPPORTED_EFFECTS, "none,mono,negative,sepia");
+        camParams.set(CameraParameters::KEY_SUPPORTED_FOCUS_MODES, "auto,infinity,normal,macro,facedetect,touchaf");
     }
 
     camParams.set(CameraParameters::KEY_SUPPORTED_PREVIEW_FRAME_RATES, "30,15,7");
