@@ -455,6 +455,9 @@ void CameraHAL_FixupParams(android::CameraParameters &camParams, priv_camera_dev
 
     	camParams.set(CameraParameters::KEY_FOCUS_MODE,
                   CameraParameters::FOCUS_MODE_INFINITY);
+
+    	camParams.set(CameraParameters::KEY_SUPPORTED_SCENE_MODES, "");
+    	camParams.set(CameraParameters::KEY_SUPPORTED_EFFECTS, "");
     }
 
     if (dev->cameraid == CAMERA_ID_BACK) {
