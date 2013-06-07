@@ -344,8 +344,8 @@ static camera_memory_t *wrap_memory_data(priv_camera_device_t *dev,
     ALOGV(" mem:%p,mem->data%p ",  mem,mem->data);
 
     memcpy(mem->data, data, size);
-    if (dev->cameraid==CAMERA_ID_FRONT)
-        rotateJPEG(mem->data,size);
+    /*if (dev->cameraid==CAMERA_ID_FRONT)
+        rotateJPEG(mem->data,size);*/
 
     ALOGV("%s---", __FUNCTION__);
     return mem;
