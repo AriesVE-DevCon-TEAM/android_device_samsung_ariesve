@@ -4,6 +4,8 @@
     
     <string name="category_screen_title">Ecran</string>
     <string name="category_touchkey_title">Tastele sensibile la atingere</string>
+    <string name="backlight_timeout_title_head">Iluminarea Tastelor</string>
+    <string name="backlight_timeout_summary_head">Ajustaţi durata iluminării tastelor</string>
 
     <string name="g_sensor_title">Calibrare orizontală</string>
     <string name="g_sensor_summary">Calibrare orizontală utilizând accelerometrul</string>

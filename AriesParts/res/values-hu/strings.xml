@@ -4,6 +4,8 @@
 
     <string name="category_screen_title">Screen</string>
     <string name="category_touchkey_title">Érintő Gombok</string>
+    <string name="backlight_timeout_title_head">Háttérvilágítás Időtúllépése</string>
+    <string name="backlight_timeout_summary_head">Állítsa be, mennyi idő után kapcsoljon ki autómatikusan a háttérvilágítás</string>
 
     <string name="g_sensor_title">Vízszintes kalibrálás</string>
     <string name="g_sensor_summary">Vízszintes kalibrálás a gyorsulásméró segítségével</string>

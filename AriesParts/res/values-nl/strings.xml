@@ -4,7 +4,9 @@
 
     <string name="category_screen_title">Scherm</string>
     <string name="category_touchkey_title">Aanraakknoppen</string>
-	
+    <string name="backlight_timeout_title_head">Time-out achtergrondverlichting</string>
+    <string name="backlight_timeout_summary_head">Vertraging voor automatisch uitschakelen achtergrondverlichting aanpassen</string>
+
     <string name="g_sensor_title">Horizontale kalibratie</string>
     <string name="g_sensor_summary">Horizontaal kalibreren met acceleratiemeter</string>
     <string name="gsensor_ready">Plaats op een vlakke ondergrond en tik op Kalibreren</string>

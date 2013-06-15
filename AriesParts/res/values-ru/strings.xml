@@ -4,7 +4,9 @@
 
     <string name="category_screen_title">Экран</string>
     <string name="category_touchkey_title">Сенсорные кнопки</string>
-   
+    <string name="backlight_timeout_title_head">Подсветка кнопок</string>
+    <string name="backlight_timeout_summary_head">Настройте время подсветки сенсорных кнопок</string>
+
     <string name="g_sensor_title">Горизонтальная калибровка</string>
     <string name="g_sensor_summary">Калибровать по горизонтали с помощью акселерометра</string>
     <string name="gsensor_ready">Положите устройство на ровную поверхность и нажмите \"Калибровка\"</string>

@@ -3,7 +3,9 @@
     <string name="app_name">Galaxy S Plus Settings</string>
 
     <string name="category_touchkey_title">Touch Keys</string>
-    <string name="backlight_title_head">Backlight Settings</string>
+    <string name="backlight_timeout_title_head">Backlight Timeout</string>
+    <string name="backlight_timeout_summary_head">Adjust the delay before the touch key backlight automatically turns off</string>
+    <string name="backlight_title_head">Backlight Notifications</string>
     <string name="backlight_summary_head">Backlight Notification Settings (external application)</string>
 
     <string name="category_screen_title">Screen</string>
