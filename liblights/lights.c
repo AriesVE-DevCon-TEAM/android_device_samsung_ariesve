@@ -172,7 +172,7 @@ static int set_light_buttons(struct light_device_t *dev,
     //ALOGD("set_light_buttons: color=%#010x, tlc=%u.", state->color, touch_led_control);
 
     pthread_mutex_lock(&g_lock);
-    if (g_enable_touchlight == -1 || g_enable_touchlight > 0)
+    if (g_enable_touchlight == -1 || g_enable_touchlight > 0 || touch_led_control == 2)
         res = write_int(BUTTONS_FILE, touch_led_control);
     pthread_mutex_unlock(&g_lock);
 
