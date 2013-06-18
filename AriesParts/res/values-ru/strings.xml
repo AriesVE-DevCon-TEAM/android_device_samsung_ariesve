@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Настройки Galaxy S Plus</string>
+    <string name="app_name">Расширенные настройки</string>
 
     <string name="category_screen_title">Экран</string>
     <string name="category_touchkey_title">Сенсорные кнопки</string>

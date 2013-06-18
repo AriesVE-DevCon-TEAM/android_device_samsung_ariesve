@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Configurações do Galaxy S Plus</string>
+    <string name="app_name">Configurações Avançadas</string>
 
     <string name="category_screen_title">Tela</string>
     <string name="category_touchkey_title">Botões Touch</string>

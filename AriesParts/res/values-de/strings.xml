@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Galaxy S Plus Einstellungen</string>
+    <string name="app_name">Erweiterte Einstellungen</string>
 
     <string name="category_touchkey_title">Touch Tasten</string>
     <string name="backlight_title_head">BLN</string>

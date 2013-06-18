@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Setări Galaxy S Plus</string>
+    <string name="app_name">Setări avansate</string>
     
     <string name="category_screen_title">Ecran</string>
     <string name="category_touchkey_title">Tastele sensibile la atingere</string>

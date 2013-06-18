@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Impostazioni Galaxy S Plus</string>
+    <string name="app_name">Impostazioni avanzate</string>
 
     <string name="category_screen_title">Display</string>
     <string name="category_touchkey_title">Tasti a sfioramento</string>
