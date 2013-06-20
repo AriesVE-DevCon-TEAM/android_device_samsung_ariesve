@@ -43,4 +43,12 @@
             android:title="@string/vibration_title_head" />
     </PreferenceCategory>
 
+    <!-- PKF Manager -->
+    <PreferenceCategory android:title="@string/category_pkfmanager_title" >
+        <Preference
+            android:key="pkfmanager"
+            android:summary="@string/pkfmanager_summary_head"
+            android:title="@string/pkfmanager_title_head" />
+    </PreferenceCategory>
+
 </PreferenceScreen>

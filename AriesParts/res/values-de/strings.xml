@@ -27,4 +27,8 @@
     <string name="vibration_test_title">Test</string>
 
     <string name="button_reset_title">Reset</string>
+
+    <string name="category_pkfmanager_title">Phantom tastendrücke</string>
+    <string name="pkfmanager_title_head">Phantom tastendrücke filter</string>
+    <string name="pkfmanager_summary_head">Filter Tastatureingaben durch die Interferenz der antenne verursacht (externe App)</string>
 </resources>

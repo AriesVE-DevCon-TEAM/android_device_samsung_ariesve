@@ -29,4 +29,8 @@
     <string name="vibration_test_title">Prova</string>
 
     <string name="button_reset_title">Ripristina</string>
+
+    <string name="category_pkfmanager_title">Pressioni fantasma</string>
+    <string name="pkfmanager_title_head">Filtro delle pressioni fantasma</string>
+    <string name="pkfmanager_summary_head">Filtra le pressioni dei tasti causate dall\'interferenza dell\'antenna (applicazione esterna)</string>
 </resources>

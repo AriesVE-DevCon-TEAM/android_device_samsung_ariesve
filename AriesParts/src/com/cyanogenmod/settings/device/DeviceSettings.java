@@ -13,12 +13,14 @@ public class DeviceSettings extends PreferenceActivity  {
     public static final String KEY_BACKLIGHT_TIMEOUT = "backlight_timeout";
     public static final String KEY_FAST_CHARGE = "force_fast_charge";
     public static final String KEY_VIBRATION = "vibration";
+    public static final String KEY_PKFMANAGER = "pkfmanager";
 
     private ListPreference mBacklightTimeout;
     private Preference mBacklight;
     private Preference mGSensor;
     private CheckBoxPreference mFastCharge;
     private VibrationPreference mVibration;
+    private Preference mPkfManager;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -42,5 +44,7 @@ public class DeviceSettings extends PreferenceActivity  {
         mVibration = (VibrationPreference) findPreference(KEY_VIBRATION);
         mVibration.setEnabled(VibrationPreference.isSupported());
 
+        mPkfManager = (Preference) findPreference(KEY_PKFMANAGER);
+        mPkfManager.setOnPreferenceClickListener(new PkfManager(this));
     }
 }
