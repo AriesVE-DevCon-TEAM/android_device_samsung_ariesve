@@ -10,6 +10,11 @@
             android:entries="@array/backlight_timeout_entries"
             android:entryValues="@array/backlight_timeout_entries_values"
             android:defaultValue="1600" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="touchlight_status"
+            android:summary="@string/touchlight_status_summary_head"
+            android:title="@string/touchlight_status_title_head" />
         <Preference
             android:key="backlight"
             android:summary="@string/backlight_summary_head"

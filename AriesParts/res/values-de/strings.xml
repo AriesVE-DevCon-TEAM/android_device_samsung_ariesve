@@ -3,6 +3,10 @@
     <string name="app_name">Erweiterte Einstellungen</string>
 
     <string name="category_touchkey_title">Touch Tasten</string>
+    <string name="backlight_timeout_title_head">Hintergrundbeleuchtung</string>
+    <string name="backlight_timeout_summary_head">Die verzögerung der hintergrundbeleuchtung der touch keys eintellen</string>
+    <string name="touchlight_status_title_head">Hintergrundbeleuchtung bei Touchscreen berührung</string>
+    <string name="touchlight_status_summary_head">Aktivieren oder deaktivieren der touch key hintergrundbeleuchtung bei berührung des touchscreens</string>
     <string name="backlight_title_head">BLN</string>
     <string name="backlight_summary_head">Backlight Notification Einstellugnen (externe App)</string>
 
