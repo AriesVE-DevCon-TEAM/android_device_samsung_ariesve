@@ -9,7 +9,7 @@ $(call inherit-product, $(LOCAL_PATH)/full_ariesve.mk)
 
 PRODUCT_RELEASE_NAME := ariesve
 
-CM_BUILDTYPE := dev_connection_team-release2
+CM_BUILDTYPE := dev_connection_team-release3
 CM_NUMERICAL_VERSION := 2.0.0
 
 # Setup device configuration
