@@ -1,26 +1,38 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Setări avansate</string>
-    
-    <string name="category_screen_title">Ecran</string>
-    <string name="category_touchkey_title">Tastele sensibile la atingere</string>
-    <string name="backlight_timeout_title_head">Iluminarea Tastelor</string>
-    <string name="backlight_timeout_summary_head">Ajustaţi durata iluminării tastelor</string>
+    <string name="app_name">Setari Avansate</string>
 
-    <string name="g_sensor_title">Calibrare orizontală</string>
-    <string name="g_sensor_summary">Calibrare orizontală utilizând accelerometrul</string>
-    <string name="gsensor_ready">Poziţionaţi dispozitivul pe o suprafaţă netedă şi atingeţi Calibrare</string>
-    <string name="gsensor_calibrating">Se calibrează. Nu mişcaţi dispozitivul. Aşteptaţi...</string>
-    <string name="gsensor_nofile">Imposibil de găsit fişierul offset de calibrare. Încercaţi din nou</string>
+    <string name="category_touchkey_title">Tastele Sensibile la atingere</string>
+    <string name="backlight_timeout_title_head">Durata iluminarii de fundal</string>
+    <string name="backlight_timeout_summary_head">Reglarea unei intarzieri inainte ca lumina de fundal a tastelor tactile sa se opreasca</string>
+    <string name="touchlight_status_title_head">Iluminare tastelor la atingerea ecranului</string>
+    <string name="touchlight_status_summary_head">Activarea starii luminei de fundal a tastelor tactile la atingerea ecranului </string>
+    <string name="backlight_title_head">Notificarea utilizatorului folosind lumina de fundal a tastelor tactile</string>
+    <string name="backlight_summary_head">Setarile notificarilor utilizand lumina de fundal (utilizand aplicatie externa)</string>
+
+    <string name="category_screen_title">Ecran</string>
+    <string name="g_sensor_title">Calibrare orizontala</string>
+    <string name="g_sensor_summary">Calibrare orizontala folosind accelerometrul</string>
+    <string name="gsensor_ready">Plasati dispozitivul pe o suprafata dreapta si apasati Calibrare</string>
+    <string name="gsensor_calibrating">Se calibreaza.Nu misca dispozitivul.Te rugam sa astepti...</string>
+    <string name="gsensor_nofile">Imposibil de gasit fisierul.Incercati din nou</string>
     <string name="gsensor_end">Calibrat</string>
-    <string name="gsensor_button1">terminat</string>
-    <string name="gsensor_button2">Calibrare</string>
+    <string name="gsensor_button1">Terminat</string>
+    <string name="gsensor_button2">Calibreaza</string>
+
+    <string name="category_fast_charge_title">Suport pentru Incarcarea Rapida</string>
+    <string name="force_fast_charge_head">Fortarea Incarcarii Rapide</string>
+    <string name="force_fast_charge_summary_head">Detectarea USB--ului conectat la PC ca un incarcator, pentru o incarcare mai rapida</string>
 
     <string name="category_vibration_title">Vibrare</string>
     <string name="vibration_title_head">Vibrare</string>
-    <string name="vibration_summary_head">Control intensitate vibraţii</string>
-    <string name="vibration_title">Intesitate vibraţii</string>
-    <string name="vibration_test_title">Testaţi</string>
+    <string name="vibration_summary_head">Controlul intensitatii vibratiilor</string>
+    <string name="vibration_title">Intensitatea vibratiilor</string>
+    <string name="vibration_test_title">Test</string>
 
-    <string name="button_reset_title">Resetați</string>
+    <string name="button_reset_title">Resetare</string>
+
+    <string name="category_pkfmanager_title">Atingerile "fantoma"</string>
+    <string name="pkfmanager_title_head">Filtru pentru atingerile "fantoma"</string>
+    <string name="pkfmanager_summary_head">Filtrarea atingerilor nedorite cauzate de interferenta antenei (folosind o aplicatie externa)</string>
 </resources>
