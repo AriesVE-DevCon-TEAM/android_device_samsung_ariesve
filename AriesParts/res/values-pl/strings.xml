@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Zaawansowane ustawienia</string>
+
+    <string name="category_touchkey_title">Klawisze dotykowe</string>
+    <string name="backlight_timeout_title_head">Czas podświetlenia klawiszy dotykowych</string>
+    <string name="backlight_timeout_summary_head">Wybierz czas, po jakim klawisze dotykowe zgasną</string>
+    <string name="touchlight_status_title_head">Podświetlenie klawiszy przy dotykaniu ekranu</string>
+    <string name="touchlight_status_summary_head">Wybierz, czy klaiwsze mają się podswietlać przy dotykaniu ekranu</string>
+    <string name="backlight_title_head">Powiadomienia podświetlaniem klawiszy dotykowych</string>
+    <string name="backlight_summary_head">Ustawienia podświetlania klawiszy dotykowych po przyjściu powiadomienia (zewnętrzna aplikacja)</string>
+
+    <string name="category_screen_title">Ekran</string>
+    <string name="g_sensor_title">Pozioma kalibracja</string>
+    <string name="g_sensor_summary">Kalibruj poziomo używajac akceleromentra</string>
+    <string name="gsensor_ready">Połóż urządzenie na płaskiej powierzchni i kliknij Kalibruj</string>
+    <string name="gsensor_calibrating">Kalibracja. Nie ruszaj urządzenia. Proszę czekać...</string>
+    <string name="gsensor_nofile">Nie można znaleźć właściwego pliku. Spróbuj ponownie</string>
+    <string name="gsensor_end">Skalibrowano</string>
+    <string name="gsensor_button1">Ukończono</string>
+    <string name="gsensor_button2">Kalibruj</string>
+	
+    <string name="category_fast_charge_title">Wsparcie dla szybkiego ładowania</string>
+    <string name="force_fast_charge_head">Wymuś szybkie ładowanie</string>
+    <string name="force_fast_charge_summary_head">Podłącz telefon do komputera przez port USB w celu właczenia szybkiego ładowania</string>
+
+    <string name="category_vibration_title">Wibracja</string>
+    <string name="vibration_title_head">Wibracja</string>
+    <string name="vibration_summary_head">Ustaw intensywność wibracji</string>
+    <string name="vibration_title">Nasilenie wybracji</string>
+    <string name="vibration_test_title">Test</string>
+
+    <string name="button_reset_title">Reset</string>
+
+    <string name="category_pkfmanager_title">Phantom key presses</string>
+    <string name="pkfmanager_title_head">Phantom key presses filter</string>
+    <string name="pkfmanager_summary_head">Filtr wyłącza nieporządane wciśnięcia klawiszy spowodowane umieszczeniem anteny (zewnętrzna aplikacja)</string>
+</resources>
