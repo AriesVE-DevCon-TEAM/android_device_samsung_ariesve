@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Opciones Avanzadas</string>
+    <string name="category_touchkey_title">Teclas tactiles</string>
+    <string name="backlight_timeout_title_head">Tiempo de retroiluminacion</string>
+    <string name="backlight_timeout_summary_head">"Configura el intervalo en el cual la retroiluminacion de teclas se apaguen"</string>
+    <string name="touchlight_status_title_head">Retroiluminacion de presiones touchscreen</string>
+    <string name="touchlight_status_summary_head">Activa/desactiva la retroiluminacion de las teclas tactiles en caso de presiones del touchscreen</string>
+    <string name="backlight_title_head">Ajustes de notificaciones</string>
+    <string name="backlight_summary_head">Ajustes de retroiluminacion en caso de notificas (aplicacion externa)</string>
+    <string name="category_screen_title">Pantalla</string>
+    <string name="g_sensor_title">Calibracion horizontal</string>
+    <string name="g_sensor_summary">Calibra el dispositivo con el acelerometro</string>
+    <string name="gsensor_ready">Posiciona el dispositivo en una superficie plana y toca Calibrar</string>
+    <string name="gsensor_calibrating">Calibracion en curso. No mover el dispositivo. Espere...</string>
+    <string name="gsensor_nofile">Imposible encontrar el file offset. Prueba de Nuevo</string>
+    <string name="gsensor_end">Calibracion completada</string>
+    <string name="gsensor_button1">Completo</string>
+    <string name="gsensor_button2">Calibrar</string>
+    <string name="category_fast_charge_title">Soporto carga veloz</string>
+    <string name="force_fast_charge_head">Fuerza la carga veloz</string>
+    <string name="force_fast_charge_summary_head">Detecta los PC conectados al puerto USB como simples cargadores USB, para una veloz carga de la bateria</string>
+    <string name="category_vibration_title">Vibracion</string>
+    <string name="vibration_title_head">Vibracion</string>
+    <string name="vibration_summary_head">Control de intensidad de la vibracion</string>
+    <string name="vibration_title">Intensidad de la vibracion</string>
+    <string name="vibration_test_title">Prueba</string>
+    <string name="button_reset_title">Por Defecto</string>
+    <string name="category_pkfmanager_title">Presiones fantasmas</string>
+    <string name="pkfmanager_title_head">Filtro de las presiones fantasmas</string>
+    <string name="pkfmanager_summary_head">"Filtra las presiones de las teclas causadas por la interferencia de la antena (aplicacion externa)"</string>
+</resources>

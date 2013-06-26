@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="backlight_timeout_entries">
+        <item>Defecto (1.6 segundos)</item>
+        <item>0.5 milisegundos</item>
+        <item>1 segundo</item>
+        <item>2 segundos</item>
+        <item>5 segundos</item>
+        <item>Nunca</item>
+    </string-array>
+</resources>
