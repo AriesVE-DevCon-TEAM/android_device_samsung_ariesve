@@ -3,4 +3,7 @@
          AudioHardware::setMicMute(bool state) and AudioHardware::getMicMute(bool* state)
          so microphone muting calls should be routed through the AudioManager API. -->
     <bool name="send_mic_mute_to_AudioManager">true</bool>
+
+    <!-- Flag indicating if the phone is a world phone -->
+    <bool name="world_phone">true</bool>
 </resources>
