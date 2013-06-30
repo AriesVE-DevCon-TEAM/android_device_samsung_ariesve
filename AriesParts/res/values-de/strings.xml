@@ -2,27 +2,27 @@
 <resources>
     <string name="app_name">Erweiterte Einstellungen</string>
 
-    <string name="category_touchkey_title">Touch Tasten</string>
+    <string name="category_touchkey_title">Touch Keys</string>
     <string name="backlight_timeout_title_head">Hintergrundbeleuchtung</string>
-    <string name="backlight_timeout_summary_head">Die verzögerung der hintergrundbeleuchtung der touch keys eintellen</string>
-    <string name="touchlight_status_title_head">Hintergrundbeleuchtung bei Touchscreen berührung</string>
-    <string name="touchlight_status_summary_head">Aktivieren oder deaktivieren der touch key hintergrundbeleuchtung bei berührung des touchscreens</string>
+    <string name="backlight_timeout_summary_head">Verzögerung der Hintergrundbeleuchtung der Touch Keys einstellen</string>
+    <string name="touchlight_status_title_head">Hintergrundbeleuchtung bei Touchscreenberührung</string>
+    <string name="touchlight_status_summary_head">(De-)Aktivieren der Touch Key Hintergrundbeleuchtung bei Berührung des Touchscreens</string>
     <string name="backlight_title_head">BLN</string>
-    <string name="backlight_summary_head">Backlight Notification Einstellugnen (externe App)</string>
+    <string name="backlight_summary_head">Backlight Notification Einstellungen (externe App)</string>
 
     <string name="category_screen_title">Anzeige</string>
     <string name="g_sensor_title">Horizontale Kalibrierung</string>
     <string name="g_sensor_summary">Horizontale Kalibrierung mit Accelerometer</string>
     <string name="gsensor_ready">Platziere das Gerät auf einer flachen Ebene und drücke "Kalibrieren"</string>
     <string name="gsensor_calibrating">Kalibriere. Gerät nicht bewegen. Bitte warten...</string>
-    <string name="gsensor_nofile">Offset Datei nicht gefunden. Erneut versuchen</string>
+    <string name="gsensor_nofile">Offset-Datei nicht gefunden. Erneut versuchen</string>
     <string name="gsensor_end">Kalibriert</string>
     <string name="gsensor_button1">Fertig</string>
     <string name="gsensor_button2">Kalibrieren</string>
-	
+
     <string name="category_fast_charge_title">Ladeeinstellungen</string>
     <string name="force_fast_charge_head">Schnelles Laden</string>
-    <string name="force_fast_charge_summary_head">Erkenne den über USB angeschlossenen PC als Aufladestecker, um schneller zu laden</string>
+    <string name="force_fast_charge_summary_head">Den über USB angeschlossenen PC als Aufladestecker erkennen, um schneller zu laden</string>
 
     <string name="category_vibration_title">Vibrationseinstellungen</string>
     <string name="vibration_title_head">Vibration</string>
@@ -32,7 +32,7 @@
 
     <string name="button_reset_title">Reset</string>
 
-    <string name="category_pkfmanager_title">Phantom tastendrücke</string>
-    <string name="pkfmanager_title_head">Phantom tastendrücke filter</string>
-    <string name="pkfmanager_summary_head">Filter Tastatureingaben durch die Interferenz der antenne verursacht (externe App)</string>
+    <string name="category_pkfmanager_title">Phantom Tastendrücke</string>
+    <string name="pkfmanager_title_head">Phantom Tastendrückefilter</string>
+    <string name="pkfmanager_summary_head">Filtert durch die Interferenz der Antenne verursachte Tastatureingaben (externe App)</string>
 </resources>
