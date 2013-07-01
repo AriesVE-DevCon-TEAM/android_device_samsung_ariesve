@@ -21,6 +21,6 @@ $(call inherit-product, device/common/gps/gps_eu_supl.mk)
 # Set those variables here to overwrite the inherited values.
 PRODUCT_NAME := full_ariesve
 PRODUCT_DEVICE := ariesve
-PRODUCT_BRAND := Samsung
-PRODUCT_MANUFACTURER := Samsung
+PRODUCT_BRAND := samsung
+PRODUCT_MANUFACTURER := samsung
 PRODUCT_MODEL := GT-I9001
