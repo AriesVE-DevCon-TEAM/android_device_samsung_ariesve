@@ -142,7 +142,7 @@ public class VibrationPreference extends DialogPreference implements OnClickList
         }
 
         protected void updateValue(int progress) {
-            mValueDisplay.setText(String.valueOf(progress));
+            mValueDisplay.setText(String.valueOf(strengthToPercent(progress)) + "%");
         }
 
         public void resetDefault() {
@@ -150,6 +150,16 @@ public class VibrationPreference extends DialogPreference implements OnClickList
             updateValue(121);
             Utils.writeValue(FILE_PATH, String.valueOf(121));
         }
+
+        public int strengthToPercent(int strength) {
+		double percent = ((double)strength * 100) / 127;
+
+		if (percent > 100)
+			percent = 100;
+		else if (percent < 0)
+			percent = 0;
+		return (int) percent;
+		}
     }
 
     public void onClick(View v) {
@@ -167,5 +177,4 @@ public class VibrationPreference extends DialogPreference implements OnClickList
         Vibrator vib = (Vibrator) this.getContext().getSystemService(Context.VIBRATOR_SERVICE);
         vib.vibrate(1000);
     }
-
 }
