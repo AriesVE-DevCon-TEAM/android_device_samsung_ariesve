@@ -78,43 +78,6 @@ void load_settings()
     }
 }
 
-static int write_str(char const *path, char const *str)
-{
-    int fd;
-    static int already_warned = 0;
-
-    ALOGV("write_str: path=\"%s\", str=\"%s\".", path, str);
-    fd = open(path, O_RDWR);
-
-    if (fd >= 0) {
-        int amt = write(fd, str, strlen(str));
-        close(fd);
-        return amt == -1 ? -errno : 0;
-    } else {
-        if (already_warned == 0) {
-            ALOGE("write_int failed to open %s\n", path);
-            already_warned = 1;
-        }
-        return -errno;
-    }
-}
-
-/* Should check for snprintf truncation, but as these functions only use
- * internal paths, meh. */
-static int write_df_int(char const *dir, char const *file, int value)
-{
-    char path[PATH_MAX];
-    snprintf(path, sizeof(path), "%s/%s", dir, file);
-    return write_int(path, value);
-}
-
-static int write_df_str(char const *dir, char const *file, char const *str)
-{
-    char path[PATH_MAX];
-    snprintf(path, sizeof(path), "%s/%s", dir, file);
-    return write_str(path, str);
-}
-
 static int rgb_to_brightness(struct light_state_t const *state)
 {
     int color = state->color & 0x00ffffff;
@@ -169,8 +132,6 @@ static int set_light_buttons(struct light_device_t *dev,
     int touch_led_control = state->color & 0x00ffffff ? 1 : 2;
     int res = 0;
 
-    //ALOGD("set_light_buttons: color=%#010x, tlc=%u.", state->color, touch_led_control);
-
     pthread_mutex_lock(&g_lock);
     if (g_enable_touchlight == -1 || g_enable_touchlight > 0 || touch_led_control == 2)
         res = write_int(BUTTONS_FILE, touch_led_control);
@@ -222,7 +183,7 @@ static int open_lights(const struct hw_module_t *module, char const *name,
 }
 
 static struct hw_module_methods_t lights_module_methods = {
-    .open =  open_lights,
+    .open = open_lights,
 };
 
 struct hw_module_t HAL_MODULE_INFO_SYM = {
@@ -230,7 +191,7 @@ struct hw_module_t HAL_MODULE_INFO_SYM = {
     .version_major = 1,
     .version_minor = 0,
     .id = LIGHTS_HARDWARE_MODULE_ID,
-    .name = "lights module",
+    .name = "Ariesve Lights Module",
     .author = "The CyanogenMod Project",
     .methods = &lights_module_methods,
 };
