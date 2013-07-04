@@ -1,16 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2013 The CyanogenMod Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
 <resources>
     <string name="app_name">Impostazioni avanzate</string>
 
-    <string name="category_screen_title">Display</string>
-    <string name="category_touchkey_title">Tasti a sfioramento</string>
-    <string name="backlight_timeout_title_head">Timer retroilluminazione</string>
-    <string name="backlight_timeout_summary_head">Imposta l\'intervallo dopo cui la retroilluminazione dei tasti si spegne</string>
-    <string name="touchlight_status_title_head">Retroilluminazione pressioni touchscreen</string>
-    <string name="touchlight_status_summary_head">Attiva/disattiva la retroilluminazione dei touchkey in caso di pressioni del touchscreen</string>
-    <string name="backlight_title_head">Impostazioni notifiche</string>
-    <string name="backlight_summary_head">Impostazioni retroilluminazione in caso di notifiche (applicazione esterna)</string>
+    <!-- Page Headers -->
+    <string name="tab_general_title">VARIE</string>
+    <string name="tab_touchkey_title">TOUCHKEY</string>
 
+    <!-- Page General -->
+    <string name="category_screen_title">Display</string>
     <string name="g_sensor_title">Calibrazione orizzontale</string>
     <string name="g_sensor_summary">Calibra il dispositivo con l’accelerometro</string>
     <string name="gsensor_ready">Posizionate il dispositivo su una superficie piana e toccate Calibra</string>
@@ -31,6 +42,15 @@
     <string name="vibration_test_title">Prova</string>
 
     <string name="button_reset_title">Ripristina</string>
+
+    <!-- Page TouchKey -->
+    <string name="category_touchkey_title">Tasti a sfioramento</string>
+    <string name="backlight_timeout_title_head">Timer retroilluminazione</string>
+    <string name="backlight_timeout_summary_head">Imposta l\'intervallo dopo cui la retroilluminazione dei tasti si spegne</string>
+    <string name="touchlight_status_title_head">Retroilluminazione pressioni touchscreen</string>
+    <string name="touchlight_status_summary_head">Attiva/disattiva la retroilluminazione dei touchkey in caso di pressioni del touchscreen</string>
+    <string name="backlight_title_head">Impostazioni notifiche</string>
+    <string name="backlight_summary_head">Impostazioni retroilluminazione in caso di notifiche (applicazione esterna)</string>
 
     <string name="category_pkfmanager_title">Pressioni fantasma</string>
     <string name="pkfmanager_title_head">Filtro delle pressioni fantasma</string>

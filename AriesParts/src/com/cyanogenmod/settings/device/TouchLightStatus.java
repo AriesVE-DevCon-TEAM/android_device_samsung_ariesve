@@ -37,4 +37,3 @@ public class TouchLightStatus implements OnPreferenceChangeListener {
 	}
 
 }
-

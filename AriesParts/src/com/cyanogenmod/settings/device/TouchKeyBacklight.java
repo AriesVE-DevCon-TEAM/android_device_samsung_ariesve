@@ -6,6 +6,7 @@ import android.annotation.SuppressLint;
 import android.content.pm.PackageManager;
 import android.content.pm.ApplicationInfo;
 import android.net.Uri;
+import android.content.Context;
 import android.content.Intent;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceClickListener;
@@ -13,7 +14,7 @@ import android.preference.PreferenceActivity;
 
 public class TouchKeyBacklight implements OnPreferenceClickListener {
 
-    private PreferenceActivity mContext;
+    private Context mContext;
 
     public static final String PACKAGE_BLN = "neldar.bln.control.free";
     public static final String PACKAGE_BLN_PRO = "neldar.bln.control.pro";
@@ -38,7 +39,7 @@ public class TouchKeyBacklight implements OnPreferenceClickListener {
         mContext.startActivity(i);
     }
 
-    public TouchKeyBacklight(PreferenceActivity context) {
+    public TouchKeyBacklight(Context context) {
         mContext = context;
     }
 
@@ -57,4 +58,3 @@ public class TouchKeyBacklight implements OnPreferenceClickListener {
     }
 
 }
-

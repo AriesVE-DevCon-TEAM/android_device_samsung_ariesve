@@ -6,6 +6,7 @@ import android.annotation.SuppressLint;
 import android.content.pm.PackageManager;
 import android.content.pm.ApplicationInfo;
 import android.net.Uri;
+import android.content.Context;
 import android.content.Intent;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceClickListener;
@@ -15,9 +16,9 @@ public class PkfManager implements OnPreferenceClickListener {
 
 	public static final String PACKAGE_PKFMANAGER = "com.christopher83.pkfmanager";
 
-	private PreferenceActivity mContext;
+	private Context mContext;
 
-	public PkfManager(PreferenceActivity context) {
+	public PkfManager(Context context) {
 		mContext = context;
 	}
 
@@ -52,4 +53,3 @@ public class PkfManager implements OnPreferenceClickListener {
 	}
 
 }
-
