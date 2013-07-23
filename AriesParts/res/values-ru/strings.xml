@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2013 The CyanogenMod Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,23 +16,37 @@
 <resources>
     <string name="app_name">Расширенные настройки</string>
 
-    <string name="category_screen_title">Экран</string>
     <string name="category_touchkey_title">Сенсорные кнопки</string>
     <string name="backlight_timeout_title_head">Подсветка кнопок</string>
-    <string name="backlight_timeout_summary_head">Настройте время подсветки сенсорных кнопок</string>
+    <string name="backlight_timeout_summary_head">Настройка времени подсветки сенсорных кнопок</string>
+    <string name="touchlight_status_title_head">Подсветка при касании экрана</string>
+    <string name="touchlight_status_summary_head">Включение подсветки при касании сенсорного экрана</string>
+    <string name="backlight_title_head">Уведомления подсветкой</string>
+    <string name="backlight_summary_head">Настройка уведомлений подсветкой кнопок (дополнительное приложение)</string>
 
+    <string name="category_screen_title">Экран</string>
     <string name="g_sensor_title">Горизонтальная калибровка</string>
-    <string name="g_sensor_summary">Калибровать по горизонтали с помощью акселерометра</string>
-    <string name="gsensor_ready">Положите устройство на ровную поверхность и нажмите \"Калибровка\"</string>
-    <string name="gsensor_calibrating">Выполняется калибровка. Не перемещайте устройство. Подождите...</string>
-    <string name="gsensor_nofile">Не удается найти файл погрешностей. Повторите попытку</string>
+    <string name="g_sensor_summary">Горизонтальная калибровка с помощью акселерометра</string>
+    <string name="gsensor_ready">Положите устройство на ровную поверхность и нажмите "Калибровка"</string>
+    <string name="gsensor_calibrating">Калибровка. Не перемещайте устройство. Пожалуйста, подождите...</string>
+    <string name="gsensor_nofile">Невозможно найти файл калибровки. Попытайтесь снова</string>
     <string name="gsensor_end">Откалибровано</string>
     <string name="gsensor_button1">Завершено</string>
     <string name="gsensor_button2">Калибровка</string>
+	
+    <string name="category_fast_charge_title">Поддержка быстрой зарядки</string>
+    <string name="force_fast_charge_head">Быстрая зарядка</string>
+    <string name="force_fast_charge_summary_head">Определяет компьютер, подключенный через USB-порт, как зарядное устройство для более быстрого режима зарядки.</string>
 
     <string name="category_vibration_title">Вибрация</string>
-    <string name="vibration_title_head">Интенсивность</string>
+    <string name="vibration_title_head">Интенсивность вибрации</string>
     <string name="vibration_summary_head">Настройка интенсивности вибрации</string>
     <string name="vibration_title">Интенсивность вибрации</string>
     <string name="vibration_test_title">Тест</string>
+
+    <string name="button_reset_title">По умолчанию</string>
+
+    <string name="category_pkfmanager_title">Фантомные нажатия</string>
+    <string name="pkfmanager_title_head">Фильтр фантомных нажатий</string>
+    <string name="pkfmanager_summary_head">Фильтр ненужных нажатий на кнопки, возникающих из-за интерференции антенны (дополнительное приложение)</string>
 </resources>
