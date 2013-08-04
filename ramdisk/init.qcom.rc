@@ -2,7 +2,7 @@ import init.qcom.usb.rc
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug
-    chmod 666 /proc/cmdline
+    chmod 0644 /proc/cmdline
 
 on init
     export EXTERNAL_STORAGE /storage/sdcard0
