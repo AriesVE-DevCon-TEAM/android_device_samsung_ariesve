@@ -1,7 +1,7 @@
 <resources>
-    <!-- This device uses libaudio which implements
-         AudioHardware::setMicMute(bool state) and AudioHardware::getMicMute(bool* state)
-         so microphone muting calls should be routed through the AudioManager API. -->
+    <!-- Determine whether calls to mute the microphone in PhoneUtils
+         are routed through the android.media.AudioManager class (true) or through
+         the com.android.internal.telephony.Phone interface (false). -->
     <bool name="send_mic_mute_to_AudioManager">true</bool>
 
     <!-- Flag indicating if the phone is a world phone -->

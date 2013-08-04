@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="keypress_vibration_durations" translatable="false">
-        <!-- Build.HARDWARE,duration_in_milliseconds -->
-        <item>qcom,16</item>
+        <!-- Build condition,duration_in_milliseconds -->
+        <item>MANUFACTURER=qcom,16</item>
+        <!-- Default value for unknown device -->
+        <item>,20</item>
     </string-array>
 </resources>
+
