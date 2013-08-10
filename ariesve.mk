@@ -145,6 +145,9 @@ PRODUCT_PACKAGES += \
     PhotoTable \
     AriesParts
 
+PRODUCT_PACKAGES += \
+    sensors.ariesve
+
 # Kernel
 ifeq ($(TARGET_PREBUILT_KERNEL),)
     LOCAL_KERNEL := $(LOCAL_PATH)/prebuilt/zImage
