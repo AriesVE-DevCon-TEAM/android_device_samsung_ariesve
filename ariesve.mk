@@ -129,6 +129,7 @@ PRODUCT_PACKAGES += \
     libstagefrighthw \
     libc2dcolorconvert
 
+# Filesystem management tools
 PRODUCT_PACKAGES += \
     badblocks \
     e2fsck \
@@ -139,14 +140,19 @@ PRODUCT_PACKAGES += \
     make_ext4fs \
     setup_fs
 
+# Usb accessory and Wifi
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory \
-    libnetcmdiface \
-    PhotoTable \
+    libnetcmdiface
+
+# Device-specific packages
+PRODUCT_PACKAGES += \
+    sensors.ariesve \
     AriesParts
 
+# Other apps
 PRODUCT_PACKAGES += \
-    sensors.ariesve
+    PhotoTable
 
 # Kernel
 ifeq ($(TARGET_PREBUILT_KERNEL),)
@@ -176,6 +182,8 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 
 # WiFi
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4329/device-bcm.mk)
+
+# Dalvik heap
 $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
 
 PRODUCT_COPY_FILES += \
