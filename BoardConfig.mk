@@ -101,6 +101,7 @@ BOARD_USES_QCOM_AUDIO_VOIPMUTE := true
 # EGL
 BOARD_EGL_CFG := device/samsung/ariesve/config/egl.cfg
 BOARD_EGL_NEEDS_LEGACY_FB := true
+BOARD_ALLOW_EGL_HIBERNATION := true
 USE_OPENGL_RENDERER := true
 
 # Display stuff
