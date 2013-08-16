@@ -158,9 +158,6 @@ TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 BOARD_VOLD_MAX_PARTITIONS := 28
 
-# FSTAB version
-RECOVERY_FSTAB_VERSION := 2
-
 # Custom recovery files
 TARGET_RECOVERY_INITRC := device/samsung/ariesve/recovery/init.rc
 TARGET_RECOVERY_FSTAB := device/samsung/ariesve/ramdisk/fstab.qcom
