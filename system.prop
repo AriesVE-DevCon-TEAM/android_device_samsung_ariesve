@@ -27,6 +27,9 @@ dalvik.vm.dexopt-data-only=1
 # Disable zram by default
 ro.zram.default=0
 
+# Reduce total number of background apps
+sys.mem.max_hidden_apps=5
+
 # QCOM
 com.qc.hardware=true
 debug.sf.hw=1
@@ -36,7 +39,6 @@ debug.mdpcomp.logs=0
 # Low Power Audio
 lpa.decode=false
 lpa.use-stagefright=false
-use.non-omx.mp3.decoder=true
 
 # Resampler quality 
 af.resampler.quality=255
