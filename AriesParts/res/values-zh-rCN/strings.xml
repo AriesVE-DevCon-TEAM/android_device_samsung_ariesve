@@ -15,13 +15,8 @@
  -->
 <resources>
     <string name="app_name">高级设置</string>
-    <string name="category_touchkey_title">触控键</string>
-    <string name="backlight_timeout_title_head">按键灯超时</string>
-    <string name="backlight_timeout_summary_head">调整触控键背光自动关闭前的延迟时间</string>
-    <string name="touchlight_status_title_head">点击屏幕时背光</string>
-    <string name="touchlight_status_summary_head">点击屏幕时激活触控键背光状态</string>
-    <string name="backlight_title_head">呼吸灯设置</string>
-    <string name="backlight_summary_head">调用第三方软件调节锁屏后的呼吸灯持续时间</string>
+    <string name="tab_general_title">调整</string>
+    <string name="tab_touchkey_title">触控键</string>
     <string name="category_screen_title">屏幕</string>
     <string name="g_sensor_title">水平校准</string>
     <string name="g_sensor_summary">使用加速计作水平校准</string>
@@ -40,6 +35,13 @@
     <string name="vibration_title">振动强度</string>
     <string name="vibration_test_title">测试</string>
     <string name="button_reset_title">还原</string>
+    <string name="category_touchkey_title">触控键</string>
+    <string name="backlight_timeout_title_head">按键灯超时</string>
+    <string name="backlight_timeout_summary_head">调整触控键背光自动关闭前的延迟时间</string>
+    <string name="touchlight_status_title_head">点击屏幕时背光</string>
+    <string name="touchlight_status_summary_head">点击屏幕时激活触控键背光状态</string>
+    <string name="backlight_title_head">呼吸灯设置</string>
+    <string name="backlight_summary_head">调用第三方软件调节锁屏后的呼吸灯持续时间</string>
     <string name="category_pkfmanager_title">虚假触控键</string>
     <string name="pkfmanager_title_head">触控过滤值</string>
     <string name="pkfmanager_summary_head">调用第三方软件调节虚拟触控值，能避免天线信号干扰造成的自动返回桌面等问题</string>
