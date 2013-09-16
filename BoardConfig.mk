@@ -135,6 +135,7 @@ ENABLE_WEBGL := true
 BOARD_USES_QCOM_HARDWARE := true
 BOARD_VENDOR_QCOM_AMSS_VERSION := 6225
 BOARD_USE_LEGACY_SENSORS_FUSION := false
+TARGET_TOROPLUS_RADIO := true
 
 # USB mass storage
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
