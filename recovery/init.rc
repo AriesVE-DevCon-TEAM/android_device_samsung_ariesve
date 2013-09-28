@@ -1,4 +1,5 @@
 import init.qcom.usb.rc
+import init.recovery.qcom.rc
 
 on early-init
     start ueventd

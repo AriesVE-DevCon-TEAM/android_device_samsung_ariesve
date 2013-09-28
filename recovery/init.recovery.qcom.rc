@@ -1,0 +1,9 @@
+on init
+    export PATH /sbin
+    export LD_LIBRARY_PATH .:/sbin /system/lib
+    export ANDROID_ROOT /system
+    export ANDROID_DATA /data
+    export EXTERNAL_STORAGE /sdcard
+
+# Required to fix shutdown issue
+service rmt_storage /sbin/rmt_storage
