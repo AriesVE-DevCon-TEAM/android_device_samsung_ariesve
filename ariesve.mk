@@ -147,7 +147,6 @@ PRODUCT_PACKAGES += \
 
 # Device-specific packages
 PRODUCT_PACKAGES += \
-    sensors.ariesve \
     AriesParts
 
 # Other apps
