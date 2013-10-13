@@ -15,7 +15,7 @@ import android.util.Log;
 
 public class GSensor extends Activity implements SensorEventListener {
 
-    private static final String FILE = "/sys/class/input/event6/device/calibration";
+    private static final String FILE = "/sys/class/input/input6/calibration";
     private static final String TAG = "GSensor";
     private Button calibrateButton;
     private SensorManager sm = null;
