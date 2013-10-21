@@ -27,9 +27,6 @@
 # Vendor stuff
 -include vendor/samsung/ariesve/BoardConfigVendor.mk
 
-# Costum kernel header
-TARGET_SPECIFIC_HEADER_PATH := device/samsung/ariesve/include
-
 # Platform
 TARGET_BOOTLOADER_BOARD_NAME := ariesve
 TARGET_OTA_ASSERT_DEVICE := ariesve,GT-I9001
@@ -54,9 +51,8 @@ TARGET_SCREEN_WIDTH := 480
 # Kernel stuff
 BOARD_KERNEL_BASE := 0x00400000
 BOARD_KERNEL_PAGESIZE := 4096
-#TARGET_KERNEL_SOURCE := kernel/samsung/msm7x30/
-#TARGET_KERNEL_CONFIG := ariesve_defconfig
-TARGET_PREBUILT_KERNEL := device/samsung/ariesve/prebuilt/zImage
+TARGET_KERNEL_SOURCE := kernel/samsung/msm7x30/
+TARGET_KERNEL_CONFIG := ariesve_defconfig
 
 # WiFi
 BOARD_HAVE_SAMSUNG_WIFI          := true
@@ -67,7 +63,7 @@ BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_bcmdhd
 BOARD_HOSTAPD_DRIVER             := NL80211
 BOARD_HOSTAPD_PRIVATE_LIB        := lib_driver_cmd_bcmdhd
 BOARD_WLAN_DEVICE                := bcmdhd
-WIFI_DRIVER_MODULE_PATH          := "/lib/modules/dhd.ko"
+WIFI_DRIVER_MODULE_PATH          := "/system/lib/modules/dhd.ko"
 WIFI_DRIVER_MODULE_NAME          := "dhd"
 WIFI_DRIVER_MODULE_ARG           := "firmware_path=/vendor/firmware/fw_bcmdhd.bin nvram_path=/vendor/firmware/nvram_net.txt"
 WIFI_DRIVER_MODULE_AP_ARG        := "firmware_path=/vendor/firmware/fw_bcmdhd_apsta.bin nvram_path=/vendor/firmware/nvram_net.txt"
