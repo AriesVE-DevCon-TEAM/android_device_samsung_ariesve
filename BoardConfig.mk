@@ -27,6 +27,9 @@
 # Vendor stuff
 -include vendor/samsung/ariesve/BoardConfigVendor.mk
 
+# create the folder /usr to prevent the build from failing
+$(shell mkdir -p $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/)
+
 # Platform
 TARGET_BOOTLOADER_BOARD_NAME := ariesve
 TARGET_OTA_ASSERT_DEVICE := ariesve,GT-I9001
