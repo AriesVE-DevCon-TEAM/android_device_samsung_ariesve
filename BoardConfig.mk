@@ -192,6 +192,32 @@ TARGET_BOOTANIMATION_PRELOAD := true
 TARGET_BOOTANIMATION_TEXTURE_CACHE := true
 TARGET_BOOTANIMATION_USE_RGB565 := true
 
+# SELinux
+BOARD_SEPOLICY_DIRS += \
+    device/samsung/ariesve/sepolicy
+
+BOARD_SEPOLICY_UNION += \
+    file_contexts \
+    property_contexts \
+    bridge.te \
+    camera.te \
+    device.te \
+    dhcp.te \
+    domain.te \
+    drmserver.te \
+    file.te \
+    geomagneticd.te \
+    init.te \
+    mac_update.te \
+    mediaserver.te \
+    rild.te \
+    rmt.te \
+    surfaceflinger.te \
+    system.te \
+    tee.te \
+    ueventd.te \
+    wpa_supplicant.te
+
 # Hardware tunables
 BOARD_HARDWARE_CLASS := device/samsung/ariesve/cmhw/
 
