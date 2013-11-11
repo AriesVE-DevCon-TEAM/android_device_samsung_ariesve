@@ -5,10 +5,12 @@ on early-init
     chmod 0644 /proc/cmdline
 
 on init
-    mkdir /storage 0550 system sdcard_r
+    mkdir /storage 0555 system system
     mkdir /storage/sdcard0 0000 system system
     mkdir /storage/sdcard1 0000 system system
     mkdir /storage/usbdisk 0000 system system
+    mkdir /mnt/media_rw/sdcard0 0000 system system
+    mkdir /mnt/media_rw/sdcard1 0000 system system
 
     export EXTERNAL_STORAGE /storage/sdcard0
     export SECONDARY_STORAGE /storage/sdcard1:/storage/usbdisk
@@ -224,6 +226,16 @@ on post-fs-data
     chown dhcp dhcp /data/misc/dhcp
 
     setprop vold.post_fs_data_done 1
+
+# FUSE sdcard daemon for rich permissions (runs as media_rw)
+service fuse_sdcard0 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/sdcard0 /storage/sdcard0
+    class late_start
+    disabled
+
+# FUSE sdcard daemon for rich permissions (runs as media_rw)
+service fuse_sdcard1 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/sdcard1 /storage/sdcard1
+    class late_start
+    disabled
 
 service wpa_supplicant /system/bin/wpa_supplicant \
     -iwlan0 -Dnl80211 -c/data/misc/wifi/wpa_supplicant.conf -O/data/misc/wifi/sockets -e/data/misc/wifi/entropy.bin -g@android:wpa_wlan0
