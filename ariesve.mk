@@ -162,6 +162,11 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.bq.gpu_to_cpu_unsupported=1
 
+# Enable for debugging
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.debuggable=1 \
+    persist.service.adb.enable=1
+
 # For applications to determine if they should turn off specific memory-intensive
 # features that work poorly on low-memory devices.
 PRODUCT_PROPERTY_OVERRIDES += \
