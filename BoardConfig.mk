@@ -194,3 +194,6 @@ TARGET_BOOTANIMATION_USE_RGB565 := true
 
 # Hardware tunables
 BOARD_HARDWARE_CLASS := device/samsung/ariesve/cmhw/
+
+#OTA updater
+USE_SET_METADATA := false
