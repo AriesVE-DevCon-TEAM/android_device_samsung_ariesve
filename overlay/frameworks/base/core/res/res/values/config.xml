@@ -133,9 +133,6 @@
     <!-- Boolean to enable stk functionality on Samsung phones -->
     <bool name="config_samsung_stk">true</bool>
 
-    <!-- Disable the home key unlock setting -->
-    <bool name="config_disableHomeUnlockSetting">false</bool>
-
     <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
     <bool name="config_intrusiveNotificationLed">true</bool>
 
@@ -150,6 +147,9 @@
          For example, a device with Home, Back and Menu keys would set this
          config to 7. -->
     <integer name="config_deviceHardwareKeys">7</integer>
+
+    <!-- Boolean to enable adb by default on a per-device basis -->
+    <bool name="config_enableAdbByDefault">true</bool>
 
     <!-- Flag indicating whether the we should enable the automatic brightness in Settings.
          Software implementation will be used if config_hardware_auto_brightness_available
