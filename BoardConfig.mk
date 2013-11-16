@@ -103,6 +103,7 @@ BOARD_EGL_CFG := device/samsung/ariesve/config/egl.cfg
 BOARD_EGL_NEEDS_LEGACY_FB := true
 BOARD_ALLOW_EGL_HIBERNATION := true
 USE_OPENGL_RENDERER := true
+BOARD_EGL_WORKAROUND_BUG_10194508 := true
 
 # Display stuff
 TARGET_NO_HW_VSYNC := false
