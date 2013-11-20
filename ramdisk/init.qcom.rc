@@ -161,6 +161,11 @@ on boot
     chown system system sys/class/misc/notification/wakelock
     chown system system sys/class/vibetonz/immDuty/pwmvalue_intensity
 
+    # Kernel Samepage Merging (KSM)
+    write /sys/kernel/mm/ksm/pages_to_scan 100
+    write /sys/kernel/mm/ksm/sleep_millisecs 500
+    write /sys/kernel/mm/ksm/run 1
+
     # for silent reset
     chown system system /proc/dump_enable
     chown system system /proc/silent
