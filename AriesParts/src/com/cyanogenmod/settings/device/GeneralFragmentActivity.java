@@ -19,6 +19,7 @@ package com.cyanogenmod.settings.device;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.SystemProperties;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
@@ -39,7 +40,7 @@ public class GeneralFragmentActivity extends PreferenceFragment {
     private Preference mGSensor;
     private CheckBoxPreference mFastCharge;
     private VibrationPreference mVibration;
-    private CheckBoxPreference mLowRamStatus;
+    private Preference mLowRamStatus;
     
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -58,10 +59,9 @@ public class GeneralFragmentActivity extends PreferenceFragment {
 
         mVibration = (VibrationPreference) findPreference(DeviceSettings.KEY_VIBRATION);
         mVibration.setEnabled(VibrationPreference.isSupported());
-        
-        mLowRamStatus = (CheckBoxPreference) findPreference(DeviceSettings.KEY_LOW_RAM);
+
+        mLowRamStatus = (Preference) findPreference(DeviceSettings.KEY_LOW_RAM);
         mLowRamStatus.setEnabled(LowRamChanger.isSupported());
-        mLowRamStatus.setOnPreferenceChangeListener(new LowRamChanger());
     }
 
     public static void restore(Context context) {

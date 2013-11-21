@@ -41,13 +41,14 @@
             <intent android:action="com.cyanogenmod.settings.device.GSensor" />
         </Preference>
     </PreferenceCategory>
-    
-        <!-- Low Ram config -->
-        <PreferenceCategory android:title="@string/category_lowram_title" >
-        <CheckBoxPreference
-            android:defaultValue="true"
+
+    <!-- Low Ram config -->
+    <PreferenceCategory android:title="@string/category_lowram_title" >
+        <Preference
             android:key="low_ram"
             android:summary="@string/low_ram_summary"
-            android:title="@string/low_ram_title" />
-        </PreferenceCategory>
+            android:title="@string/low_ram_title" >
+            <intent android:action="com.cyanogenmod.settings.device.LowRamChanger" />
+        </Preference>
+    </PreferenceCategory>
 </PreferenceScreen>
