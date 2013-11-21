@@ -43,6 +43,10 @@
 
     <string name="button_reset_title">Reset</string>
 
+        <string name="category_lowram_title">Low RAM</string>
+    <string name="low_ram_title">Enable/Disable Low RAM</string>
+    <string name="low_ram_summary">Switch between the state low RAM on or off  - reboot necessary</string>
+    
     <!-- Page TouchKey -->
     <string name="category_touchkey_title">Touch Keys</string>
     <string name="backlight_timeout_title_head">Backlight Timeout</string>

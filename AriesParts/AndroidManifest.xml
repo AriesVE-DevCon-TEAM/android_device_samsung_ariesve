@@ -45,6 +45,14 @@
             </intent-filter>
         </activity>
 
+               <activity android:name=".LowRamChanger"
+            android:label="@string/low_ram_title">
+            <intent-filter>
+                <action android:name="com.cyanogenmod.settings.device.LowRamChanger" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
         <receiver android:name=".Startup" >
             <intent-filter android:priority="100" >
                 <action android:name="android.intent.action.BOOT_COMPLETED" />

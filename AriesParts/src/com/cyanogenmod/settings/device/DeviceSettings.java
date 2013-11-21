@@ -47,7 +47,8 @@ public class DeviceSettings extends Activity {
     public static final String KEY_GSENSOR = "gsensor";
     public static final String KEY_FAST_CHARGE = "force_fast_charge";
     public static final String KEY_VIBRATION = "vibration";
-
+    public static final String KEY_LOW_RAM = "low_ram";
+    
     /* Tab TouchKey */
     public static final String KEY_BACKLIGHT = "backlight";
     public static final String KEY_BACKLIGHT_TIMEOUT = "backlight_timeout";
