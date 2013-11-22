@@ -4,11 +4,10 @@
 rild.libpath=/system/lib/libsec-ril.so
 rild.libargs=-d /dev/smd0
 
-ro.ril.hsxpa=1
-ro.ril.gprsclass=10
-ro.ril.disable.power.collapse=1
+ro.ril.hsxpa=2
+ro.ril.gprsclass=12
 ro.telephony.ril_class=SamsungRIL
-ro.telephony.ril.v3=datacall,icccardstatus
+ro.telephony.ril.v3=datacall,icccardstatus,facilitylock
 
 # Wifi interface device
 wifi.interface=wlan0
