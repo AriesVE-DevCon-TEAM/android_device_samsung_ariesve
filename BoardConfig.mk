@@ -138,9 +138,6 @@ ENABLE_WEBGL := true
 # Sensors
 BOARD_USE_LEGACY_SENSORS_FUSION := false
 
-# Touchscreen
-BOARD_USE_LEGACY_TOUCHSCREEN := true
-
 # USB mass storage
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
 # Enable below line if compiling for a recovery version before 6.0.1.2
