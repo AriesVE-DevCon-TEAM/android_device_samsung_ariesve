@@ -21,6 +21,7 @@ import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceManager;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Button;
 
@@ -49,6 +50,12 @@ public class LowRamChanger extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.lowrambutton);
  
+		String lowramvalue = SystemProperties.get("ro.config.low_ram");
+		TextView tv = (TextView) findViewById(R.id.lowramviewvalue);
+		if (lowramvalue.equals("true")){
+			tv.setText("LOWRAM is currently ON");
+		}else tv.setText("LOWRAM is currently OFF");
+		
 		lowrambutton = (Button) findViewById(R.id.buttonSwitch);
  
 		// add button listener
