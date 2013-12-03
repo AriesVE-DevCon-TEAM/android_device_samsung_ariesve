@@ -24,7 +24,7 @@
 //#define DUMP_PARAMS 1   /* dump parameteters after get/set operation */
 
 #define MAX_CAMERAS_SUPPORTED 2
-#define GRALLOC_USAGE_PMEM_PRIVATE_ADSP GRALLOC_USAGE_PRIVATE_3
+#define GRALLOC_USAGE_PRIVATE_SYSTEM_HEAP	GRALLOC_USAGE_PRIVATE_0
 
 #define CAMERA_ID_FRONT 1
 #define CAMERA_ID_BACK 0
@@ -545,7 +545,7 @@ int camera_set_preview_window(struct camera_device * device,
     //    return -1;
     //}
 
-    window->set_usage(window, GRALLOC_USAGE_PMEM_PRIVATE_ADSP | GRALLOC_USAGE_HW_RENDER);
+    window->set_usage(window, GRALLOC_USAGE_PRIVATE_SYSTEM_HEAP | GRALLOC_USAGE_HW_RENDER);
 
     if (window->set_buffers_geometry(window, preview_width,
                                      preview_height, hal_pixel_format)) {
