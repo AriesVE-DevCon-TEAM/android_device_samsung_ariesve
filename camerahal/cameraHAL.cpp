@@ -24,7 +24,6 @@
 //#define DUMP_PARAMS 1   /* dump parameteters after get/set operation */
 
 #define MAX_CAMERAS_SUPPORTED 2
-#define GRALLOC_USAGE_PRIVATE_SYSTEM_HEAP	GRALLOC_USAGE_PRIVATE_0
 
 #define CAMERA_ID_FRONT 1
 #define CAMERA_ID_BACK 0
@@ -42,6 +41,7 @@
 #include <binder/IMemory.h>
 #include "CameraHardwareInterface.h"
 #include <cutils/properties.h>
+#include <gralloc_priv.h>
 
 using android::sp;
 using android::Overlay;
