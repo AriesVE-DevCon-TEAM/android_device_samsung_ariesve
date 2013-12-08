@@ -180,6 +180,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.zygote.disable_gl_preload=true
 
+# Use ION uncached buffers for video recording and video playback
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.camera.mem.usecache=0 \
+    persist.video.mem.usecache=0
+
 # We have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
 
