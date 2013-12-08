@@ -158,6 +158,11 @@ PRODUCT_PACKAGES += \
 ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.secure=0
 
+# Use ION uncached buffers for video recording and video playback
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.camera.mem.usecache=0 \
+    persist.video.mem.usecache=0
+
 # We have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
 
