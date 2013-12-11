@@ -109,6 +109,7 @@ PRODUCT_PACKAGES += \
     camera.msm7x30 \
     copybit.msm7x30 \
     gralloc.msm7x30 \
+    libgenlock \
     hwcomposer.msm7x30 \
     memtrack.msm7x30 \
     gps.msm7x30 \
