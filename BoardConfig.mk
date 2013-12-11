@@ -223,5 +223,4 @@ BOARD_SEPOLICY_UNION += \
 # Hardware tunables
 BOARD_HARDWARE_CLASS := device/samsung/ariesve/cmhw/
 
-#OTA updater
-#USE_SET_METADATA := false
+SKIP_SET_METADATA := true
