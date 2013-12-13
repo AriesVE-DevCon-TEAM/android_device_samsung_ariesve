@@ -30,11 +30,5 @@
     <string name="gsensor_button1">Concluída</string>
     <string name="gsensor_button2">Calibrar</string>
 
-    <string name="category_vibration_title">Vibração</string>
-    <string name="vibration_title_head">Vibração</string>
-    <string name="vibration_summary_head">Controlar Intensidade de Vibração</string>
-    <string name="vibration_title">Intensidade da Vibraçao</string>
-    <string name="vibration_test_title">Testar</string>
-
     <string name="button_reset_title">Resetar</string>
 </resources>

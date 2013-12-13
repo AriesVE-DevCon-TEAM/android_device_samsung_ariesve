@@ -38,12 +38,6 @@
     <string name="force_fast_charge_head">Быстрая зарядка</string>
     <string name="force_fast_charge_summary_head">Определяет компьютер, подключенный через USB-порт, как зарядное устройство для более быстрого режима зарядки.</string>
 
-    <string name="category_vibration_title">Вибрация</string>
-    <string name="vibration_title_head">Интенсивность вибрации</string>
-    <string name="vibration_summary_head">Настройка интенсивности вибрации</string>
-    <string name="vibration_title">Интенсивность вибрации</string>
-    <string name="vibration_test_title">Тест</string>
-
     <string name="button_reset_title">По умолчанию</string>
 
     <string name="category_pkfmanager_title">Фантомные нажатия</string>
