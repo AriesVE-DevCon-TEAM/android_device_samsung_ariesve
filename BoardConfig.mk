@@ -55,7 +55,7 @@ TARGET_SCREEN_WIDTH := 480
 # Kernel stuff
 BOARD_KERNEL_BASE := 0x00400000
 BOARD_KERNEL_PAGESIZE := 4096
-TARGET_KERNEL_SOURCE := kernel/samsung/msm7x30/
+TARGET_KERNEL_SOURCE := kernel/samsung/msm7x30-common
 TARGET_KERNEL_CONFIG := ariesve_defconfig
 
 # WiFi
@@ -218,7 +218,7 @@ BOARD_SEPOLICY_UNION += \
     wpa_supplicant.te
 
 # Hardware tunables
-BOARD_HARDWARE_CLASS := device/samsung/ariesve/cmhw/
+BOARD_HARDWARE_CLASS := device/samsung/ariesve/cmhw
 
 #OTA updater
 USE_SET_METADATA := false
