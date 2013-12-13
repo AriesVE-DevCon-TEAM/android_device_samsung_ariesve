@@ -192,5 +192,80 @@ $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/config/nvram_net.txt:system/vendor/firmware/nvram_net.txt
 
+# Ril
+PRODUCT_PROPERTY_OVERRIDES += \
+rild.libpath=/system/lib/libsec-ril.so \
+rild.libargs=-d /dev/smd0 \
+ro.ril.hsxpa=2 \
+ro.ril.gprsclass=12 \
+ro.telephony.ril_class=SamsungRIL \
+ro.telephony.ril.v3=datacall,icccardstatus,facilitylock
+
+# Ril sends only one RIL_UNSOL_CALL_RING, so set call_ring.multiple to false
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.telephony.call_ring.multiple=0
+
+# Wifi interface device
+PRODUCT_PROPERTY_OVERRIDES += \
+wifi.interface=wlan0
+
+# Density in DPI of the LCD of this board. This is used to scale the UI
+# appropriately. If this property is not defined, the default value is 160 dpi.
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.sf.lcd_density=240
+
+# The OpenGL ES API level that is natively supported by this device.
+# This is a 16.16 fixed point number.
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.opengles.version=131072
+
+# Perform dexopt in data as our cache partition is very small
+PRODUCT_PROPERTY_OVERRIDES += \
+dalvik.vm.dexopt-data-only=1
+
+# Disable zram by default
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.zram.default=0
+
+# Reduce total number of background apps
+PRODUCT_PROPERTY_OVERRIDES += \
+sys.mem.max_hidden_apps=5
+
+# QCOM
+PRODUCT_PROPERTY_OVERRIDES += \
+com.qc.hardware=true \
+debug.sf.hw=1 \
+debug.egl.hw=1 \
+debug.mdpcomp.logs=0
+
+# Low Power Audio
+PRODUCT_PROPERTY_OVERRIDES += \
+lpa.decode=false \
+lpa.use-stagefright=false
+
+# Resampler quality
+PRODUCT_PROPERTY_OVERRIDES += \
+af.resampler.quality=255
+
+# Set default USB interface
+PRODUCT_PROPERTY_OVERRIDES += \
+persist.sys.usb.config=mass_storage
+
+# Increase speed for UMS transfer
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.vold.umsdirtyratio=50
+
+# Storage configuration
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.vold.switchablepair=/storage/sdcard0,/storage/sdcard1
+
+# Change to 1 for swapping SD cards
+PRODUCT_PROPERTY_OVERRIDES += \
+persist.sys.vold.switchexternal=0
+
+# Enable repeatable keys in recovery
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.cwm.enable_key_repeat=true
+
 # Vendor stuff
 $(call inherit-product-if-exists, vendor/samsung/ariesve/device-vendor.mk)
