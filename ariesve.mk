@@ -158,10 +158,6 @@ PRODUCT_PACKAGES += \
 ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.secure=0
 
-# Fix for Screenshots
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.bq.gpu_to_cpu_unsupported=1
-
 # Use ION uncached buffers for video recording and video playback
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.mem.usecache=0 \
