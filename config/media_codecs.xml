@@ -26,7 +26,6 @@
             <Quirk name="requires-allocate-on-output-ports" />
         </MediaCodec>
         <MediaCodec name="OMX.google.flac.encoder" type="audio/flac"/>
-	<MediaCodec name="OMX.google.vp8.encoder" type="video/x-vnd.on2.vp8" />
         <MediaCodec name="OMX.qcom.audio.encoder.qcelp13" type="audio/qcelp" >
             <Quirk name="requires-allocate-on-input-ports" />
             <Quirk name="requires-allocate-on-output-ports" />
@@ -50,7 +49,7 @@
             <Quirk name="requires-allocate-on-output-ports"/>
             <Quirk name="requires-loaded-to-idle-after-allocation"/>
         </MediaCodec>
-        <MediaCodec name="OMX.google.vpx.encoder" type="video/x-vnd.on2.vp8" />
+        <MediaCodec name="OMX.google.vp8.encoder" type="video/x-vnd.on2.vp8" />
     </Encoders>
     <Decoders>
         <!-- Audio Hardware  -->
@@ -123,7 +122,7 @@
             <Quirk name="defers-output-buffer-allocation"/>
         </MediaCodec>
         <MediaCodec name="OMX.google.vp8.decoder" type="video/x-vnd.on2.vp8" />
-	<MediaCodec name="OMX.google.vp9.decoder" type="video/x-vnd.on2.vp9" />
+	    <MediaCodec name="OMX.google.vp9.decoder" type="video/x-vnd.on2.vp9" />
         <MediaCodec name="OMX.google.h264.decoder" type="video/avc" />
         <MediaCodec name="OMX.google.h263.decoder" type="video/3gpp" />
         <MediaCodec name="OMX.google.mpeg4.decoder" type="video/mp4v-es" />
