@@ -215,6 +215,7 @@ BOARD_SEPOLICY_UNION += \
     drmserver.te \
     file.te \
     geomagneticd.te \
+    healthd.te \
     init.te \
     mac_update.te \
     mediaserver.te \
