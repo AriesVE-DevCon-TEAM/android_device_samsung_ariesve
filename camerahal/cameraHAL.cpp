@@ -99,7 +99,7 @@ typedef struct priv_camera_device {
     camera_data_timestamp_callback data_timestamp_callback;
     camera_request_memory request_memory;
     void *user;
-    int preview_started;
+    int mFixFocus;
     /* old world*/
     int preview_width;
     int preview_height;
@@ -682,6 +682,27 @@ int camera_start_preview(struct camera_device * device)
 
     rv = gCameraHals[dev->cameraid]->startPreview();
 
+
+    if (dev->mFixFocus) {
+        if (dev->cameraid == CAMERA_ID_BACK) {
+            ALOGI("%s: Fix focus mode", __FUNCTION__);
+
+            // We need to switch the focus mode once after switching from video at 720P or the camera won't work.
+            int rv_fm = -EINVAL;
+            CameraParameters camParams;
+            camParams = gCameraHals[dev->cameraid]->getParameters();
+            const char *prevFocusMode = camParams.get(android::CameraParameters::KEY_FOCUS_MODE);
+
+            camParams.set(CameraParameters::KEY_FOCUS_MODE, CameraParameters::FOCUS_MODE_MACRO);
+            rv_fm = gCameraHals[dev->cameraid]->setParameters(camParams);
+
+            camParams.set(android::CameraParameters::KEY_FOCUS_MODE, prevFocusMode);
+            rv_fm = gCameraHals[dev->cameraid]->setParameters(camParams);
+
+            dev->mFixFocus = 0;
+        }
+    }
+
     ALOGI("%s--- rv %d", __FUNCTION__,rv);
     return rv;
 }
@@ -770,8 +791,9 @@ void camera_stop_recording(struct camera_device * device)
 
     gCameraHals[dev->cameraid]->stopRecording();
 
+    dev->mFixFocus = 1;
     //QiSS ME force start preview when recording stop
-    gCameraHals[dev->cameraid]->startPreview();
+    //gCameraHals[dev->cameraid]->startPreview();
 
     ALOGI("%s---", __FUNCTION__);
 }
