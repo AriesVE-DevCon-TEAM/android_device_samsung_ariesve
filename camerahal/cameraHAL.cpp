@@ -673,7 +673,6 @@ int camera_start_preview(struct camera_device * device)
 
     rv = gCameraHals[dev->cameraid]->startPreview();
 
-
     if (dev->mFixFocus) {
         if (dev->cameraid == CAMERA_ID_BACK) {
             ALOGI("%s: Fix focus mode", __FUNCTION__);
@@ -685,6 +684,9 @@ int camera_start_preview(struct camera_device * device)
             const char *prevFocusMode = camParams.get(android::CameraParameters::KEY_FOCUS_MODE);
 
             camParams.set(CameraParameters::KEY_FOCUS_MODE, CameraParameters::FOCUS_MODE_MACRO);
+            rv_fm = gCameraHals[dev->cameraid]->setParameters(camParams);
+
+            camParams.set(CameraParameters::KEY_FOCUS_MODE, CameraParameters::FOCUS_MODE_INFINITY);
             rv_fm = gCameraHals[dev->cameraid]->setParameters(camParams);
 
             camParams.set(android::CameraParameters::KEY_FOCUS_MODE, prevFocusMode);
