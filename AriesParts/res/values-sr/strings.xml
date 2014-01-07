@@ -38,12 +38,6 @@
     <string name="force_fast_charge_head">Укључи брзо пуњење</string>
     <string name="force_fast_charge_summary_head">Препознај USB конекцију рачунара као зидни прикључак за брже пуњење</string>
 
-    <string name="category_vibration_title">Вибрација</string>
-    <string name="vibration_title_head">Вибрација</string>
-    <string name="vibration_summary_head">Подеси јачину вибрације</string>
-    <string name="vibration_title">Јачина вибрације</string>
-    <string name="vibration_test_title">Тестирај</string>
-
     <string name="button_reset_title">Ресетуј</string>
 
     <string name="category_pkfmanager_title">Нежељени притисци тастера</string>

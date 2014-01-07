@@ -39,7 +39,6 @@ public class GeneralFragmentActivity extends PreferenceFragment {
  
     private Preference mGSensor;
     private CheckBoxPreference mFastCharge;
-    private VibrationPreference mVibration;
     private Preference mLowRamStatus;
     
     @Override
@@ -57,15 +56,11 @@ public class GeneralFragmentActivity extends PreferenceFragment {
         mFastCharge.setEnabled(FastCharge.isSupported());
         mFastCharge.setOnPreferenceChangeListener(new FastCharge());
 
-        mVibration = (VibrationPreference) findPreference(DeviceSettings.KEY_VIBRATION);
-        mVibration.setEnabled(VibrationPreference.isSupported());
-
         mLowRamStatus = (Preference) findPreference(DeviceSettings.KEY_LOW_RAM);
         mLowRamStatus.setEnabled(LowRamChanger.isSupported());
     }
 
     public static void restore(Context context) {
         FastCharge.restore(context);
-        VibrationPreference.restore(context);
     }
 }

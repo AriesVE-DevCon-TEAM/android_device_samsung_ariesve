@@ -35,12 +35,6 @@
     <string name="force_fast_charge_head">Forza caricamento rapido</string>
     <string name="force_fast_charge_summary_head">Rileva i PC connessi alla porta USB come semplici caricatori USB, per un più rapido caricamento della batteria</string>
 
-    <string name="category_vibration_title">Vibrazione</string>
-    <string name="vibration_title_head">Vibrazione</string>
-    <string name="vibration_summary_head">Controllo intensità vibrazione</string>
-    <string name="vibration_title">Intensità vibrazione</string>
-    <string name="vibration_test_title">Prova</string>
-
     <string name="button_reset_title">Ripristina</string>
 
     <!-- Page TouchKey -->

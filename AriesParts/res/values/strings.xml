@@ -35,15 +35,9 @@
     <string name="force_fast_charge_head">Force Fast Charge</string>
     <string name="force_fast_charge_summary_head">Detect USB-connected PC as USB Wall Charger, for faster charging mode</string>
 
-    <string name="category_vibration_title">Vibration</string>
-    <string name="vibration_title_head">Vibration</string>
-    <string name="vibration_summary_head">Control vibration intensity</string>
-    <string name="vibration_title">Vibration intensity</string>
-    <string name="vibration_test_title">Test</string>
-
     <string name="button_reset_title">Reset</string>
 
-        <string name="category_lowram_title">Low RAM</string>
+    <string name="category_lowram_title">Low RAM</string>
     <string name="low_ram_title">Enable/Disable Low RAM</string>
     <string name="low_ram_summary">Switch between the state low RAM on or off  - reboot necessary</string>
     <string name="switch_lowram">SWITCH</string>

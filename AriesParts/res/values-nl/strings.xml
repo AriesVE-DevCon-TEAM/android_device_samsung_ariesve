@@ -30,9 +30,4 @@
     <string name="gsensor_button1">Voltooid</string>
     <string name="gsensor_button2">Kalibreren</string>
 
-    <string name="category_vibration_title">Trillen</string>
-    <string name="vibration_title_head">Trillen</string>
-    <string name="vibration_summary_head">Trilintensiteit instellen</string>
-    <string name="vibration_title">Trilintensiteit</string>
-    <string name="vibration_test_title">Test</string>
 </resources>

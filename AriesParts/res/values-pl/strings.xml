@@ -38,12 +38,6 @@
     <string name="force_fast_charge_head">Wymuś szybkie ładowanie</string>
     <string name="force_fast_charge_summary_head">Podłącz telefon do komputera przez port USB w celu właczenia szybkiego ładowania</string>
 
-    <string name="category_vibration_title">Wibracja</string>
-    <string name="vibration_title_head">Wibracja</string>
-    <string name="vibration_summary_head">Ustaw intensywność wibracji</string>
-    <string name="vibration_title">Nasilenie wybracji</string>
-    <string name="vibration_test_title">Test</string>
-
     <string name="button_reset_title">Reset</string>
 
     <string name="category_pkfmanager_title">Phantom key presses</string>

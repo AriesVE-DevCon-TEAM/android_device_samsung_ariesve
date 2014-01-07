@@ -15,14 +15,6 @@
  -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- Vibration -->
-    <PreferenceCategory android:title="@string/category_vibration_title" >
-        <com.cyanogenmod.settings.device.VibrationPreference
-            android:key="vibration"
-            android:summary="@string/vibration_summary_head"
-            android:title="@string/vibration_title_head" />
-    </PreferenceCategory>
-
     <!-- Fastcharge -->
     <PreferenceCategory android:title="@string/category_fast_charge_title" >
         <CheckBoxPreference
