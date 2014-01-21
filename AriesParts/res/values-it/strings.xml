@@ -43,8 +43,6 @@
     <string name="backlight_timeout_summary_head">Imposta l\'intervallo dopo cui la retroilluminazione dei tasti si spegne</string>
     <string name="touchlight_status_title_head">Retroilluminazione pressioni touchscreen</string>
     <string name="touchlight_status_summary_head">Attiva/disattiva la retroilluminazione dei touchkey in caso di pressioni del touchscreen</string>
-    <string name="backlight_title_head">Impostazioni notifiche</string>
-    <string name="backlight_summary_head">Impostazioni retroilluminazione in caso di notifiche (applicazione esterna)</string>
 
     <string name="category_pkfmanager_title">Pressioni fantasma</string>
     <string name="pkfmanager_title_head">Filtro delle pressioni fantasma</string>

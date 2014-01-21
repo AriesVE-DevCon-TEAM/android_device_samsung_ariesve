@@ -21,8 +21,6 @@
     <string name="backlight_timeout_summary_head">Настройка времени подсветки сенсорных кнопок</string>
     <string name="touchlight_status_title_head">Подсветка при касании экрана</string>
     <string name="touchlight_status_summary_head">Включение подсветки при касании сенсорного экрана</string>
-    <string name="backlight_title_head">Уведомления подсветкой</string>
-    <string name="backlight_summary_head">Настройка уведомлений подсветкой кнопок (дополнительное приложение)</string>
 
     <string name="category_screen_title">Экран</string>
     <string name="g_sensor_title">Горизонтальная калибровка</string>

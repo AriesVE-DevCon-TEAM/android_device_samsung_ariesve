@@ -21,8 +21,6 @@
     <string name="backlight_timeout_summary_head">Verzögerung der Hintergrundbeleuchtung der Touch Keys einstellen</string>
     <string name="touchlight_status_title_head">Hintergrundbeleuchtung bei Touchscreenberührung</string>
     <string name="touchlight_status_summary_head">(De-)Aktivieren der Touch Key Hintergrundbeleuchtung bei Berührung des Touchscreens</string>
-    <string name="backlight_title_head">BLN</string>
-    <string name="backlight_summary_head">Backlight Notification Einstellungen (externe App)</string>
 
     <string name="category_screen_title">Anzeige</string>
     <string name="g_sensor_title">Horizontale Kalibrierung</string>

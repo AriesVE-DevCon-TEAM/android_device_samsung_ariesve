@@ -20,8 +20,6 @@
     <string name="backlight_timeout_summary_head">"Configurar el intervalo de tiempo previo al apagado de la iluminacion de teclas"</string>
     <string name="touchlight_status_title_head">Retroiluminacion al pulsar en la pantalla</string>
     <string name="touchlight_status_summary_head">Activar la iluminacion de las teclas tactiles al pulsar en la pantalla</string>
-    <string name="backlight_title_head">Ajustes de notificaciones</string>
-    <string name="backlight_summary_head">Ajustes de retroiluminacion en caso de notificaciones (aplicación externa)</string>
     <string name="category_screen_title">Pantalla</string>
     <string name="g_sensor_title">Calibración horizontal</string>
     <string name="g_sensor_summary">Calibrar dispositivo con el acelerómetro</string>

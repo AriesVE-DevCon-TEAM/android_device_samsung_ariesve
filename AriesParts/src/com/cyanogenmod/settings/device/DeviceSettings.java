@@ -49,10 +49,16 @@ public class DeviceSettings extends Activity {
     public static final String KEY_LOW_RAM = "low_ram";
     
     /* Tab TouchKey */
-    public static final String KEY_BACKLIGHT = "backlight";
     public static final String KEY_BACKLIGHT_TIMEOUT = "backlight_timeout";
     public static final String KEY_TOUCHLIGHT_STATUS = "touchlight_status";
     public static final String KEY_PKFMANAGER = "pkfmanager";
+
+    /* Tab Backlight Notification */
+    public static final String KEY_BLN_TYPE = "bln_type";
+    public static final String KEY_BLN_BLINK_TIMEOUT = "bln_blink_timeout";
+    public static final String KEY_BLN_BLINK_INTERVAL_ON = "bln_blink_interval_on";
+	public static final String KEY_BLN_BLINK_INTERVAL_OFF = "bln_blink_interval_off";
+    public static final String KEY_BLN_STATIC_TIMEOUT = "bln_static_timeout";
 
     ViewPager mViewPager;
     TabsAdapter mTabsAdapter;
@@ -77,6 +83,9 @@ public class DeviceSettings extends Activity {
 
         mTabsAdapter.addTab(bar.newTab().setText(R.string.tab_touchkey_title),
                 TouchKeyFragmentActivity.class, null);
+
+        mTabsAdapter.addTab(bar.newTab().setText(R.string.tab_bln_title),
+                BacklightNotificationFragmentActivity.class, null);
 
         if (savedInstanceState != null) {
             bar.setSelectedNavigationItem(savedInstanceState.getInt("tab", 0));
