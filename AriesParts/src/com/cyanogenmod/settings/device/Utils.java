@@ -24,114 +24,95 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.SyncFailedException;
 
+/**
+ * Utility class
+ */
 public class Utils {
-    private static final String TAG = "DeviceSettings_Utils";
-    private static final String TAG_READ = "DeviceSettings_Utils_Read";
-    private static final String TAG_WRITE = "DeviceSettings_Utils_Write";
 
-    /**
-     * Write a string value to the specified file.
-     *
-     * @param filename The filename
-     * @param value The value
-     */
-    public static void writeValue(String filename, String value) {
-        FileOutputStream fos = null;
-        try {
-            fos = new FileOutputStream(new File(filename), false);
-            fos.write(value.getBytes());
-            fos.flush();
-            // fos.getFD().sync();
-        } catch (FileNotFoundException ex) {
-            Log.w(TAG, "file " + filename + " not found: " + ex);
-        } catch (SyncFailedException ex) {
-            Log.w(TAG, "file " + filename + " sync failed: " + ex);
-        } catch (IOException ex) {
-            Log.w(TAG, "IOException trying to sync " + filename + ": " + ex);
-        } catch (RuntimeException ex) {
-            Log.w(TAG, "exception while syncing file: ", ex);
-        } finally {
-            if (fos != null) {
-                try {
-                    Log.w(TAG_WRITE, "file " + filename + ": " + value);
-                    fos.close();
-                } catch (IOException ex) {
-                    Log.w(TAG, "IOException while closing synced file: ", ex);
-                } catch (RuntimeException ex) {
-                    Log.w(TAG, "exception while closing file: ", ex);
-                }
-            }
-        }
-    }
+	private static final String TAG_READ = "DeviceSettings_Utils_Read";
+	private static final String TAG_WRITE = "DeviceSettings_Utils_Write";
 
-    /**
-     * Write a string value to the specified file.
-     *
-     * @param filename The filename
-     * @param value The value
-     */
-    public static void writeValue(String filename, Boolean value) {
-        FileOutputStream fos = null;
-        String sEnvia;
-        try {
-            fos = new FileOutputStream(new File(filename), false);
-            if (value)
-                sEnvia = "1";
-            else
-                sEnvia = "0";
-            fos.write(sEnvia.getBytes());
-            fos.flush();
-            // fos.getFD().sync();
-        } catch (FileNotFoundException ex) {
-            Log.w(TAG, "file " + filename + " not found: " + ex);
-        } catch (SyncFailedException ex) {
-            Log.w(TAG, "file " + filename + " sync failed: " + ex);
-        } catch (IOException ex) {
-            Log.w(TAG, "IOException trying to sync " + filename + ": " + ex);
-        } catch (RuntimeException ex) {
-            Log.w(TAG, "exception while syncing file: ", ex);
-        } finally {
-            if (fos != null) {
-                try {
-                    Log.w(TAG_WRITE, "file " + filename + ": " + value);
-                    fos.close();
-                } catch (IOException ex) {
-                    Log.w(TAG, "IOException while closing synced file: ", ex);
-                } catch (RuntimeException ex) {
-                    Log.w(TAG, "exception while closing file: ", ex);
-                }
-            }
-        }
-    }
+	/**
+	 * Checks if the specified file path exists
+	 * @param path The file path to check
+	 * @return True if the path exists
+	 */
+	public static boolean fileExists(String path) {
+		return new File(path).exists();
+	}
 
-    /**
-     * Check if the specified file exists.
-     *
-     * @param filename The filename
-     * @return Whether the file exists or not
-     */
-    public static boolean fileExists(String filename) {
-        return new File(filename).exists();
-    }
+	/**
+	 * Checks if the specified path exists and is a directory
+	 * @param path The directory path to check
+	 * @return True if the path exists and is a directory
+	 */
+	public static boolean directoryExists(String path) {
+		File directory = new File(path);
+		return directory.exists() && directory.isDirectory();
+	}
 
-    // Read value from sysfs interface
-    public static String readOneLine(String sFile) {
-        BufferedReader brBuffer;
-        String sLine = null;
+	/**
+	 * Reads from a file
+	 * @param path The file path
+	 * @return The content of the file, if found, otherwise a string empty
+	 */
+	public static String readValue(String path) {
+		// Initialization of the content to return
+		StringBuilder content = new StringBuilder();
 
-        try {
-            brBuffer = new BufferedReader(new FileReader(sFile), 512);
-            try {
-                sLine = brBuffer.readLine();
-            } finally {
-                Log.w(TAG_READ, "file " + sFile + ": " + sLine);
-                brBuffer.close();
-            }
-        } catch (Exception e) {
-            Log.e(TAG_READ, "IO Exception when reading /sys/ file", e);
-        }
-        return sLine;
-    }
+		try {
+			// Create a new buffered reader to read the file content
+			BufferedReader reader = new BufferedReader(new FileReader(new File(path)));
+
+			// Read each file line till the end and append it to the content StringBuilder
+			String line = null;
+			while ((line = reader.readLine()) != null)
+				content.append(line);
+
+			// Close the file
+			reader.close();
+		} catch (FileNotFoundException ex) {
+			Log.e(TAG_READ, String.format("The file %s not exists", path));
+		} catch (IOException ex) {
+			Log.e(TAG_READ, String.format("Error during file %s reading", path));
+		}
+
+		// Return the content of the file
+		return content.toString();
+	}
+
+	/**
+	 * Writes the specified text value to the file
+	 * @param path File path
+	 * @param value The value to write
+	 * @return The result of the operation (true = successful write, false = write failed)
+	 */
+	public static boolean writeValue(String path, String value) {
+		// If the value is null, then replace it with an empty string
+		if (value == null)
+			value = "";
+
+		try {
+			// Create the output stream to perform file writes
+			FileOutputStream stream = new FileOutputStream(new File(path));
+
+			// Write the passed value
+			stream.write(value.getBytes());
+
+			// Flush and close the file
+			stream.flush();
+			stream.close();
+
+			// Successful write
+			return true;
+		} catch (FileNotFoundException e) {
+			Log.e(TAG_WRITE, String.format("The file %s not exists", path));
+			return false;
+		} catch (IOException e) {
+			Log.e(TAG_WRITE, String.format("Error during file %s writing", path));
+			return false;
+		}
+	}
+
 }
