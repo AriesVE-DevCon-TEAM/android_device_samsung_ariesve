@@ -53,4 +53,17 @@
     <string name="category_pkfmanager_title">Pressioni fantasma</string>
     <string name="pkfmanager_title_head">Filtro delle pressioni fantasma</string>
     <string name="pkfmanager_summary_head">Filtra le pressioni dei tasti causate dall\'interferenza dell\'antenna (applicazione esterna)</string>
+
+    <!-- Page BLN -->
+    <string name="category_bln_title">Notifiche luminose</string>
+    <string name="bln_type_title_head">Modalità di notifica</string>
+    <string name="bln_type_summary_head">Imposta la modalità con cui una notifica verrà segnalata dai pulsanti luminosi</string>
+    <string name="bln_blink_timeout_title_head">Durata del lampeggiamento</string>
+    <string name="bln_blink_timeout_summary_head">Imposta la durata del lampeggiamento dei pulsanti</string>
+    <string name="bln_blink_interval_on_title_head">Durata illuminazione accesa</string>
+    <string name="bln_blink_interval_on_summary_head">Imposta la durata di illuminazione accesa durante il lampeggiamento</string>
+    <string name="bln_blink_interval_off_title_head">Durata illuminazione spenta</string>
+    <string name="bln_blink_interval_off_summary_head">Imposta la durata di illuminazione spenta durante il lampeggiamento</string>
+    <string name="bln_static_timeout_title_head">Durata dell\'illuminazione fissa</string>
+    <string name="bln_static_timeout_summary_head">Imposta la durata dell\'illuminazione fissa dei pulsanti</string>
 </resources>

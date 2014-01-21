@@ -22,4 +22,37 @@
         <item>5 secondi</item>
         <item>Mai</item>
     </string-array>
+
+    <string-array name="bln_type_entries">
+        <item>Disabilitato</item>
+        <item>Led lampeggianti</item>
+        <item>Led fissi</item>
+        <item>Led lampeggianti, poi fissi</item>
+    </string-array>
+
+    <string-array name="bln_timeout_entries">
+        <item>10 secondi</item>
+        <item>15 secondi</item>
+        <item>20 secondi</item>
+        <item>30 secondi</item>
+        <item>1 minuto</item>
+        <item>2 minuti</item>
+        <item>5 minuti</item>
+        <item>10 minuti</item>
+        <item>15 minuti</item>
+        <item>30 minuti</item>
+        <item>45 minuti</item>
+        <item>1 ora</item>
+    </string-array>
+
+    <string-array name="bln_blink_interval_entries">
+        <item>0.25 secondi</item>
+        <item>0.5 secondi</item>
+        <item>1 secondo</item>
+        <item>1.5 secondi</item>
+        <item>2 secondi</item>
+        <item>3 secondi</item>
+        <item>4 secondi</item>
+        <item>5 secondi</item>
+    </string-array>
 </resources>
