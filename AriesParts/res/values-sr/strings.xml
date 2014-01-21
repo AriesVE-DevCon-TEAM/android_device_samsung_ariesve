@@ -21,8 +21,6 @@
     <string name="backlight_timeout_summary_head">Подеси дужину трајања осветљености</string>
     <string name="touchlight_status_title_head">Осветљеност тастера при додиру екрана</string>
     <string name="touchlight_status_summary_head">Укључује осветљеност приликом додира екрана</string>
-    <string name="backlight_title_head">Светлосна обавештења</string>
-    <string name="backlight_summary_head">Подешавања светлосних обавештења (екстерна апликација)</string>
 
     <string name="category_screen_title">Екран</string>
     <string name="g_sensor_title">Хоризонтална калибрација</string>
