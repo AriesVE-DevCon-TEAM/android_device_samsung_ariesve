@@ -38,7 +38,6 @@ public class TouchKeyFragmentActivity extends PreferenceFragment {
 
 	private ListPreference mBacklightTimeout;
     private CheckBoxPreference mTouchLightStatus;
-    private Preference mBacklight;
     private Preference mPkfManager;
 
     @Override
@@ -57,9 +56,6 @@ public class TouchKeyFragmentActivity extends PreferenceFragment {
         mTouchLightStatus = (CheckBoxPreference) findPreference(DeviceSettings.KEY_TOUCHLIGHT_STATUS);
         mTouchLightStatus.setEnabled(TouchLightStatus.isSupported());
         mTouchLightStatus.setOnPreferenceChangeListener(new TouchLightStatus());
-
-        mBacklight = (Preference) findPreference(DeviceSettings.KEY_BACKLIGHT);
-        mBacklight.setOnPreferenceClickListener(new TouchKeyBacklight(mContext));
 
         mPkfManager = (Preference) findPreference(DeviceSettings.KEY_PKFMANAGER);
         mPkfManager.setOnPreferenceClickListener(new PkfManager(mContext));

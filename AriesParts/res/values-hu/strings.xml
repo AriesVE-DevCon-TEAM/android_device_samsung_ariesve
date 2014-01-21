@@ -18,8 +18,6 @@
 
     <string name="category_screen_title">Képernyő</string>
     <string name="category_touchkey_title">Érintő Gombok</string>
-    <string name="backlight_title_head">Háttérvilágítás beállítások</string>
-    <string name="backlight_summary_head">Háttérvilágításos értesítés beállítások (külső alkalmazás)</string>
     <string name="backlight_timeout_title_head">Háttérvilágítás Időtúllépése</string>
     <string name="backlight_timeout_summary_head">Állítsa be, mennyi idő után kapcsoljon ki autómatikusan a háttérvilágítás</string>
 

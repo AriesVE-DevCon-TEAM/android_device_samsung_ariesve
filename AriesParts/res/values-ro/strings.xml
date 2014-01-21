@@ -21,8 +21,6 @@
     <string name="backlight_timeout_summary_head">Reglarea unei intarzieri inainte ca lumina de fundal a tastelor tactile sa se opreasca</string>
     <string name="touchlight_status_title_head">Iluminare tastelor la atingerea ecranului</string>
     <string name="touchlight_status_summary_head">Activarea starii luminei de fundal a tastelor tactile la atingerea ecranului </string>
-    <string name="backlight_title_head">Notificarea utilizatorului folosind lumina de fundal a tastelor tactile</string>
-    <string name="backlight_summary_head">Setarile notificarilor utilizand lumina de fundal (utilizand aplicatie externa)</string>
 
     <string name="category_screen_title">Ecran</string>
     <string name="g_sensor_title">Calibrare orizontala</string>

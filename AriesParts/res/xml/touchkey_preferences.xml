@@ -29,10 +29,6 @@
             android:key="touchlight_status"
             android:summary="@string/touchlight_status_summary_head"
             android:title="@string/touchlight_status_title_head" />
-        <Preference
-            android:key="backlight"
-            android:summary="@string/backlight_summary_head"
-            android:title="@string/backlight_title_head" />
     </PreferenceCategory>
 
     <!-- PKF Manager -->
