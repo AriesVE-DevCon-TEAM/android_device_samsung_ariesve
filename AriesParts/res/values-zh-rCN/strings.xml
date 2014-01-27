@@ -15,8 +15,13 @@
  -->
 <resources>
     <string name="app_name">高级设置</string>
+
+    <!-- Page Headers -->
     <string name="tab_general_title">调整</string>
     <string name="tab_touchkey_title">触控键</string>
+    <string name="tab_bln_title">呼吸灯</string>
+
+    <!-- Page General -->
     <string name="category_screen_title">屏幕</string>
     <string name="g_sensor_title">水平校准</string>
     <string name="g_sensor_summary">使用加速计作水平校准</string>
@@ -26,21 +31,39 @@
     <string name="gsensor_end">校准</string>
     <string name="gsensor_button1">完成</string>
     <string name="gsensor_button2">校准</string>
+
     <string name="category_fast_charge_title">快速充电设置</string>
     <string name="force_fast_charge_head">启用快速充电</string>
     <string name="force_fast_charge_summary_head">若检测到USB线连接到电脑，充电会加快。（提醒：打开后无法使用大容量存储）</string>
+
     <string name="category_vibration_title">振动</string>
     <string name="vibration_title_head">振动</string>
     <string name="vibration_summary_head">调节振动强度</string>
     <string name="vibration_title">振动强度</string>
     <string name="vibration_test_title">测试</string>
     <string name="button_reset_title">还原</string>
+
+    <!-- Page TouchKey -->
     <string name="category_touchkey_title">触控键</string>
     <string name="backlight_timeout_title_head">按键灯超时</string>
     <string name="backlight_timeout_summary_head">调整触控键背光自动关闭前的延迟时间</string>
     <string name="touchlight_status_title_head">点击屏幕时背光</string>
     <string name="touchlight_status_summary_head">点击屏幕时激活触控键背光状态</string>
+
     <string name="category_pkfmanager_title">虚假触控键</string>
     <string name="pkfmanager_title_head">触控过滤值</string>
     <string name="pkfmanager_summary_head">调用第三方软件调节虚拟触控值，能避免天线信号干扰造成的自动返回桌面等问题</string>
+
+    <!-- Page BLN -->
+    <string name="category_bln_title">呼吸灯通知</string>
+    <string name="bln_type_title_head">通知类型</string>
+    <string name="bln_type_summary_head">设置触控键呼吸灯闪烁的方式</string>
+    <string name="bln_blink_timeout_title_head">呼吸灯超时</string>
+    <string name="bln_blink_timeout_summary_head">设置闪烁的总持续时间</string>
+    <string name="bln_blink_interval_on_title_head">点亮时长</string>
+    <string name="bln_blink_interval_on_summary_head">设置每次呼吸灯点亮的时长</string>
+    <string name="bln_blink_interval_off_title_head">熄灭时长</string>
+    <string name="bln_blink_interval_off_summary_head">设置每次呼吸灯熄灭的时长</string>
+    <string name="bln_static_timeout_title_head">常亮灯超时</string>
+    <string name="bln_static_timeout_summary_head">设置常亮灯的总持续时间</string>
 </resources>
