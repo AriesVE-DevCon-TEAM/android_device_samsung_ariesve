@@ -14,20 +14,55 @@
      limitations under the License.
  -->
 <resources>
-    <string name="app_name">Galaxy S Plus-instellingen</string>
+    <string name="app_name">Geavanceerde instellingen</string>
 
+    <!-- Page Headers -->
+    <string name="tab_general_title">ALGEMEEN</string>
+    <string name="tab_touchkey_title">TOUCHKEY</string>
+    <string name="tab_bln_title">BLN</string>
+    
+    <!-- Page General -->
     <string name="category_screen_title">Scherm</string>
-    <string name="category_touchkey_title">Aanraakknoppen</string>
-    <string name="backlight_timeout_title_head">Time-out achtergrondverlichting</string>
-    <string name="backlight_timeout_summary_head">Vertraging voor automatisch uitschakelen achtergrondverlichting aanpassen</string>
-
     <string name="g_sensor_title">Horizontale kalibratie</string>
-    <string name="g_sensor_summary">Horizontaal kalibreren met acceleratiemeter</string>
+    <string name="g_sensor_summary">Horizontaal kalibreren met de acceleratiemeter</string>
     <string name="gsensor_ready">Plaats op een vlakke ondergrond en tik op Kalibreren</string>
     <string name="gsensor_calibrating">Kalibreren. Verplaats apparaat niet. Even geduld...</string>
     <string name="gsensor_nofile">Kan margebestand niet vinden. Probeer het opnieuw</string>
     <string name="gsensor_end">Gekalibreerd</string>
     <string name="gsensor_button1">Voltooid</string>
-    <string name="gsensor_button2">Kalibreren</string>
+    <string name="gsensor_button2">Kalibreer</string>
+
+    <string name="category_fast_charge_title">Snel Opladen ondersteuning</string>
+    <string name="force_fast_charge_head">Forceer snel opladen</string>
+    <string name="force_fast_charge_summary_head">Detecteert een via USB verbonden PC als een gewone lader, om sneller op te laden</string>
+
+    <string name="category_lowram_title">Weinig RAM</string>
+    <string name="low_ram_title">Schakel "Weinig RAM"-mode in/uit</string>
+    <string name="low_ram_summary">Wissel tussen "Weinig RAM"-mode aan en uit te zetten - opnieuw opstarten noodzakelijk</string>
+    <string name="switch_lowram">WISSEL</string>
+    
+    <!-- Page TouchKey -->
+    <string name="category_touchkey_title">Aanraakknoppen</string>
+    <string name="backlight_timeout_title_head">Time-out achtergrondverlichting</string>
+    <string name="backlight_timeout_summary_head">Vertraging voor automatisch uitschakelen achtergrondverlichting aanpassen</string>
+    <string name="touchlight_status_title_head">Achtergrondverlichting als op het scherm wordt getikt</string>
+    <string name="touchlight_status_summary_head">Actievatiestatus van achtergrondverlichting indien op het scherm wordt getikt</string>
+
+    <string name="category_pkfmanager_title">Fout geregistreerde tikken</string>
+    <string name="pkfmanager_title_head">Filter fout geregistreerde tikken</string>
+    <string name="pkfmanager_summary_head">Filter tikken op de aanraakknoppen veroorzaakt door interferentie van de antenne (externe applicatie)</string>
+
+    <!-- Page BLN -->
+    <string name="category_bln_title">Achtergrondverlichting Notificatie</string>
+    <string name="bln_type_title_head">Notificatietype</string>
+    <string name="bln_type_summary_head">De manier waarop een notificatie wordt weergegeven door de achtergrondverlichting</string>
+    <string name="bln_blink_timeout_title_head">Knipperen time-out</string>
+    <string name="bln_blink_timeout_summary_head">De periode waarin de lichten knipperen</string>
+    <string name="bln_blink_interval_on_title_head">Knipperen AAN interval</string>
+    <string name="bln_blink_interval_on_summary_head">Het interval waarin het licht AAN is</string>
+    <string name="bln_blink_interval_off_title_head">Knipperen UIT interval</string>
+    <string name="bln_blink_interval_off_summary_head">Het interval waarin het licht UIT is</string>
+    <string name="bln_static_timeout_title_head">Continu licht time-out</string>
+    <string name="bln_static_timeout_summary_head">De periode waarin het licht continu aan blijft</string>
 
 </resources>
