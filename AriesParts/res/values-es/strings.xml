@@ -32,7 +32,6 @@
     <string name="category_fast_charge_title">Soporte de carga rápida</string>
     <string name="force_fast_charge_head">Fuerza la carga rápida</string>
     <string name="force_fast_charge_summary_head">Detectar PC conectado al puerto USB como un simple cargador USB, para una carga más rápida</string>
-    <string name="button_reset_title">Por defecto</string>
     <string name="category_pkfmanager_title">Pulsaciones fantasmas</string>
     <string name="pkfmanager_title_head">Filtro de las pulsaciones fantasma</string>
     <string name="pkfmanager_summary_head">"Filtra las pulsaciones fantasma de las teclas, causadas por la interferencia de la antena (aplicación externa)"</string>

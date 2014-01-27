@@ -36,8 +36,6 @@
     <string name="force_fast_charge_head">Быстрая зарядка</string>
     <string name="force_fast_charge_summary_head">Определяет компьютер, подключенный через USB-порт, как зарядное устройство для более быстрого режима зарядки.</string>
 
-    <string name="button_reset_title">По умолчанию</string>
-
     <string name="category_pkfmanager_title">Фантомные нажатия</string>
     <string name="pkfmanager_title_head">Фильтр фантомных нажатий</string>
     <string name="pkfmanager_summary_head">Фильтр ненужных нажатий на кнопки, возникающих из-за интерференции антенны (дополнительное приложение)</string>

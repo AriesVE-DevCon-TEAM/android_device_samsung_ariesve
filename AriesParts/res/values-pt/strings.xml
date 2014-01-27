@@ -29,6 +29,4 @@
     <string name="gsensor_end">Calibrada</string>
     <string name="gsensor_button1">Concluída</string>
     <string name="gsensor_button2">Calibrar</string>
-
-    <string name="button_reset_title">Resetar</string>
 </resources>

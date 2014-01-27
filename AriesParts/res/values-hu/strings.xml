@@ -33,6 +33,4 @@
     <string name="category_fast_charge_title">Gyors töltés</string>
     <string name="force_fast_charge_head">Gyors töltés kényszerítése</string>
     <string name="force_fast_charge_summary_head">Észlelje az USB-n csatlakoztatott PC-t USB-s Fali Töltőként a gyorsabb töltési módért</string>
-
-    <string name="button_reset_title">Visszaállítás</string>
 </resources>

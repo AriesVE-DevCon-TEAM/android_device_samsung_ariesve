@@ -31,12 +31,10 @@
     <string name="gsensor_end">Skalibrowano</string>
     <string name="gsensor_button1">Ukończono</string>
     <string name="gsensor_button2">Kalibruj</string>
-	
+
     <string name="category_fast_charge_title">Wsparcie dla szybkiego ładowania</string>
     <string name="force_fast_charge_head">Wymuś szybkie ładowanie</string>
     <string name="force_fast_charge_summary_head">Podłącz telefon do komputera przez port USB w celu właczenia szybkiego ładowania</string>
-
-    <string name="button_reset_title">Reset</string>
 
     <string name="category_pkfmanager_title">Phantom key presses</string>
     <string name="pkfmanager_title_head">Phantom key presses filter</string>

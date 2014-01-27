@@ -36,8 +36,6 @@
     <string name="force_fast_charge_head">Укључи брзо пуњење</string>
     <string name="force_fast_charge_summary_head">Препознај USB конекцију рачунара као зидни прикључак за брже пуњење</string>
 
-    <string name="button_reset_title">Ресетуј</string>
-
     <string name="category_pkfmanager_title">Нежељени притисци тастера</string>
     <string name="pkfmanager_title_head">Одбацивање нежељених притисака</string>
     <string name="pkfmanager_summary_head">Одбацивање нежељених притисака тастера, узрокованих сметњама антене (екстерна апликација)</string>

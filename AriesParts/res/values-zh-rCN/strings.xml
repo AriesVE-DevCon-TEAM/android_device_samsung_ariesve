@@ -29,7 +29,6 @@
     <string name="category_fast_charge_title">快速充电设置</string>
     <string name="force_fast_charge_head">启用快速充电</string>
     <string name="force_fast_charge_summary_head">若检测到USB线连接到电脑，充电会加快。（提醒：打开后无法使用大容量存储）</string>
-    <string name="button_reset_title">还原</string>
     <string name="category_touchkey_title">触控键</string>
     <string name="backlight_timeout_title_head">按键灯超时</string>
     <string name="backlight_timeout_summary_head">调整触控键背光自动关闭前的延迟时间</string>

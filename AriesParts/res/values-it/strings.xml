@@ -35,8 +35,6 @@
     <string name="force_fast_charge_head">Forza caricamento rapido</string>
     <string name="force_fast_charge_summary_head">Rileva i PC connessi alla porta USB come semplici caricatori USB, per un più rapido caricamento della batteria</string>
 
-    <string name="button_reset_title">Ripristina</string>
-
     <!-- Page TouchKey -->
     <string name="category_touchkey_title">Tasti a sfioramento</string>
     <string name="backlight_timeout_title_head">Timer retroilluminazione</string>

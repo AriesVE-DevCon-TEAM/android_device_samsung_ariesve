@@ -36,8 +36,6 @@
     <string name="force_fast_charge_head">Fortarea Incarcarii Rapide</string>
     <string name="force_fast_charge_summary_head">Detectarea USB--ului conectat la PC ca un incarcator, pentru o incarcare mai rapida</string>
 
-    <string name="button_reset_title">Resetare</string>
-
     <string name="category_pkfmanager_title">Atingerile "fantoma"</string>
     <string name="pkfmanager_title_head">Filtru pentru atingerile "fantoma"</string>
     <string name="pkfmanager_summary_head">Filtrarea atingerilor nedorite cauzate de interferenta antenei (folosind o aplicatie externa)</string>

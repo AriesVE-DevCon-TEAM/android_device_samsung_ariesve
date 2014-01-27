@@ -36,8 +36,6 @@
     <string name="force_fast_charge_head">Force Fast Charge</string>
     <string name="force_fast_charge_summary_head">Detect USB-connected PC as USB Wall Charger, for faster charging mode</string>
 
-    <string name="button_reset_title">Reset</string>
-
     <string name="category_lowram_title">Low RAM</string>
     <string name="low_ram_title">Enable/Disable Low RAM</string>
     <string name="low_ram_summary">Switch between the state low RAM on or off  - reboot necessary</string>

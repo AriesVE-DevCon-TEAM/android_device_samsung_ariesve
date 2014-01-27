@@ -36,8 +36,6 @@
     <string name="force_fast_charge_head">Schnelles Laden</string>
     <string name="force_fast_charge_summary_head">Den über USB angeschlossenen PC als Aufladestecker erkennen, um schneller zu laden</string>
 
-    <string name="button_reset_title">Reset</string>
-
     <string name="category_pkfmanager_title">Phantom Tastendrücke</string>
     <string name="pkfmanager_title_head">Phantom Tastendrückefilter</string>
     <string name="pkfmanager_summary_head">Filtert durch die Interferenz der Antenne verursachte Tastatureingaben (externe App)</string>
