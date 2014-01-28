@@ -36,10 +36,15 @@
     <string name="force_fast_charge_head">Wymuś szybkie ładowanie</string>
     <string name="force_fast_charge_summary_head">Podłącz telefon do komputera przez port USB w celu włączenia szybkiego ładowania</string>
 
-    <string name="category_lowram_title">Low RAM</string>
-    <string name="low_ram_title">Włącz/Wyłącz Low RAM</string>
-    <string name="low_ram_summary">Włącz lub wyłącz opcję Low RAM - wymaga ponownego uruchomienia telefonu</string>
-    <string name="switch_lowram">PRZEŁĄCZ</string>
+    <string name="category_performance_title">Wydajność</string>
+    <string name="low_ram_title">Kontrola Low RAM</string>
+    <string name="low_ram_summary_on">Low RAM jest włączony, funkcje wymagające dużej ilości RAM-u są wyłączone</string>
+    <string name="low_ram_summary_off">Low RAM jest wyłączony, funkcje wymagające dużej ilości RAM-u są włączone</string>
+    <string name="low_ram_error">Nie udało się zmienić ustawień Low RAM. Proszę nadać uprawnienia root dla tej aplikacji.</string>
+    <string name="low_ram_reboot_alert">Aby zastosować ustawienia, wymagane jest ponowne uruchomienie telefonu.\nCzy chcesz uruchomić ponownie telefon teraz?\n\nNaciśnij TAK, aby uruchomić ponownie telefon. NIE, jeżeli chcesz uruchomić ponownie telefon później.</string>
+    <string name="low_ram_reboot_wait">Telefon zostanie ponownie uruchomiony za %1$d sekund, proszę czekać.</string>
+    <string name="low_ram_reboot_yes">Tak</string>
+    <string name="low_ram_reboot_no">Nie</string>
 
     <!-- Page TouchKey -->
     <string name="category_touchkey_title">Klawisze dotykowe</string>

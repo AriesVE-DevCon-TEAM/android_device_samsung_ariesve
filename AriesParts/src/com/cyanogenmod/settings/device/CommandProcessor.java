@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.cyanogenmod.settings.device.util;
+package com.cyanogenmod.settings.device;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -28,14 +28,14 @@ import java.io.IOException;
 
 import android.util.Log;
 
-public class CMDProcessor {
+public class CommandProcessor {
 
-    private static final String TAG = "CMD Processor";
+    private static final String TAG = "CommandProcessor";
     private Boolean can_su;
     public SH sh;
     public SH su;
 
-    public CMDProcessor() {
+    public CommandProcessor() {
         sh = new SH("sh");
         su = new SH("su");
     }
@@ -101,11 +101,7 @@ public class CMDProcessor {
         public Process run(final String s) {
             Process process = null;
             try {
-                process = Runtime.getRuntime().exec(SHELL);
-                final DataOutputStream toProcess = new DataOutputStream(
-                        process.getOutputStream());
-                toProcess.writeBytes("exec " + s + "\n");
-                toProcess.flush();
+                process = Runtime.getRuntime().exec(new String[] { SHELL, "-c", s });
             } catch (final Exception e) {
                 Log.e(TAG, "Exception while trying to run: '" + s + "' "
                         + e.getMessage());
@@ -155,7 +151,7 @@ public class CMDProcessor {
     }
 
     public static boolean getMount(final String mount) {
-        final CMDProcessor cmd = new CMDProcessor();
+        final CommandProcessor cmd = new CommandProcessor();
         final String mounts[] = getMounts("/system");
         if (mounts != null
                 && mounts.length >= 3) {

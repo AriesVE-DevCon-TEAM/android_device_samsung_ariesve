@@ -36,10 +36,15 @@
     <string name="force_fast_charge_head">Force Fast Charge</string>
     <string name="force_fast_charge_summary_head">Detect USB-connected PC as USB Wall Charger, for faster charging mode</string>
 
-    <string name="category_lowram_title">Low RAM</string>
-    <string name="low_ram_title">Enable/Disable Low RAM</string>
-    <string name="low_ram_summary">Switch between the state low RAM on or off  - reboot necessary</string>
-    <string name="switch_lowram">SWITCH</string>
+    <string name="category_performance_title">Performance</string>
+    <string name="low_ram_title">Low RAM Switch</string>
+    <string name="low_ram_summary_on">Low RAM is enabled, large-RAM features are disabled</string>
+    <string name="low_ram_summary_off">Low RAM is disabled, large-RAM features are enabled</string>
+    <string name="low_ram_error">Impossible to set LowRam setting, please grant the root permissions for this app.</string>
+    <string name="low_ram_reboot_alert">To apply the setting, a reboot is required.\nWould you like to reboot now?\n\nPress Yes to reboot now, No if you prefer to reboot later.</string>
+    <string name="low_ram_reboot_wait">The device will be rebooted in %1$d seconds, please wait.</string>
+    <string name="low_ram_reboot_yes">Yes</string>
+    <string name="low_ram_reboot_no">No</string>
 
     <!-- Page TouchKey -->
     <string name="category_touchkey_title">Touch Keys</string>

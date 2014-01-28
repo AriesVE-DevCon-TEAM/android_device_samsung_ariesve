@@ -34,13 +34,13 @@
         </Preference>
     </PreferenceCategory>
 
-    <!-- Low Ram config -->
-    <PreferenceCategory android:title="@string/category_lowram_title" >
-        <Preference
+    <!-- Performance -->
+    <PreferenceCategory android:title="@string/category_performance_title" >
+        <CheckBoxPreference
             android:key="low_ram"
-            android:summary="@string/low_ram_summary"
-            android:title="@string/low_ram_title" >
-            <intent android:action="com.cyanogenmod.settings.device.LowRamChanger" />
-        </Preference>
+            android:title="@string/low_ram_title"
+            android:summaryOn="@string/low_ram_summary_on"
+            android:summaryOff="@string/low_ram_summary_off"
+            android:defaultValue="true" />
     </PreferenceCategory>
 </PreferenceScreen>

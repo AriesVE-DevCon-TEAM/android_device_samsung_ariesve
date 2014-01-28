@@ -36,10 +36,15 @@
     <string name="force_fast_charge_head">Gyors töltés kényszerítése</string>
     <string name="force_fast_charge_summary_head">A PC-hez való USB csatlakozást érzékelje fali töltőként a gyorsabb töltés érdekében</string>
 
-    <string name="category_lowram_title">Alacsony RAM-használat</string>
-    <string name="low_ram_title">Alacsony RAM-használat engedélyezése/tiltása</string>
-    <string name="low_ram_summary">Váltás az alacsony RAM-használat ki/bekapcsolása közt. Újraindítás szükséges!</string>
-    <string name="switch_lowram">VÁLTÁS</string>
+    <string name="category_performance_title">Teljesítmény</string>
+    <string name="low_ram_title">Alacsony RAM-használat</string>
+    <string name="low_ram_summary_on">Alacsony RAM-használat engedélyezve, ezzel járó memóriakezelési tiltásokkal együtt</string>
+    <string name="low_ram_summary_off">Alacsony RAM-használat letiltva, memóriakezelési tiltások feloldva</string>
+    <string name="low_ram_error">Hiba! Engedélyezd ennek az alkalmazásnak a root-jogokat!</string>
+    <string name="low_ram_reboot_alert">A beállítás engedélyezéséhez újra kell indítani a készüléket.\nSzeretnéd most megtenni?\n\nNyomj igent ha most, nem-et ha később indítanál újra.</string>
+    <string name="low_ram_reboot_wait">A készülék %1$d másodperc múlva újraindul, kis türelem...</string>
+    <string name="low_ram_reboot_yes">Igen</string>
+    <string name="low_ram_reboot_no">Nem</string>
 
     <!-- Page TouchKey -->
     <string name="category_touchkey_title">Érintőgombok</string>

@@ -39,7 +39,7 @@ public class GeneralFragmentActivity extends PreferenceFragment {
  
     private Preference mGSensor;
     private CheckBoxPreference mFastCharge;
-    private Preference mLowRamStatus;
+    private CheckBoxPreference mLowRamStatus;
     
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -56,8 +56,15 @@ public class GeneralFragmentActivity extends PreferenceFragment {
         mFastCharge.setEnabled(FastCharge.isSupported());
         mFastCharge.setOnPreferenceChangeListener(new FastCharge());
 
-        mLowRamStatus = (Preference) findPreference(DeviceSettings.KEY_LOW_RAM);
-        mLowRamStatus.setEnabled(LowRamChanger.isSupported());
+        mLowRamStatus = (CheckBoxPreference) findPreference(DeviceSettings.KEY_LOW_RAM);
+        mLowRamStatus.setEnabled(LowRam.isSupported());
+        mLowRamStatus.setOnPreferenceChangeListener(new LowRam());
+    }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        mLowRamStatus.setChecked(LowRam.getPropertyValue());
     }
 
     public static void restore(Context context) {

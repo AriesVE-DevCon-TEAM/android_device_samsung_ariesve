@@ -36,11 +36,16 @@
     <string name="force_fast_charge_head">Forceer snel opladen</string>
     <string name="force_fast_charge_summary_head">Detecteert een via USB verbonden PC als een gewone lader, om sneller op te laden</string>
 
-    <string name="category_lowram_title">Weinig RAM</string>
-    <string name="low_ram_title">Schakel "Weinig RAM"-mode in/uit</string>
-    <string name="low_ram_summary">Wissel tussen "Weinig RAM"-mode aan en uit te zetten - opnieuw opstarten noodzakelijk</string>
-    <string name="switch_lowram">WISSEL</string>
-    
+    <string name="category_performance_title">Performantie</string>
+    <string name="low_ram_title">Weinig RAM schakelaar</string>
+    <string name="low_ram_summary_on">Weinig RAM is ingeschakeld, functionaliteit voor apparaten met veel RAM is niet beschikbaar</string>
+    <string name="low_ram_summary_off">Weinig RAM is uitgeschakeld, functionaliteit voor apparaten met veel RAM is beschikbaar</string>
+    <string name="low_ram_error">Onmogelijk om de instelling aan te passen, gelieve voor deze applicatie root-toegang toe te staan</string>
+    <string name="low_ram_reboot_alert">Om deze instelling toe te passen is opnieuw opstarten noodzakelijk.\nWilt u nu opnieuw opstarten?\n\nTik op Ja om nu opnieuw op te starten of op Nee als u dit later wilt doen.</string>
+    <string name="low_ram_reboot_wait">Het apparaat wordt opnieuw opgestart over %1$d seconden, even geduld.</string>
+    <string name="low_ram_reboot_yes">Ja</string>
+    <string name="low_ram_reboot_no">Nee</string>
+
     <!-- Page TouchKey -->
     <string name="category_touchkey_title">Aanraakknoppen</string>
     <string name="backlight_timeout_title_head">Time-out achtergrondverlichting</string>
