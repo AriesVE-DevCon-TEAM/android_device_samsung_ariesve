@@ -16,23 +16,25 @@
 <resources>
     <string name="app_name">Haladó beállítások</string>
 
-    <string name="category_screen_title">Képernyő</string>
-    <string name="category_touchkey_title">Érintő Gombok</string>
-    <string name="backlight_timeout_title_head">Háttérvilágítás Időtúllépése</string>
-    <string name="backlight_timeout_summary_head">Állítsa be, mennyi idő után kapcsoljon ki autómatikusan a háttérvilágítás</string>
+    <!-- Page Headers -->
+    <string name="tab_general_title">ÁLTALÁNOS</string>
+    <string name="tab_touchkey_title">ÉRINTŐGOMBOK</string>
+    <string name="tab_bln_title">BLN</string>
 
+    <!-- Page General -->
+    <string name="category_screen_title">Kijelző</string>
     <string name="g_sensor_title">Vízszintes kalibrálás</string>
-    <string name="g_sensor_summary">Vízszintes kalibrálás a gyorsulásméró segítségével</string>
-    <string name="gsensor_ready">Helyezze a készüléket egy sík felületre és érintse meg a Kalibrálás gombot</string>
-    <string name="gsensor_calibrating">Kalibrálás. Ne mozgassa a készüléket. Kérjük, várjon...</string>
-    <string name="gsensor_nofile">A fájl nem található. Próbálja újra</string>
+    <string name="g_sensor_summary">Vízszintes kalibrálás a gyorulásmérő használatával</string>
+    <string name="gsensor_ready">Helyezd a készüléket vízszintes felületre és érintsd meg a "Kalibrálás" gombot</string>
+    <string name="gsensor_calibrating">Kalibrálás folyamatban...Kérlek ne mozgasd a készüléket!</string>
+    <string name="gsensor_nofile">A fájl nem található. Kérlek próbáld újra</string>
     <string name="gsensor_end">Kalibrálva</string>
-    <string name="gsensor_button1">Kész</string>
+    <string name="gsensor_button1">Befejezve</string>
     <string name="gsensor_button2">Kalibrálás</string>
 
-    <string name="category_fast_charge_title">Gyors töltés</string>
+    <string name="category_fast_charge_title">Gyors töltés engedélyezése</string>
     <string name="force_fast_charge_head">Gyors töltés kényszerítése</string>
-    <string name="force_fast_charge_summary_head">Észlelje az USB-n csatlakoztatott PC-t USB-s Fali Töltőként a gyorsabb töltési módért</string>
+    <string name="force_fast_charge_summary_head">A PC-hez való USB csatlakozást érzékelje fali töltőként a gyorsabb töltés érdekében</string>
 
     <string name="category_vibration_title">Vibráció</string>
     <string name="vibration_title_head">Vibráció</string>
@@ -41,4 +43,28 @@
     <string name="vibration_test_title">Teszt</string>
 
     <string name="button_reset_title">Visszaállítás</string>
+
+    <!-- Page TouchKey -->
+    <string name="category_touchkey_title">Érintőgombok</string>
+    <string name="backlight_timeout_title_head">Érintőgombok időzítése</string>
+    <string name="backlight_timeout_summary_head">Állísd be, meddig tartson az érintőgombok háttérvilágítása</string>
+    <string name="touchlight_status_title_head">Gombnyomásra világítás</string>
+    <string name="touchlight_status_summary_head">A háttérvilágítás ki/bekapcsolásának beállítása</string>
+
+    <string name="category_pkfmanager_title">Véletlenszerű gomblenyomás-érzékelés</string>
+    <string name="pkfmanager_title_head">Véletlenszerű gomblenyomások</string>
+    <string name="pkfmanager_summary_head">Külső alkalmazás segítségével szűrje az antenna-interferencia okozta gombnyomásokat</string>
+
+    <!-- Page BLN -->
+    <string name="category_bln_title">Háttérvilágításos értesítések</string>
+    <string name="bln_type_title_head">Értesítés formája</string>
+    <string name="bln_type_summary_head">Állítsd be, értesítés esetén hogyan világítsanak az érintőgombok</string>
+    <string name="bln_blink_timeout_title_head">Villogó gombok időtartama</string>
+    <string name="bln_blink_timeout_summary_head">Állítsd be meddig villogjon a háttérvilágítás</string>
+    <string name="bln_blink_interval_on_title_head">Felvillanás időtartama</string>
+    <string name="bln_blink_interval_on_summary_head">Állítsd be meddig tartson egy felvillanás</string>
+    <string name="bln_blink_interval_off_title_head">Szünet időtartama</string>
+    <string name="bln_blink_interval_off_summary_head">Állítsd be mekkora legyen a szünet két villanás közt</string>
+    <string name="bln_static_timeout_title_head">Folytonos világítás időtartama</string>
+    <string name="bln_static_timeout_summary_head">Állítsd be meddig tartson a folytonos világítás</string>
 </resources>
