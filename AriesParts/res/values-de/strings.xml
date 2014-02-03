@@ -16,12 +16,12 @@
 <resources>
     <string name="app_name">Erweiterte Einstellungen</string>
 
-    <string name="category_touchkey_title">Touch Keys</string>
-    <string name="backlight_timeout_title_head">Hintergrundbeleuchtung</string>
-    <string name="backlight_timeout_summary_head">Verzögerung der Hintergrundbeleuchtung der Touch Keys einstellen</string>
-    <string name="touchlight_status_title_head">Hintergrundbeleuchtung bei Touchscreenberührung</string>
-    <string name="touchlight_status_summary_head">(De-)Aktivieren der Touch Key Hintergrundbeleuchtung bei Berührung des Touchscreens</string>
+    <!-- Page Headers -->
+    <string name="tab_general_title">GENERAL</string>
+    <string name="tab_touchkey_title">TOUCHKEY</string>
+    <string name="tab_bln_title">BLN</string>
 
+    <!-- Page General -->
     <string name="category_screen_title">Anzeige</string>
     <string name="g_sensor_title">Horizontale Kalibrierung</string>
     <string name="g_sensor_summary">Horizontale Kalibrierung mit Accelerometer</string>
@@ -36,7 +36,37 @@
     <string name="force_fast_charge_head">Schnelles Laden</string>
     <string name="force_fast_charge_summary_head">Den über USB angeschlossenen PC als Aufladestecker erkennen, um schneller zu laden</string>
 
+	<string name="category_performance_title">Performance</string>
+	<string name="low_ram_title">Low RAM Schalter</string>
+	<string name="low_ram_summary_on">Low RAM ist aktiviert, large-RAM ist deaktiviert.</string>
+	<string name="low_ram_summary_off">Low RAM ist deaktiviert, large-RAM ist aktiviert</string>
+	<string name="low_ram_error">LowRAM Einstellung kann nicht übernommen werden, stelle sicher, dass die App Root Berechtigungen hat.</string>
+	<string name="low_ram_reboot_alert">Zur Übernahme der Einstellungen ist ein Neustart notwendig.\nMöchtest Du jetzt neu starten?\n\nDrücke Ja um neu zu starten, Nein wenn Du später neu starten willst.</string>
+	<string name="low_ram_reboot_wait">Das Gerät startet in %1$d Sekunden neu, bitte warten.</string>
+	<string name="low_ram_reboot_yes">Ja</string>
+	<string name="low_ram_reboot_no">Nein</string>
+
+    <!-- Page TouchKey -->
+    <string name="category_touchkey_title">Touch Keys</string>
+    <string name="backlight_timeout_title_head">Hintergrundbeleuchtung</string>
+    <string name="backlight_timeout_summary_head">Verzögerung der Hintergrundbeleuchtung der Touch Keys einstellen</string>
+    <string name="touchlight_status_title_head">Hintergrundbeleuchtung bei Touchscreenberührung</string>
+    <string name="touchlight_status_summary_head">(De-)Aktivieren der Touch Key Hintergrundbeleuchtung bei Berührung des Touchscreens</string>
+
     <string name="category_pkfmanager_title">Phantom Tastendrücke</string>
     <string name="pkfmanager_title_head">Phantom Tastendrückefilter</string>
     <string name="pkfmanager_summary_head">Filtert durch die Interferenz der Antenne verursachte Tastatureingaben (externe App)</string>
+
+    <!-- Page BLN -->
+    <string name="category_bln_title">LED Benachrichtigunglicht</string>
+    <string name="bln_type_title_head">Art der Benachrichtigung</string>
+    <string name="bln_type_summary_head">Wähle die Art, wie die LEDs Benachrichtigungen darstellen</string>
+    <string name="bln_blink_timeout_title_head">Maximale Blinkdauer</string>
+    <string name="bln_blink_timeout_summary_head">Einstellung für die maximale Blinkdauer</string>
+    <string name="bln_blink_interval_on_title_head">LED AN Intervall</string>
+    <string name="bln_blink_interval_on_summary_head">Einstellung für die Dauer der LED AN</string>
+    <string name="bln_blink_interval_off_title_head">LED AUS Intervall</string>
+    <string name="bln_blink_interval_off_summary_head">Einstellung für die Dauer der LED AUS</string>
+    <string name="bln_static_timeout_title_head">Dauer des statischen Leuchtens der LED</string>
+    <string name="bln_static_timeout_summary_head">Einstellungen für die Dauer des statischen Leuchtens der LED</string>
 </resources>

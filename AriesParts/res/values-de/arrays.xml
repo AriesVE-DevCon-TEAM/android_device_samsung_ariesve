@@ -22,4 +22,37 @@
         <item>5 Sekunden</item>
         <item>Nie</item>
     </string-array>
+
+    <string-array name="bln_type_entries">
+        <item>Deaktiviert</item>
+        <item>Intervall</item>
+        <item>Statisch</item>
+        <item>Intervall und statisch</item>
+    </string-array>
+
+    <string-array name="bln_timeout_entries">
+        <item>10 Sekunden</item>
+        <item>15 Sekunden</item>
+        <item>20 Sekunden</item>
+        <item>30 Sekunden</item>
+        <item>1 Minute</item>
+        <item>2 Minuten</item>
+        <item>5 Minuten</item>
+        <item>10 Minuten</item>
+        <item>15 Minuten</item>
+        <item>30 Minuten</item>
+        <item>45 Minuten</item>
+        <item>1 Stunde</item>
+    </string-array>
+
+    <string-array name="bln_blink_interval_entries">
+        <item>0.25 Sekunden</item>
+        <item>0.5 Sekunden</item>
+        <item>1 Sekunde</item>
+        <item>1.5 Sekunden</item>
+        <item>2 Sekunden</item>
+        <item>3 Sekunden</item>
+        <item>4 Sekunden</item>
+        <item>5 Sekunden</item>
+    </string-array>
 </resources>
