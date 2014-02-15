@@ -58,7 +58,6 @@ using android::CameraHardwareInterface;
 
 static sp<CameraHardwareInterface> gCameraHals[MAX_CAMERAS_SUPPORTED];
 static unsigned int gCamerasOpen = 0;
-//static android::Mutex gCameraDeviceLock;
 
 static int camera_device_open(const hw_module_t* module, const char* name,
                               hw_device_t** device);
@@ -66,7 +65,6 @@ static int camera_device_close(hw_device_t* device);
 static int camera_get_number_of_cameras(void);
 static int camera_get_camera_info(int camera_id, struct camera_info *info);
 int camera_get_number_of_cameras(void);
-static inline void rotateJPEG(void* src,size_t size);
 
 static struct hw_module_methods_t camera_module_methods = {
     open: camera_device_open
@@ -304,8 +302,6 @@ static camera_memory_t *wrap_memory_data(priv_camera_device_t *dev,
     ALOGV(" mem:%p,mem->data%p ",  mem,mem->data);
 
     memcpy(mem->data, data, size);
-    /*if (dev->cameraid==CAMERA_ID_FRONT)
-        rotateJPEG(mem->data,size);*/
 
     ALOGV("%s---", __FUNCTION__);
     return mem;
@@ -496,12 +492,6 @@ int camera_set_preview_window(struct camera_device * device,
     const char *str_preview_format = params.getPreviewFormat();
 
     ALOGI("%s: preview format %s", __FUNCTION__, str_preview_format);
-
-    //Enable panorama without camera application "hacks"
-    //if (window->set_usage(window, GRALLOC_USAGE_SW_WRITE_MASK)) {
-    //    ALOGE("%s---: could not set usage on gralloc buffer", __FUNCTION__);
-    //    return -1;
-    //}
 
     window->set_usage(window, GRALLOC_USAGE_PRIVATE_SYSTEM_HEAP | GRALLOC_USAGE_HW_RENDER);
 
@@ -709,11 +699,8 @@ int camera_store_meta_data_in_buffers(struct camera_device * device, int enable)
 
     dev = (priv_camera_device_t*) device;
 
-    //  TODO: meta data buffer not current supported
-    //rv = gCameraHals[dev->cameraid]->storeMetaDataInBuffers(enable);
     ALOGI("%s--- rv %d", __FUNCTION__,rv);
     return rv;
-    //return enable ? android::INVALID_OPERATION: android::OK;
 }
 
 int camera_start_recording(struct camera_device * device)
@@ -748,8 +735,6 @@ void camera_stop_recording(struct camera_device * device)
     gCameraHals[dev->cameraid]->stopRecording();
 
     dev->mFixFocus = 1;
-    //QiSS ME force start preview when recording stop
-    //gCameraHals[dev->cameraid]->startPreview();
 
     ALOGI("%s---", __FUNCTION__);
 }
@@ -775,24 +760,7 @@ int camera_recording_enabled(struct camera_device * device)
 void camera_release_recording_frame(struct camera_device * device,
                                     const void *opaque)
 {
-    priv_camera_device_t* dev = NULL;
-    //camera_memory_t *data = (camera_memory_t *)(&opaque);
-
-
-    //ALOGI("%s+++: device %p,opaque %p,data %p", __FUNCTION__, device,opaque,data);
-
-    if(!device)
-        return;
-
-    dev = (priv_camera_device_t*) device;
-    /*
-     if ( NULL != data ) {
-     data->release(data);
-     }
-     */
-    //gCameraHals[dev->cameraid]->releaseRecordingFrame(opaque);
-
-    ALOGI("%s---", __FUNCTION__);
+    ALOGI("%s", __FUNCTION__);
 }
 
 int camera_auto_focus(struct camera_device * device)
@@ -983,6 +951,8 @@ int camera_dump(struct camera_device * device, int fd)
 {
     int rv = -EINVAL;
     priv_camera_device_t* dev = NULL;
+
+#if 0
     ALOGI("%s", __FUNCTION__);
 
     if(!device)
@@ -990,7 +960,9 @@ int camera_dump(struct camera_device * device, int fd)
 
     dev = (priv_camera_device_t*) device;
 
-    // rv = gCameraHals[dev->cameraid]->dump(fd);
+    rv = gCameraHals[dev->cameraid]->dump(fd);
+#endif
+
     return rv;
 }
 
@@ -1002,8 +974,6 @@ int camera_device_close(hw_device_t* device)
     priv_camera_device_t* dev = NULL;
 
     ALOGI("%s+++: device %p", __FUNCTION__, device);
-
-    //android::Mutex::Autolock lock(gCameraDeviceLock);
 
     if (!device) {
         ret = -EINVAL;
@@ -1061,8 +1031,6 @@ int camera_device_open(const hw_module_t* module, const char* name,
     priv_camera_device_t* priv_camera_device = NULL;
     camera_device_ops_t* camera_ops = NULL;
     sp<CameraHardwareInterface> camera = NULL;
-
-    //android::Mutex::Autolock lock(gCameraDeviceLock);
 
     /* add SIGFPE handler */
     signal(SIGFPE, sigfpe_handle);
@@ -1197,22 +1165,4 @@ int camera_get_camera_info(int camera_id, struct camera_info *info)
     ALOGI("%s: id:%i faceing:%i orientation: %i", __FUNCTION__, camera_id, info->facing, info->orientation);
 
     return rv;
-}
-
-extern "C" {
-#include "exif/jhead.h"
-}
-
-static inline void rotateJPEG(void* src,size_t size) {
-    ReadMode_t ReadMode = READ_METADATA;
-
-    ALOGE("ResetJpgfile");
-    ResetJpgfile();
-
-    // Start with an empty image information structure.
-    memset(&CameraHALImageInfo, 0, sizeof(CameraHALImageInfo));
-
-    ALOGE("ReadJpegFile");
-    ReadJpegSectionsFromBuffer((unsigned char*)src, size, ReadMode);
-
 }
