@@ -863,6 +863,24 @@ int camera_set_parameters(struct camera_device * device, const char *params)
     camParams.dump();
 #endif
 
+    // If the front camera is going to be used
+    if (dev->cameraid == CAMERA_ID_FRONT) {
+        // Get recording hint (set in video recordin only) and rotation
+        const char *recordingHint = camParams.get(CameraParameters::KEY_RECORDING_HINT);
+        int rotation = camParams.getInt(CameraParameters::KEY_ROTATION);
+
+        // If the current mode is not video recording and the rotation
+        // is a portrait rotation (eg. 90, 270, etc), add 180 degree to
+        // fix the rotation of the taken photo
+        if ((recordingHint == NULL ||
+             strcmp(recordingHint, CameraParameters::FALSE) == 0) &&
+            (rotation / 90) % 2 > 0) {
+            rotation = (rotation + 180) % 360;
+            camParams.set(CameraParameters::KEY_ROTATION, rotation);
+            ALOGI("%s: Rotation changed to %d", __FUNCTION__, rotation);
+        }
+    }
+
     rv = gCameraHals[dev->cameraid]->setParameters(camParams);
 
 #ifdef DUMP_PARAMS
