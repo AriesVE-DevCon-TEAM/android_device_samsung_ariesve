@@ -165,45 +165,6 @@ static void wrap_set_crop_hook(void *data,
     dev = (priv_camera_device_t*) data;
 }
 
-static void swap_yuv_buffer(uint8_t *buff, char *frame,
-                            int width, int height) {
-    /*
-     * The YUV420 Semi-Planar frame is constructed as follows:
-     *
-     * - the Y values are stored in one plane:
-     * |-------------------------------|   _
-     * | Y0 | Y1 | Y2 | Y3 | ...       |   |
-     * | ...                           | height
-     * |                               |   |
-     * |-------------------------------|   -
-     * <------------ width ------------>
-     *
-     * - the U and V values (sub-sampled by 2) are stored in another plane:
-     * |-------------------------------|   _
-     * | U0 | V0 | U2 | V2 | ....      |   |
-     * | ...                           | height/2
-     * |                               |   |
-     * |-------------------------------|   -
-     * <------------ width ------------>
-     */
-
-    int pos = 0;
-
-    //swap Y plane
-    for (int y = 0; y < height; ++y) {
-        pos = y * width;
-        for (int x = 0; x < width; ++x)
-            buff[pos + x] = frame[pos + width - x - 1];
-    }
-
-    //swap UV plane
-    for (int y = 0; y < height/2; ++y) {
-        pos += width;
-        for (int x = 0; x < width; ++x)
-            buff[pos + x] = frame[pos + width - x - 2];
-    }
-}
-
 //QiSS ME for preview
 static void wrap_queue_buffer_hook(void *data, void* buffer)
 {
@@ -246,11 +207,7 @@ static void wrap_queue_buffer_hook(void *data, void* buffer)
     if (0 == dev->gralloc->lock(dev->gralloc, *buf_handle,
                                 GRALLOC_USAGE_SW_WRITE_MASK,
                                 0, 0, width, height, &vaddr)) {
-        if (dev->cameraid == CAMERA_ID_FRONT)
-            swap_yuv_buffer((uint8_t *)vaddr, frame, width, height);
-        else
-            memcpy(vaddr, frame, width * height * 3 / 2);
-
+        memcpy(vaddr, frame, width * height * 3 / 2);
         ALOGV("%s: copy frame to gralloc buffer", __FUNCTION__);
     } else {
         ALOGE("%s: could not lock gralloc buffer", __FUNCTION__);
