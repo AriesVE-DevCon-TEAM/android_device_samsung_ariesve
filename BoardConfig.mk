@@ -147,9 +147,6 @@ BOARD_USES_QCOM_AUDIO_LPA := true
 BOARD_USES_QCOM_AUDIO_RESETALL := true
 BOARD_USES_QCOM_AUDIO_VOIPMUTE := true
 
-# Sensors
-BOARD_USE_LEGACY_SENSORS_FUSION := false
-
 # USB mass storage
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
 
