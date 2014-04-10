@@ -33,6 +33,7 @@
     <string name="gsensor_button2">Calibrate</string>
 
     <string name="category_fast_charge_title">Fast Charge Support</string>
+    <string name="force_fast_charge_usbwarning">Remove the USB cable</string>
     <string name="force_fast_charge_head">Force Fast Charge</string>
     <string name="force_fast_charge_summary_head">Detect USB-connected PC as USB Wall Charger, for faster charging mode</string>
 

@@ -19,7 +19,9 @@ package com.cyanogenmod.settings.device;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.SystemProperties;
+import android.os.FileObserver;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
@@ -30,6 +32,8 @@ import android.preference.PreferenceScreen;
 import android.util.Log;
 import android.view.Gravity;
 import android.widget.Toast;
+import android.widget.CheckBox;
+import android.util.Log;
 
 import com.cyanogenmod.settings.device.R;
 
@@ -40,7 +44,26 @@ public class GeneralFragmentActivity extends PreferenceFragment {
     private Preference mGSensor;
     private CheckBoxPreference mFastCharge;
     private CheckBoxPreference mLowRamStatus;
-    
+    private FileObserver mObserver;
+
+    private Handler mHandler = new Handler();
+
+	private final Runnable mFileChangedRunnable = new Runnable() {
+		@Override
+		public void run() {
+			boolean mNewFeatureValue = "1".equals(Utils.readValue(FastCharge.FilePath()));
+			onFileChanged(mNewFeatureValue);
+			mFastCharge.setChecked(mNewFeatureValue);
+		}
+	};
+
+	/**
+	 * subclasses can override onFileChanged() to hook
+	 * into the FileObserver onEvent() callback
+	 */
+
+	protected void onFileChanged(boolean featureState){}
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,13 +71,22 @@ public class GeneralFragmentActivity extends PreferenceFragment {
         addPreferencesFromResource(R.xml.general_preferences);
 
         PreferenceScreen prefSet = getPreferenceScreen();
+        Context mContext = getActivity();
 
         mGSensor = (Preference) findPreference(DeviceSettings.KEY_GSENSOR);
         mGSensor.setEnabled(GSensor.isSupported());
 
         mFastCharge = (CheckBoxPreference) findPreference(DeviceSettings.KEY_FAST_CHARGE);
         mFastCharge.setEnabled(FastCharge.isSupported());
-        mFastCharge.setOnPreferenceChangeListener(new FastCharge());
+        mFastCharge.setOnPreferenceChangeListener(new FastCharge(mContext));
+
+		mObserver = new FileObserver(FastCharge.FilePath(), FileObserver.MODIFY) {
+			@Override
+			public void onEvent(int event, String file) {
+				mHandler.postDelayed(mFileChangedRunnable, 1);
+			}
+		};
+		mObserver.startWatching();
 
         mLowRamStatus = (CheckBoxPreference) findPreference(DeviceSettings.KEY_LOW_RAM);
         mLowRamStatus.setEnabled(LowRam.isSupported());
@@ -65,9 +97,16 @@ public class GeneralFragmentActivity extends PreferenceFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         mLowRamStatus.setChecked(LowRam.getPropertyValue());
+        mFastCharge.setChecked(((Utils.readValue(FastCharge.FilePath()) == "1")));
+    }
+
+    @Override
+    public void onDestroy() {
+    	mObserver.stopWatching();
+    	super.onDestroy();
     }
 
     public static void restore(Context context) {
-        FastCharge.restore(context);
+        //FastCharge.restore(context);
     }
 }

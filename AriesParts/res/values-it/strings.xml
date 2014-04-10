@@ -32,6 +32,7 @@
     <string name="gsensor_button2">Calibra</string>
 
     <string name="category_fast_charge_title">Supporto caricamento rapido</string>
+    <string name="force_fast_charge_usbwarning">Rimuovi il cavo USB</string>
     <string name="force_fast_charge_head">Forza caricamento rapido</string>
     <string name="force_fast_charge_summary_head">Rileva i PC connessi alla porta USB come semplici caricatori USB, per un più rapido caricamento della batteria</string>
 

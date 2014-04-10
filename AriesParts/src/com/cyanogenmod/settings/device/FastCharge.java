@@ -2,13 +2,26 @@ package com.cyanogenmod.settings.device;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.os.BatteryManager;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceManager;
+import android.widget.Toast;
 
 public class FastCharge implements OnPreferenceChangeListener {
 
     private static final String FILE = "/sys/kernel/fast_charge/force_fast_charge";
+	private Context mContext;
+
+	public FastCharge(Context context) {
+		mContext = context;
+	}
+
+    public static String FilePath() {
+        return FILE;
+    }
 
     public static boolean isSupported() {
         return Utils.fileExists(FILE);
@@ -22,15 +35,21 @@ public class FastCharge implements OnPreferenceChangeListener {
         if (!isSupported()) {
             return;
         }
-
-        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
-        Utils.writeValue(FILE, sharedPrefs.getBoolean(DeviceSettings.KEY_FAST_CHARGE, false) ? "1" : "0");
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {		
-	    Utils.writeValue(FILE, ((Boolean)newValue) ? "1" : "0");
-        return true;
+		Intent intent = mContext.registerReceiver(null, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
+		int plugged = intent.getIntExtra(BatteryManager.EXTRA_PLUGGED, -1);
+		boolean USBIsPlugged = (plugged == BatteryManager.BATTERY_PLUGGED_AC || plugged == BatteryManager.BATTERY_PLUGGED_USB);
+
+		if (USBIsPlugged == true) {
+			Toast.makeText(mContext, mContext.getString(R.string.force_fast_charge_usbwarning), Toast.LENGTH_SHORT).show();
+			return false;
+		} else {
+			Utils.writeValue(FILE, ((Boolean)newValue) ? "1" : "0");
+			return true;
+		}
     }
 
 }
