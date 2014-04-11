@@ -228,5 +228,3 @@ BOARD_SEPOLICY_UNION += \
 
 # Hardware tunables
 BOARD_HARDWARE_CLASS := device/samsung/ariesve/cmhw/
-
-SKIP_SET_METADATA := true
