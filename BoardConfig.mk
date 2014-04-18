@@ -98,6 +98,7 @@ BOARD_EGL_CFG := device/samsung/ariesve/config/egl.cfg
 BOARD_ALLOW_EGL_HIBERNATION := true
 TARGET_NO_HW_VSYNC := false
 TARGET_USES_C2D_COMPOSITION := true
+TARGET_DISPLAY_INSECURE_MM_HEAP := true
 USE_OPENGL_RENDERER := true
 
 # Memory allocation
