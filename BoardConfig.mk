@@ -47,6 +47,9 @@ TARGET_CPU_VARIANT := scorpion
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 
+# Compiler
+TARGET_GCC_VERSION_EXP := 4.8
+
 # Screens dimension
 TARGET_SCREEN_HEIGHT := 800
 TARGET_SCREEN_WIDTH := 480
