@@ -1,5 +1,6 @@
 on early-init
     start ueventd
+    start healthd
 
 on init
     export PATH /sbin
@@ -18,7 +19,7 @@ on init
     mkdir /data
     mkdir /data/data
     mkdir /cache
-    mount /tmp /tmp tmpfs
+    mount tmpfs tmpfs /tmp
 
     chown root shell /tmp
     chmod 0775 /tmp
@@ -67,6 +68,9 @@ on boot
 service ueventd /sbin/ueventd
     critical
 
+service healthd /sbin/healthd -n
+    critical
+
 # Required to fix shutdown issue
 service rmt_storage /sbin/rmt_storage
 
@@ -77,6 +81,7 @@ service setup_adbd /sbin/setup_adbd
 
 service adbd /sbin/adbd recovery
     disabled
+    socket adbd stream 660 system system
 
 service vold /sbin/minivold
     socket vold stream 0660 root mount
@@ -90,10 +95,12 @@ on property:service.adb.root=1
 
 on property:sys.storage.ums_enabled=1
     write /sys/class/android_usb/android0/enable 0
+    write /sys/class/android_usb/android0/idProduct 685b
     write /sys/class/android_usb/android0/functions mass_storage
     write /sys/class/android_usb/android0/enable 1
 
 on property:sys.storage.ums_enabled=0
     write /sys/class/android_usb/android0/enable 0
+    write /sys/class/android_usb/android0/idProduct 685e
     write /sys/class/android_usb/android0/functions adb
     write /sys/class/android_usb/android0/enable ${service.adb.root}
