@@ -40,7 +40,7 @@ import com.cyanogenmod.settings.device.R;
 public class GeneralFragmentActivity extends PreferenceFragment {
 
     private static final String TAG = "DeviceSettings_General";
- 
+
     private Preference mGSensor;
     private CheckBoxPreference mFastCharge;
     private CheckBoxPreference mLowRamStatus;
@@ -48,21 +48,21 @@ public class GeneralFragmentActivity extends PreferenceFragment {
 
     private Handler mHandler = new Handler();
 
-	private final Runnable mFileChangedRunnable = new Runnable() {
-		@Override
-		public void run() {
-			boolean mNewFeatureValue = "1".equals(Utils.readValue(FastCharge.FilePath()));
-			onFileChanged(mNewFeatureValue);
-			mFastCharge.setChecked(mNewFeatureValue);
-		}
-	};
+    private final Runnable mFileChangedRunnable = new Runnable() {
+        @Override
+        public void run() {
+            boolean mNewFeatureValue = FastCharge.isActive();
+            onFileChanged(mNewFeatureValue);
+            mFastCharge.setChecked(mNewFeatureValue);
+        }
+    };
 
-	/**
-	 * subclasses can override onFileChanged() to hook
-	 * into the FileObserver onEvent() callback
-	 */
+    /**
+     * subclasses can override onFileChanged() to hook
+     * into the FileObserver onEvent() callback
+     */
 
-	protected void onFileChanged(boolean featureState){}
+    protected void onFileChanged(boolean featureState){}
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -80,13 +80,13 @@ public class GeneralFragmentActivity extends PreferenceFragment {
         mFastCharge.setEnabled(FastCharge.isSupported());
         mFastCharge.setOnPreferenceChangeListener(new FastCharge(mContext));
 
-		mObserver = new FileObserver(FastCharge.FilePath(), FileObserver.MODIFY) {
-			@Override
-			public void onEvent(int event, String file) {
-				mHandler.postDelayed(mFileChangedRunnable, 1);
-			}
-		};
-		mObserver.startWatching();
+        mObserver = new FileObserver(FastCharge.getFilePath(), FileObserver.MODIFY) {
+            @Override
+            public void onEvent(int event, String file) {
+                mHandler.postDelayed(mFileChangedRunnable, 1);
+            }
+        };
+        mObserver.startWatching();
 
         mLowRamStatus = (CheckBoxPreference) findPreference(DeviceSettings.KEY_LOW_RAM);
         mLowRamStatus.setEnabled(LowRam.isSupported());
@@ -97,16 +97,12 @@ public class GeneralFragmentActivity extends PreferenceFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         mLowRamStatus.setChecked(LowRam.getPropertyValue());
-        mFastCharge.setChecked(((Utils.readValue(FastCharge.FilePath()) == "1")));
+        mFastCharge.setChecked(FastCharge.isActive());
     }
 
     @Override
     public void onDestroy() {
-    	mObserver.stopWatching();
-    	super.onDestroy();
-    }
-
-    public static void restore(Context context) {
-        //FastCharge.restore(context);
+        mObserver.stopWatching();
+        super.onDestroy();
     }
 }

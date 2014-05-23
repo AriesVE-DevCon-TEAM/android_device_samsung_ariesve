@@ -13,18 +13,22 @@ import android.widget.Toast;
 public class FastCharge implements OnPreferenceChangeListener {
 
     private static final String FILE = "/sys/kernel/fast_charge/force_fast_charge";
-	private Context mContext;
+    private Context mContext;
 
-	public FastCharge(Context context) {
-		mContext = context;
-	}
+    public FastCharge(Context context) {
+        mContext = context;
+    }
 
-    public static String FilePath() {
+    public static String getFilePath() {
         return FILE;
     }
 
     public static boolean isSupported() {
         return Utils.fileExists(FILE);
+    }
+
+    public static boolean isActive() {
+        return isSupported() && (Utils.readValue(FILE)).equals("1");
     }
 
     /**
@@ -38,18 +42,18 @@ public class FastCharge implements OnPreferenceChangeListener {
     }
 
     @Override
-    public boolean onPreferenceChange(Preference preference, Object newValue) {		
-		Intent intent = mContext.registerReceiver(null, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
-		int plugged = intent.getIntExtra(BatteryManager.EXTRA_PLUGGED, -1);
-		boolean USBIsPlugged = (plugged == BatteryManager.BATTERY_PLUGGED_AC || plugged == BatteryManager.BATTERY_PLUGGED_USB);
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        Intent intent = mContext.registerReceiver(null, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
+        int plugged = intent.getIntExtra(BatteryManager.EXTRA_PLUGGED, -1);
+        boolean USBIsPlugged = (plugged == BatteryManager.BATTERY_PLUGGED_AC || plugged == BatteryManager.BATTERY_PLUGGED_USB);
 
-		if (USBIsPlugged == true) {
-			Toast.makeText(mContext, mContext.getString(R.string.force_fast_charge_usbwarning), Toast.LENGTH_SHORT).show();
-			return false;
-		} else {
-			Utils.writeValue(FILE, ((Boolean)newValue) ? "1" : "0");
-			return true;
-		}
+        if (USBIsPlugged == true) {
+            Toast.makeText(mContext, mContext.getString(R.string.force_fast_charge_usbwarning), Toast.LENGTH_SHORT).show();
+            return false;
+        } else {
+            Utils.writeValue(FILE, ((Boolean)newValue) ? "1" : "0");
+            return true;
+        }
     }
 
 }
