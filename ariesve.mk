@@ -19,6 +19,8 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
+PRODUCT_BOOT_JARS += qcmediaplayer
+
 # Bootsplash and charging image
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ARIESVE.rle:root/ARIESVE.rle \
@@ -155,7 +157,8 @@ PRODUCT_PACKAGES += \
 
 # Other apps
 PRODUCT_PACKAGES += \
-    PhotoTable
+    PhotoTable \
+    qcmediaplayer
 
 # Build properties
 ADDITIONAL_DEFAULT_PROPERTIES += \
