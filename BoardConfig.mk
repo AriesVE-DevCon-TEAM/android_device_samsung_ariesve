@@ -150,9 +150,6 @@ BOARD_USES_QCOM_AUDIO_LPA := true
 BOARD_USES_QCOM_AUDIO_RESETALL := true
 BOARD_USES_QCOM_AUDIO_VOIPMUTE := true
 
-# USB mass storage
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
-
 # Partitions
 # For the Galaxy S Plus, these are calculated from /proc/partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 5242880
@@ -165,16 +162,17 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 # Target filesystem
 TARGET_USERIMAGES_USE_EXT4 := true
 
-# Vold stuff
+# Vold
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 BOARD_VOLD_MAX_PARTITIONS := 28
 
-# Custom recovery files
+# CWM Recovery
 TARGET_RECOVERY_INITRC := device/samsung/ariesve/recovery/init.recovery.rc
 TARGET_RECOVERY_FSTAB := device/samsung/ariesve/ramdisk/fstab.qcom
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/ariesve/recovery/recovery_keys.c
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
 
-# TWRP recovery stuff
+# TWRP recovery
 BOARD_HAS_SDCARD_INTERNAL := true
 BOARD_USES_MMCUTILS := true
 BOARD_HAS_NO_MISC_PARTITION := true
