@@ -48,7 +48,8 @@ TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 
 # Compiler
-TARGET_GCC_VERSION_EXP := 4.8
+#4.8 gives an error when compiling bash
+TARGET_GCC_VERSION_EXP := 4.9
 
 # Screens dimension
 TARGET_SCREEN_HEIGHT := 800
