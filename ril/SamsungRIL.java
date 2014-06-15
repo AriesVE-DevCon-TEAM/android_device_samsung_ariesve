@@ -747,7 +747,7 @@ public class SamsungRIL extends RIL implements CommandsInterface {
                 if (strings.length >= 3) {
                     dataCall.addresses = strings[2].split(" ");
                 }
-            }responseStrings(p)
+            }
         } else {
             if (mIsSamsungCdma) {
                 // On rare occasion the pppd_cdma service is left active from a stale
