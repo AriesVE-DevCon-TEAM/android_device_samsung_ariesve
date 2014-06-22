@@ -66,53 +66,53 @@ on boot
     chown root system /proc/net/ip_conntrack
 
     # geomagnetic
-    chown system input /sys/class/input/event4/device/enable
-    chown system input /sys/class/input/event4/device/delay
-    chown system input /sys/class/input/event4/device/filter_enable
-    chown system input /sys/class/input/event4/device/filter_len
-    chown system input /sys/class/input/event4/device/filter_noise
-    chown system input /sys/class/input/event4/device/filter_threshold
-    chown system input /sys/class/input/event4/device/data
-    chown system input /sys/class/input/event4/device/status
-    chown system input /sys/class/input/event4/device/wake
+    chown system input /sys/class/input/event3/device/enable
+    chown system input /sys/class/input/event3/device/delay
+    chown system input /sys/class/input/event3/device/filter_enable
+    chown system input /sys/class/input/event3/device/filter_len
+    chown system input /sys/class/input/event3/device/filter_noise
+    chown system input /sys/class/input/event3/device/filter_threshold
+    chown system input /sys/class/input/event3/device/data
+    chown system input /sys/class/input/event3/device/status
+    chown system input /sys/class/input/event3/device/wake
 
     # geomagnetic raw
-    chown system input /sys/class/input/input5/threshold
-    chown system input /sys/class/input/input5/distortion
-    chown system input /sys/class/input/input5/shape
-    chown compass input /sys/class/input/input5/offsets
-    chown compass input /sys/class/input/input5/dynamic_matrix
+    chown system input /sys/class/input/input4/threshold
+    chown system input /sys/class/input/input4/distortion
+    chown system input /sys/class/input/input4/shape
+    chown compass input /sys/class/input/input4/offsets
+    chown compass input /sys/class/input/input4/dynamic_matrix
 
     # accelerometer
-    chown system input /sys/class/input/event6/device/enable
-    chown system input /sys/class/input/event6/device/delay
-    chown system input /sys/class/input/event6/device/position
-    chown system input /sys/class/input/event6/device/threshold
-    chown system input /sys/class/input/event6/device/wake
-    chown system input /sys/class/input/event6/device/data
-    chown system input /sys/class/input/event6/device/calibration
+    chown system input /sys/class/input/event5/device/enable
+    chown system input /sys/class/input/event5/device/delay
+    chown system input /sys/class/input/event5/device/position
+    chown system input /sys/class/input/event5/device/threshold
+    chown system input /sys/class/input/event5/device/wake
+    chown system input /sys/class/input/event5/device/data
+    chown system input /sys/class/input/event5/device/calibration
 
     # orientation
+    chown system input /sys/class/input/event6/device/enable
+    chown system input /sys/class/input/event6/device/delay
+    chown system input /sys/class/input/event6/device/wake
+    chown system input /sys/class/input/event6/device/data
+    chown system input /sys/class/input/event6/device/status
+
+    # proximity
     chown system input /sys/class/input/event7/device/enable
     chown system input /sys/class/input/event7/device/delay
     chown system input /sys/class/input/event7/device/wake
     chown system input /sys/class/input/event7/device/data
     chown system input /sys/class/input/event7/device/status
 
-    # proximity
+    # light sensor
     chown system input /sys/class/input/event8/device/enable
     chown system input /sys/class/input/event8/device/delay
     chown system input /sys/class/input/event8/device/wake
-    chown system input /sys/class/input/event8/device/data
+    chown system input /sys/class/input/event8/device/raw_data
     chown system input /sys/class/input/event8/device/status
-
-    # light sensor
-    chown system input /sys/class/input/event9/device/enable
-    chown system input /sys/class/input/event9/device/delay
-    chown system input /sys/class/input/event9/device/wake
-    chown system input /sys/class/input/event9/device/raw_data
-    chown system input /sys/class/input/event9/device/status
-    chown system input /sys/class/input/event9/device/testmode
+    chown system input /sys/class/input/event8/device/testmode
 
 
     chown system system /sys/devices/platform/msm_sdcc.1/polling
