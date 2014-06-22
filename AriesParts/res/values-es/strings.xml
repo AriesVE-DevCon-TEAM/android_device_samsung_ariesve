@@ -14,12 +14,14 @@
      limitations under the License.
  -->
 <resources>
-    <string name="app_name">Opciones Avanzadas</string>
-    <string name="category_touchkey_title">Teclas táctiles</string>
-    <string name="backlight_timeout_title_head">Tiempo de retroiluminación</string>
-    <string name="backlight_timeout_summary_head">"Configurar el intervalo de tiempo previo al apagado de la iluminacion de teclas"</string>
-    <string name="touchlight_status_title_head">Retroiluminacion al pulsar en la pantalla</string>
-    <string name="touchlight_status_summary_head">Activar la iluminacion de las teclas tactiles al pulsar en la pantalla</string>
+    <string name="app_name">Opciones avanzadas</string>
+
+    <!-- Page Headers -->
+    <string name="tab_general_title">GENERAL</string>
+    <string name="tab_touchkey_title">TECLAS</string>
+    <string name="tab_bln_title">BLN</string>
+
+    <!-- Page General -->
     <string name="category_screen_title">Pantalla</string>
     <string name="g_sensor_title">Calibración horizontal</string>
     <string name="g_sensor_summary">Calibrar dispositivo con el acelerómetro</string>
@@ -29,10 +31,43 @@
     <string name="gsensor_end">Calibración completada</string>
     <string name="gsensor_button1">Completo</string>
     <string name="gsensor_button2">Calibrar</string>
-    <string name="category_fast_charge_title">Soporte de carga rápida</string>
-    <string name="force_fast_charge_head">Fuerza la carga rápida</string>
-    <string name="force_fast_charge_summary_head">Detectar PC conectado al puerto USB como un simple cargador USB, para una carga más rápida</string>
+
+    <string name="category_fast_charge_title">Carga rápida</string>
+    <string name="force_fast_charge_usbwarning">Desconecta el cable USB</string>
+    <string name="force_fast_charge_head">Forzar carga rápida</string>
+    <string name="force_fast_charge_summary_head">Detectar PC conectado al puerto USB como un cargador USB, para una carga más rápida</string>
+
+    <string name="category_performance_title">Performance</string>
+    <string name="low_ram_title">Low RAM Switch</string>
+    <string name="low_ram_summary_on">Low RAM is enabled, large-RAM features are disabled</string>
+    <string name="low_ram_summary_off">Low RAM is disabled, large-RAM features are enabled</string>
+    <string name="low_ram_error">Impossible to set LowRam setting, please grant the root permissions for this app.</string>
+    <string name="low_ram_reboot_alert">To apply the setting, a reboot is required.\nWould you like to reboot now?\n\nPress Yes to reboot now, No if you prefer to reboot later.</string>
+    <string name="low_ram_reboot_wait">The device will be rebooted in %1$d seconds, please wait.</string>
+    <string name="low_ram_reboot_yes">Yes</string>
+    <string name="low_ram_reboot_no">No</string>
+
+    <!-- Page TouchKey -->
+    <string name="category_touchkey_title">Teclas táctiles</string>
+    <string name="backlight_timeout_title_head">Duración de retroiluminación</string>
+    <string name="backlight_timeout_summary_head">"Configurar la duración de la iluminacion de las teclas"</string>
+    <string name="touchlight_status_title_head">Retroiluminación al pulsar en la pantalla</string>
+    <string name="touchlight_status_summary_head">Iluminar teclas táctiles al pulsar en la pantalla</string>
+
     <string name="category_pkfmanager_title">Pulsaciones fantasmas</string>
     <string name="pkfmanager_title_head">Filtro de las pulsaciones fantasma</string>
     <string name="pkfmanager_summary_head">"Filtra las pulsaciones fantasma de las teclas, causadas por la interferencia de la antena (aplicación externa)"</string>
+
+    <!-- Page BLN -->
+    <string name="category_bln_title">Backlight Notification</string>
+    <string name="bln_type_title_head">Notification Type</string>
+    <string name="bln_type_summary_head">Set the way a notification will be reported by touchkey lights</string>
+    <string name="bln_blink_timeout_title_head">Blinking Lights Timeout</string>
+    <string name="bln_blink_timeout_summary_head">Set the duration time of blinking lights</string>
+    <string name="bln_blink_interval_on_title_head">Blink ON Interval</string>
+    <string name="bln_blink_interval_on_summary_head">Set the duration interval of each blink ON</string>
+    <string name="bln_blink_interval_off_title_head">Blink OFF Interval</string>
+    <string name="bln_blink_interval_off_summary_head">Set the duration interval of each blink OFF</string>
+    <string name="bln_static_timeout_title_head">Static Lights Timeout</string>
+    <string name="bln_static_timeout_summary_head">Set the duration time of static lights</string>
 </resources>
