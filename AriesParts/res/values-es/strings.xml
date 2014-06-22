@@ -14,12 +14,12 @@
      limitations under the License.
  -->
 <resources>
-    <string name="app_name">Opciones Avanzadas</string>
+    <string name="app_name">Opciones avanzadas</string>
     <string name="category_touchkey_title">Teclas táctiles</string>
-    <string name="backlight_timeout_title_head">Tiempo de retroiluminación</string>
-    <string name="backlight_timeout_summary_head">"Configurar el intervalo de tiempo previo al apagado de la iluminacion de teclas"</string>
-    <string name="touchlight_status_title_head">Retroiluminacion al pulsar en la pantalla</string>
-    <string name="touchlight_status_summary_head">Activar la iluminacion de las teclas tactiles al pulsar en la pantalla</string>
+    <string name="backlight_timeout_title_head">Duración de retroiluminación</string>
+    <string name="backlight_timeout_summary_head">"Configurar la duración de la iluminacion de las teclas"</string>
+    <string name="touchlight_status_title_head">Retroiluminación al pulsar en la pantalla</string>
+    <string name="touchlight_status_summary_head">Iluminar teclas táctiles al pulsar en la pantalla</string>
     <string name="category_screen_title">Pantalla</string>
     <string name="g_sensor_title">Calibración horizontal</string>
     <string name="g_sensor_summary">Calibrar dispositivo con el acelerómetro</string>
@@ -29,9 +29,9 @@
     <string name="gsensor_end">Calibración completada</string>
     <string name="gsensor_button1">Completo</string>
     <string name="gsensor_button2">Calibrar</string>
-    <string name="category_fast_charge_title">Soporte de carga rápida</string>
-    <string name="force_fast_charge_head">Fuerza la carga rápida</string>
-    <string name="force_fast_charge_summary_head">Detectar PC conectado al puerto USB como un simple cargador USB, para una carga más rápida</string>
+    <string name="category_fast_charge_title">Carga rápida</string>
+    <string name="force_fast_charge_head">Forzar carga rápida</string>
+    <string name="force_fast_charge_summary_head">Detectar PC conectado al puerto USB como un cargador USB, para una carga más rápida</string>
     <string name="category_pkfmanager_title">Pulsaciones fantasmas</string>
     <string name="pkfmanager_title_head">Filtro de las pulsaciones fantasma</string>
     <string name="pkfmanager_summary_head">"Filtra las pulsaciones fantasma de las teclas, causadas por la interferencia de la antena (aplicación externa)"</string>
