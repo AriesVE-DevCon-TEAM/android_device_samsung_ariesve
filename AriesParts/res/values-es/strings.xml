@@ -14,12 +14,14 @@
      limitations under the License.
  -->
 <resources>
-    <string name="app_name">Opciones Avanzadas</string>
-    <string name="category_touchkey_title">Teclas táctiles</string>
-    <string name="backlight_timeout_title_head">Tiempo de retroiluminación</string>
-    <string name="backlight_timeout_summary_head">"Configurar el intervalo de tiempo previo al apagado de la iluminacion de teclas"</string>
-    <string name="touchlight_status_title_head">Retroiluminacion al pulsar en la pantalla</string>
-    <string name="touchlight_status_summary_head">Activar la iluminacion de las teclas tactiles al pulsar en la pantalla</string>
+    <string name="app_name">Opciones avanzadas</string>
+
+    <!-- Page Headers -->
+    <string name="tab_general_title">GENERAL</string>
+    <string name="tab_touchkey_title">TECLAS</string>
+    <string name="tab_bln_title">BLN</string>
+
+    <!-- Page General -->
     <string name="category_screen_title">Pantalla</string>
     <string name="g_sensor_title">Calibración horizontal</string>
     <string name="g_sensor_summary">Calibrar dispositivo con el acelerómetro</string>
@@ -29,16 +31,33 @@
     <string name="gsensor_end">Calibración completada</string>
     <string name="gsensor_button1">Completo</string>
     <string name="gsensor_button2">Calibrar</string>
-    <string name="category_fast_charge_title">Soporte de carga rápida</string>
-    <string name="force_fast_charge_head">Fuerza la carga rápida</string>
-    <string name="force_fast_charge_summary_head">Detectar PC conectado al puerto USB como un simple cargador USB, para una carga más rápida</string>
-    <string name="category_vibration_title">Vibración</string>
-    <string name="vibration_title_head">Vibracion</string>
-    <string name="vibration_summary_head">Control de la intensidad de vibracion</string>
-    <string name="vibration_title">Intensidad de la vibracion</string>
-    <string name="vibration_test_title">Probar</string>
-    <string name="button_reset_title">Por defecto</string>
+
+    <string name="category_fast_charge_title">Carga rápida</string>
+    <string name="force_fast_charge_usbwarning">Desconecta el cable USB</string>
+    <string name="force_fast_charge_head">Forzar carga rápida</string>
+    <string name="force_fast_charge_summary_head">Detectar PC conectado al puerto USB como un cargador USB, para una carga más rápida</string>
+
+    <!-- Page TouchKey -->
+    <string name="category_touchkey_title">Teclas táctiles</string>
+    <string name="backlight_timeout_title_head">Duración de retroiluminación</string>
+    <string name="backlight_timeout_summary_head">"Configurar la duración de la iluminacion de las teclas"</string>
+    <string name="touchlight_status_title_head">Retroiluminación al pulsar en la pantalla</string>
+    <string name="touchlight_status_summary_head">Iluminar teclas táctiles al pulsar en la pantalla</string>
+
     <string name="category_pkfmanager_title">Pulsaciones fantasmas</string>
     <string name="pkfmanager_title_head">Filtro de las pulsaciones fantasma</string>
     <string name="pkfmanager_summary_head">"Filtra las pulsaciones fantasma de las teclas, causadas por la interferencia de la antena (aplicación externa)"</string>
+
+    <!-- Page BLN -->
+    <string name="category_bln_title">Notificaciones luminosas</string>
+    <string name="bln_type_title_head">Tipo de notificación</string>
+    <string name="bln_type_summary_head">Configurar notificaciones luminosas</string>
+    <string name="bln_blink_timeout_title_head">Duración del parpadeo</string>
+    <string name="bln_blink_timeout_summary_head">Configurar la duración del parpadeo</string>
+    <string name="bln_blink_interval_on_title_head">LED encendido</string>
+    <string name="bln_blink_interval_on_summary_head">Tiempo que estará el LED encendido en cada parpadeo</string>
+    <string name="bln_blink_interval_off_title_head">LED apagado</string>
+    <string name="bln_blink_interval_off_summary_head">Tiempo que estará el LED apagado en cada parpadeo</string>
+    <string name="bln_static_timeout_title_head">Duración de LED encendido estático</string>
+    <string name="bln_static_timeout_summary_head">Tiempo que estará el LED encendido estático</string>
 </resources>
