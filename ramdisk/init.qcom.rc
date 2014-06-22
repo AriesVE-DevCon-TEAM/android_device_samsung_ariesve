@@ -128,9 +128,6 @@ on boot
     # for Jig
     chmod 0664 /sys/devices/virtual/jig/jig/jig
 
-    # for jack control
-    chown system system /sys/class/jack/jack_selector/select_jack
-
     # Amp Tun (YDA165)
     chown system audio /sys/devices/virtual/misc/amp/mode
     chown system audio /sys/devices/virtual/misc/amp/in1_gain
