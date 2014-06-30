@@ -268,7 +268,17 @@ static camera_memory_t *wrap_memory_data(priv_camera_device_t *dev,
     if (!dev->request_memory)
         return NULL;
 
+    if (dataPtr == NULL) {
+        ALOGE("%s: dataPtr is null", __FUNCTION__);
+        return NULL;
+    }
+
     heap = dataPtr->getMemory(&offset, &size);
+    if (heap == 0) {
+        ALOGE("%s: heap memory not found", __FUNCTION__);
+        return NULL;
+    }
+
     data = (void *)((char *)(heap->base()) + offset);
 
     ALOGV("%s: data: %p size: %i", __FUNCTION__, data, size);
@@ -284,9 +294,7 @@ static camera_memory_t *wrap_memory_data(priv_camera_device_t *dev,
     ALOGI("dumping capture jpeg %d", frameCnt);
     if (file_fd < 0) {
         ALOGE("cannot open file:%s (error:%i)\n", path, errno);
-    }
-    else
-    {
+    } else {
         ALOGV("dumping jpeg");
         written = write(file_fd, (char *)data,
                         size);
@@ -298,10 +306,13 @@ static camera_memory_t *wrap_memory_data(priv_camera_device_t *dev,
 #endif
 
     mem = dev->request_memory(-1, size, 1, dev->user);
-
-    ALOGV(" mem:%p,mem->data%p ",  mem,mem->data);
-
-    memcpy(mem->data, data, size);
+    if (mem) {
+        ALOGV(" mem:%p,mem->data%p ", mem, mem->data);
+        memcpy(mem->data, data, size);
+    } else {
+        ALOGE("%s: failed to acquire the requested memory (size: %i)", __FUNCTION__, size);
+        mem = NULL;
+    }
 
     ALOGV("%s---", __FUNCTION__);
     return mem;
@@ -336,7 +347,7 @@ static void wrap_data_callback(int32_t msg_type, const sp<IMemory>& dataPtr,
     ALOGV("%s+++: type %i user %p", __FUNCTION__, msg_type,user);
     dump_msg(__FUNCTION__, msg_type);
 
-    if(!user)
+    if (!user)
         return;
 
     dev = (priv_camera_device_t*) user;
@@ -348,11 +359,9 @@ static void wrap_data_callback(int32_t msg_type, const sp<IMemory>& dataPtr,
     }
 
     data = wrap_memory_data(dev, dataPtr);
-
-    if (dev->data_callback)
-        dev->data_callback(msg_type, data, 0, NULL, dev->user);
-
-    if ( NULL != data ) {
+    if (data) {
+        if (dev->data_callback)
+            dev->data_callback(msg_type, data, 0, NULL, dev->user);
         data->release(data);
     }
 
@@ -375,13 +384,10 @@ static void wrap_data_callback_timestamp(nsecs_t timestamp, int32_t msg_type,
     dev = (priv_camera_device_t*) user;
 
     data = wrap_memory_data(dev, dataPtr);
-
-    if (dev->data_timestamp_callback)
-        dev->data_timestamp_callback(timestamp,msg_type, data, 0, dev->user);
-
-    gCameraHals[dev->cameraid]->releaseRecordingFrame(dataPtr);//QiSS ME need release or record will stop
-
-    if ( NULL != data ) {
+    if (data) {
+        if (dev->data_timestamp_callback)
+            dev->data_timestamp_callback(timestamp,msg_type, data, 0, dev->user);
+        gCameraHals[dev->cameraid]->releaseRecordingFrame(dataPtr); // Need release or record will stop
         data->release(data);
     }
 
