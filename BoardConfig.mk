@@ -139,7 +139,7 @@ TARGET_FORCE_CPU_UPLOAD := true
 ENABLE_WEBGL := true
 
 # Sensors
-BOARD_USE_LEGACY_SENSORS_FUSION := false
+BOARD_USE_LEGACY_SENSORS_FUSION := true
 
 # USB mass storage
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
