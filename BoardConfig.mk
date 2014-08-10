@@ -159,7 +159,7 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 # Target filesystem
 TARGET_USERIMAGES_USE_EXT4 := true
 
-# Vold stuff
+# Vold
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 BOARD_VOLD_MAX_PARTITIONS := 28
 
@@ -169,12 +169,14 @@ TARGET_RECOVERY_FSTAB := device/samsung/ariesve/recovery/recovery.fstab
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/ariesve/recovery/recovery_keys.c
 BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/ariesve/recovery/graphics.c
 
-# TWRP recovery stuff
+# TWRP recovery
 BOARD_HAS_SDCARD_INTERNAL := true
 BOARD_USES_MMCUTILS := true
 BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 DEVICE_RESOLUTION := 480x800
+TW_TARGET_USES_QCOM_BSP := true
+TW_SCREEN_BLANK_ON_BOOT := true
 TW_BRIGHTNESS_PATH := /sys/devices/platform/msm_fb.196609/leds/lcd-backlight/brightness
 TW_MAX_BRIGHTNESS := 255
 TW_CUSTOM_POWER_BUTTON := 107
@@ -186,6 +188,7 @@ TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
 TW_NO_REBOOT_BOOTLOADER := true
 TW_HAS_DOWNLOAD_MODE := true
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
+TW_INCLUDE_FB2PNG := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 
 # Bootanimation
