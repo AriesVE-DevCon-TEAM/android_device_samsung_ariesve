@@ -42,7 +42,6 @@ TARGET_NO_INITLOGO := true
 # Architecture
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
-TARGET_ARCH_LOWMEM := true
 TARGET_CPU_VARIANT := scorpion
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
