@@ -42,6 +42,7 @@
 /lib/libgsl.so
 /lib/libmmipl.so
 /lib/libmmjpeg.so
+/lib/libOmxMp3Dec.so
 /lib/liboemcamera.so
 /lib/libs3cjpeg.so
 /lib/libsecril-client.so
