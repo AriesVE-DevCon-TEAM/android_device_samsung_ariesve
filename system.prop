@@ -35,9 +35,6 @@ debug.sf.hw=1
 debug.egl.hw=1
 debug.mdpcomp.logs=0
 
-# Reduce total number of background apps
-ro.sys.fw.bg_apps_limit=8
-
 # Enable non-omx mp3 decode
 use.non-omx.mp3.decoder=true
 
@@ -61,3 +58,6 @@ persist.sys.vold.switchablepair=sdcard0,sdcard1
 
 # Enable repeatable keys in recovery
 ro.cwm.enable_key_repeat=true
+
+# Reduce background apps limit to 16 on low-tier devices
+ro.sys.fw.bg_apps_limit=16
