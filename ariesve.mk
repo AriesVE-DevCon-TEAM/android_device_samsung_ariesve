@@ -155,6 +155,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     PhotoTable
 
+# CM Hardware Abstraction Framework
+PRODUCT_PACKAGES += \
+    org.cyanogenmod.hardware \
+    org.cyanogenmod.hardware.xml
+
 # Build properties
 ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.secure=0
