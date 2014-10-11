@@ -21,6 +21,10 @@ PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 PRODUCT_BOOT_JARS += qcmediaplayer
 
+# Boot animation
+TARGET_SCREEN_HEIGHT := 800
+TARGET_SCREEN_WIDTH := 480
+
 # Bootsplash and charging image
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ARIESVE.rle:root/ARIESVE.rle \
