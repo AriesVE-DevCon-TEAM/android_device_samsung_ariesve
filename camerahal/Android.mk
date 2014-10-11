@@ -2,8 +2,6 @@ $(shell mkdir -p $(OUT)/obj/SHARED_LIBRARIES/libcamera_intermediates/)
 $(shell touch $(OUT)/obj/SHARED_LIBRARIES/libcamera_intermediates/export_includes)
 $(shell mkdir -p $(OUT)/obj/SHARED_LIBRARIES/libseccameraadaptor_intermediates/)
 $(shell touch $(OUT)/obj/SHARED_LIBRARIES/libseccameraadaptor_intermediates/export_includes)
-#$(shell mkdir -p $(OUT)/obj/SHARED_LIBRARIES/camera.msm7x30_intermediates/)
-#$(shell touch $(OUT)/obj/SHARED_LIBRARIES/camera.msm7x30_intermediates/export_includes)
 
 LOCAL_PATH:= $(call my-dir)
 

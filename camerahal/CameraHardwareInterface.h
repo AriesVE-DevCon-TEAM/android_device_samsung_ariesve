@@ -18,7 +18,6 @@
 #define ANDROID_HARDWARE_CAMERA_HARDWARE_INTERFACE_H
 
 #include <binder/IMemory.h>
-#include <utils/RefBase.h>
 #include <camera/Camera.h>
 #include <camera/CameraParameters.h>
 
@@ -220,11 +219,6 @@ namespace android {
          * *not* done in the destructor.
          */
         virtual void release() = 0;
-
-        /**
-         * Dump state of the camera hardware
-         */
-        virtual status_t dump(int fd, const Vector<String16>& args) const = 0;
 
         virtual void takeLiveSnapshot() = 0;
     };

@@ -21,7 +21,6 @@
 #define LOG_TAG "CameraHAL"
 
 #define LOG_NDEBUG 1      /* disable LOGV */
-//#define DUMP_PARAMS 1   /* dump parameteters after get/set operation */
 
 #define MAX_CAMERAS_SUPPORTED 2
 
@@ -203,7 +202,7 @@ static void wrap_queue_buffer_hook(void *data, void* buffer)
         goto skipframe;
     }
     if (0 == dev->gralloc->lock(dev->gralloc, *buf_handle,
-                                GRALLOC_USAGE_SW_WRITE_MASK,
+                                GRALLOC_USAGE_HW_RENDER,
                                 0, 0, width, height, &vaddr)) {
         memcpy(vaddr, frame, width * height * 3 / 2);
         ALOGV("%s: copy frame to gralloc buffer", __FUNCTION__);
@@ -221,29 +220,6 @@ static void wrap_queue_buffer_hook(void *data, void* buffer)
 
 skipframe:
 
-#ifdef DUMP_PREVIEW_FRAMES
-    static int frameCnt = 0;
-    int written;
-    if (frameCnt >= 100 && frameCnt <= 109 ) {
-        char path[128];
-        snprintf(path, sizeof(path), "/sdcard/%d_preview.yuv", frameCnt);
-        int file_fd = open(path, O_RDWR | O_CREAT, 0666);
-        ALOGI("dumping preview frame %d", frameCnt);
-        if (file_fd < 0) {
-            ALOGE("cannot open file:%s (error:%i)\n", path, errno);
-        }
-        else
-        {
-            ALOGV("dumping data");
-            written = write(file_fd, (char *)frame,
-                            dev->preview_frame_size);
-            if(written < 0)
-                ALOGE("error in data write");
-        }
-        close(file_fd);
-    }
-    frameCnt++;
-#endif
     ALOGV("%s---: ", __FUNCTION__);
 
     return;
@@ -282,27 +258,6 @@ static camera_memory_t *wrap_memory_data(priv_camera_device_t *dev,
 
     ALOGV("%s: data: %p size: %i", __FUNCTION__, data, size);
     ALOGV(" offset: %lu", (unsigned long)offset);
-
-    //#define DUMP_CAPTURE_JPEG
-#ifdef DUMP_CAPTURE_JPEG
-    static int frameCnt = 0;
-    int written;
-    char path[128];
-    snprintf(path, sizeof(path), "/sdcard/%d_capture.jpg", frameCnt);
-    int file_fd = open(path, O_RDWR | O_CREAT, 0666);
-    ALOGI("dumping capture jpeg %d", frameCnt);
-    if (file_fd < 0) {
-        ALOGE("cannot open file:%s (error:%i)\n", path, errno);
-    } else {
-        ALOGV("dumping jpeg");
-        written = write(file_fd, (char *)data,
-                        size);
-        if(written < 0)
-            ALOGE("error in data write");
-    }
-    close(file_fd);
-    frameCnt++;
-#endif
 
     mem = dev->request_memory(-1, size, 1, dev->user);
     if (mem) {
@@ -508,7 +463,7 @@ int camera_set_preview_window(struct camera_device * device,
 
     ALOGI("%s: preview format %s", __FUNCTION__, str_preview_format);
 
-    window->set_usage(window, GRALLOC_USAGE_PRIVATE_SYSTEM_HEAP | GRALLOC_USAGE_HW_RENDER);
+    window->set_usage(window, GRALLOC_USAGE_PRIVATE_MM_HEAP | GRALLOC_USAGE_HW_RENDER);
 
     if (window->set_buffers_geometry(window, preview_width,
                                      preview_height, hal_pixel_format)) {
@@ -865,10 +820,6 @@ int camera_set_parameters(struct camera_device * device, const char *params)
     String8 params_str8(params);
     camParams.unflatten(params_str8);
 
-#ifdef DUMP_PARAMS
-    camParams.dump();
-#endif
-
     // If the front camera is going to be used
     if (dev->cameraid == CAMERA_ID_FRONT) {
         // Get recording hint (set in video recordin only) and rotation
@@ -888,10 +839,6 @@ int camera_set_parameters(struct camera_device * device, const char *params)
     }
 
     rv = gCameraHals[dev->cameraid]->setParameters(camParams);
-
-#ifdef DUMP_PARAMS
-    camParams.dump();
-#endif
 
     ALOGI("%s--- rv %d", __FUNCTION__,rv);
     return rv;
@@ -913,19 +860,11 @@ char* camera_get_parameters(struct camera_device * device)
 
     camParams = gCameraHals[dev->cameraid]->getParameters();
 
-#ifdef DUMP_PARAMS
-    camParams.dump();
-#endif
-
     CameraHAL_FixupParams(camParams, dev);
 
     params_str8 = camParams.flatten();
     params = (char*) malloc(sizeof(char) * (params_str8.length()+1));
     strcpy(params, params_str8.string());
-
-#ifdef DUMP_PARAMS
-    camParams.dump();
-#endif
 
     ALOGI("%s---", __FUNCTION__);
     return params;
@@ -973,25 +912,6 @@ void camera_release(struct camera_device * device)
     ALOGI("%s---", __FUNCTION__);
 }
 
-int camera_dump(struct camera_device * device, int fd)
-{
-    int rv = -EINVAL;
-    priv_camera_device_t* dev = NULL;
-
-#if 0
-    ALOGI("%s", __FUNCTION__);
-
-    if(!device)
-        return rv;
-
-    dev = (priv_camera_device_t*) device;
-
-    rv = gCameraHals[dev->cameraid]->dump(fd);
-#endif
-
-    return rv;
-}
-
 extern "C" void heaptracker_free_leaked_memory(void);
 
 int camera_device_close(hw_device_t* device)
@@ -1023,9 +943,7 @@ int camera_device_close(hw_device_t* device)
         free(dev);
     }
 done:
-#ifdef HEAPTRACKER
-    heaptracker_free_leaked_memory();
-#endif
+
     ALOGI("%s--- ret %d", __FUNCTION__,ret);
 
     return ret;
@@ -1130,7 +1048,6 @@ int camera_device_open(const hw_module_t* module, const char* name,
         camera_ops->put_parameters = camera_put_parameters;
         camera_ops->send_command = camera_send_command;
         camera_ops->release = camera_release;
-        camera_ops->dump = camera_dump;
 
         *device = &priv_camera_device->base.common;
 
