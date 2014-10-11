@@ -80,7 +80,6 @@ BOARD_BLUEDROID_VENDOR_CONF := device/samsung/ariesve/bluetooth/vnd_ariesve.txt
 
 # RIL
 BOARD_MOBILEDATA_INTERFACE_NAME = "pdp0"
-BOARD_USES_LIBSECRIL_STUB := true
 BOARD_USES_LEGACY_RIL := true
 BOARD_RIL_CLASS := ../../../device/samsung/ariesve/ril/
 
