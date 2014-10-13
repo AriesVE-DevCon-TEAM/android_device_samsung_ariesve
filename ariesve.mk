@@ -160,7 +160,8 @@ PRODUCT_PACKAGES += \
 # Other apps
 PRODUCT_PACKAGES += \
     PhotoTable \
-    qcmediaplayer
+    qcmediaplayer \
+    LiveWallpapersPicker
 
 # Build properties
 ADDITIONAL_DEFAULT_PROPERTIES += \
