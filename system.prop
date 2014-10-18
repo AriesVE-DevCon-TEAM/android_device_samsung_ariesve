@@ -34,6 +34,7 @@ dalvik.vm.dexopt-data-only=1
 debug.sf.hw=1
 debug.egl.hw=1
 debug.mdpcomp.logs=0
+debug.composition.type=dyn
 
 # Enable non-omx mp3 decode
 use.non-omx.mp3.decoder=true
