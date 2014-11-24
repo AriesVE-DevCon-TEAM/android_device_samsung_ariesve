@@ -72,6 +72,7 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/ariesve/bluetooth
 BOARD_BLUEDROID_VENDOR_CONF := device/samsung/ariesve/bluetooth/vnd_ariesve.txt
 
 # RIL
+TARGET_NEEDS_NON_PIE_SUPPORT := true
 BOARD_MOBILEDATA_INTERFACE_NAME = "pdp0"
 BOARD_USES_LEGACY_RIL := true
 BOARD_RIL_CLASS := ../../../device/samsung/ariesve/ril/
