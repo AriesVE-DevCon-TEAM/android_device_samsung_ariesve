@@ -185,13 +185,13 @@ BOARD_SEPOLICY_UNION += \
     device.te \
     dhcp.te \
     domain.te \
-    drmserver.te \
     file.te \
     geomagneticd.te \
     healthd.te \
     init.te \
     mac_update.te \
     mediaserver.te \
+    property.te \
     rild.te \
     rmt.te \
     surfaceflinger.te \
