@@ -27,6 +27,8 @@
 # Vendor stuff
 -include vendor/samsung/ariesve/BoardConfigVendor.mk
 
+TARGET_SPECIFIC_HEADER_PATH := device/samsung/ariesve/include
+
 # Platform
 TARGET_BOOTLOADER_BOARD_NAME := ariesve
 TARGET_OTA_ASSERT_DEVICE := ariesve,GT-I9001
