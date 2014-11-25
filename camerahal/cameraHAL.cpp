@@ -77,15 +77,16 @@ camera_module_t HAL_MODULE_INFO_SYM = {
         .name = "Samsung msm7x30 Camera Wrapper",
         .author = "Zhibin Wu",
         .methods = &camera_module_methods,
-        .dso = NULL, /* remove compilation warnings */
-        .reserved = {0}, /* remove compilation warnings */
+        .dso = NULL,
+        .reserved = {0},
     },
 
     .get_number_of_cameras = camera_get_number_of_cameras,
     .get_camera_info = camera_get_camera_info,
-    .set_callbacks = NULL, /* remove compilation warnings */
-    .get_vendor_tag_ops = NULL, /* remove compilation warnings */
-    .reserved = {0}, /* remove compilation warnings */
+    .set_callbacks = NULL,
+    .get_vendor_tag_ops = NULL,
+    .open_legacy = NULL,
+    .reserved = {0},
 };
 
 typedef struct priv_camera_device {
