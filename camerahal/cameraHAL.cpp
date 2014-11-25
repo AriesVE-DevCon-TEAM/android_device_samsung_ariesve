@@ -74,7 +74,7 @@ camera_module_t HAL_MODULE_INFO_SYM = {
         .module_api_version = CAMERA_MODULE_API_VERSION_1_0,
         .hal_api_version = HARDWARE_HAL_API_VERSION,
         .id = CAMERA_HARDWARE_MODULE_ID,
-        .name = "7x30 CameraHal Module",
+        .name = "Samsung msm7x30 Camera Wrapper",
         .author = "Zhibin Wu",
         .methods = &camera_module_methods,
         .dso = NULL, /* remove compilation warnings */
@@ -360,49 +360,43 @@ static void CameraHAL_FixupParams(android::CameraParameters &camParams, priv_cam
     camParams.set(android::CameraParameters::KEY_VIDEO_FRAME_FORMAT,
                   android::CameraParameters::PIXEL_FORMAT_YUV420SP);
 
-    if (!camParams.get(CameraParameters::KEY_PREFERRED_PREVIEW_SIZE_FOR_VIDEO)) {
-        camParams.set(CameraParameters::KEY_PREFERRED_PREVIEW_SIZE_FOR_VIDEO,
+    if (!camParams.get(android::CameraParameters::KEY_PREFERRED_PREVIEW_SIZE_FOR_VIDEO)) {
+        camParams.set(android::CameraParameters::KEY_PREFERRED_PREVIEW_SIZE_FOR_VIDEO,
                   preferred_size);
     }
 
     if (dev->cameraid == CAMERA_ID_FRONT) {
-        camParams.set(CameraParameters::KEY_SUPPORTED_ISO_MODES, "");
-        camParams.set(CameraParameters::KEY_SUPPORTED_FOCUS_MODES,
-                  CameraParameters::FOCUS_MODE_INFINITY);
+        camParams.set(android::CameraParameters::KEY_SUPPORTED_ISO_MODES, "");
+        camParams.set(android::CameraParameters::KEY_SUPPORTED_FOCUS_MODES,
+                  android::CameraParameters::FOCUS_MODE_INFINITY);
 
-        camParams.set(CameraParameters::KEY_FOCUS_MODE,
-                  CameraParameters::FOCUS_MODE_INFINITY);
+        camParams.set(android::CameraParameters::KEY_FOCUS_MODE,
+                  android::CameraParameters::FOCUS_MODE_INFINITY);
 
-        camParams.set(CameraParameters::KEY_SUPPORTED_SCENE_MODES, "");
-        camParams.set(CameraParameters::KEY_SUPPORTED_EFFECTS, "");
+        camParams.set(android::CameraParameters::KEY_SUPPORTED_SCENE_MODES, "");
+        camParams.set(android::CameraParameters::KEY_SUPPORTED_EFFECTS, "");
     } else if (dev->cameraid == CAMERA_ID_BACK) {
         if (!camParams.get(android::CameraParameters::KEY_MAX_NUM_FOCUS_AREAS)) {
-            camParams.set(CameraParameters::KEY_MAX_NUM_FOCUS_AREAS, 1);
+            camParams.set(android::CameraParameters::KEY_MAX_NUM_FOCUS_AREAS, 1);
         }
 
-        camParams.set(CameraParameters::KEY_MAX_ZOOM, "12");
-        camParams.set(CameraParameters::KEY_ZOOM_RATIOS, "100,125,150,175,200,225,250,275,300,325,350,375,400");
-        camParams.set(CameraParameters::KEY_ZOOM_SUPPORTED, CameraParameters::TRUE);
+        camParams.set(android::CameraParameters::KEY_MAX_ZOOM, "12");
+        camParams.set(android::CameraParameters::KEY_ZOOM_RATIOS, "100,125,150,175,200,225,250,275,300,325,350,375,400");
+        camParams.set(android::CameraParameters::KEY_ZOOM_SUPPORTED, android::CameraParameters::TRUE);
 
-        camParams.set(CameraParameters::KEY_SUPPORTED_EFFECTS, "none,mono,negative,sepia");
-        camParams.set(CameraParameters::KEY_SUPPORTED_FOCUS_MODES, "auto,infinity,normal,macro,facedetect,touchaf");
+        camParams.set(android::CameraParameters::KEY_SUPPORTED_EFFECTS, "none,mono,negative,sepia");
+        camParams.set(android::CameraParameters::KEY_SUPPORTED_FOCUS_MODES, "auto,infinity,normal,macro,facedetect,touchaf");
     }
 
-    camParams.set(CameraParameters::KEY_SUPPORTED_PREVIEW_FRAME_RATES, "30,15,7");
+    camParams.set(android::CameraParameters::KEY_SUPPORTED_PREVIEW_FRAME_RATES, "30,15,7");
 
-    camParams.set(CameraParameters::KEY_MAX_EXPOSURE_COMPENSATION, 4);
-    camParams.set(CameraParameters::KEY_MIN_EXPOSURE_COMPENSATION, -4);
-    camParams.set(CameraParameters::KEY_EXPOSURE_COMPENSATION_STEP, 1);
+    camParams.set(android::CameraParameters::KEY_MAX_EXPOSURE_COMPENSATION, 4);
+    camParams.set(android::CameraParameters::KEY_MIN_EXPOSURE_COMPENSATION, -4);
+    camParams.set(android::CameraParameters::KEY_EXPOSURE_COMPENSATION_STEP, 1);
 
-    camParams.set(CameraParameters::KEY_MAX_SATURATION, 10);
-    camParams.set(CameraParameters::KEY_MAX_CONTRAST, 10);
-    camParams.set(CameraParameters::KEY_MAX_SHARPNESS, 30);
-
-    //keys for compatibility with other apps
-    camParams.set("max-saturation", 10);
-    camParams.set("max-contrast", 10);
-    camParams.set("max-sharpness", 30);
-
+    camParams.set(android::CameraParameters::KEY_MAX_SATURATION, 10);
+    camParams.set(android::CameraParameters::KEY_MAX_CONTRAST, 10);
+    camParams.set(android::CameraParameters::KEY_MAX_SHARPNESS, 30);
 }
 
 static int camera_set_preview_window(struct camera_device *device,
@@ -602,10 +596,10 @@ static int camera_start_preview(struct camera_device *device)
             camParams = gCameraHals[dev->cameraid]->getParameters();
             const char *prevFocusMode = camParams.get(android::CameraParameters::KEY_FOCUS_MODE);
 
-            camParams.set(CameraParameters::KEY_FOCUS_MODE, CameraParameters::FOCUS_MODE_MACRO);
+            camParams.set(android::CameraParameters::KEY_FOCUS_MODE, android::CameraParameters::FOCUS_MODE_MACRO);
             rv_fm = gCameraHals[dev->cameraid]->setParameters(camParams);
 
-            camParams.set(CameraParameters::KEY_FOCUS_MODE, CameraParameters::FOCUS_MODE_INFINITY);
+            camParams.set(android::CameraParameters::KEY_FOCUS_MODE, android::CameraParameters::FOCUS_MODE_INFINITY);
             rv_fm = gCameraHals[dev->cameraid]->setParameters(camParams);
 
             camParams.set(android::CameraParameters::KEY_FOCUS_MODE, prevFocusMode);
@@ -833,17 +827,17 @@ static int camera_set_parameters(struct camera_device *device, const char *param
     // If the front camera is going to be used
     if (dev->cameraid == CAMERA_ID_FRONT) {
         // Get recording hint (set in video recordin only) and rotation
-        const char *recordingHint = camParams.get(CameraParameters::KEY_RECORDING_HINT);
-        int rotation = camParams.getInt(CameraParameters::KEY_ROTATION);
+        const char *recordingHint = camParams.get(android::CameraParameters::KEY_RECORDING_HINT);
+        int rotation = camParams.getInt(android::CameraParameters::KEY_ROTATION);
 
         // If the current mode is not video recording and the rotation
         // is a portrait rotation (eg. 90, 270, etc), add 180 degree to
         // fix the rotation of the taken photo
         if ((recordingHint == NULL ||
-             strcmp(recordingHint, CameraParameters::FALSE) == 0) &&
+             strcmp(recordingHint, android::CameraParameters::FALSE) == 0) &&
             (rotation / 90) % 2 > 0) {
             rotation = (rotation + 180) % 360;
-            camParams.set(CameraParameters::KEY_ROTATION, rotation);
+            camParams.set(android::CameraParameters::KEY_ROTATION, rotation);
             ALOGI("%s: Rotation changed to %d", __FUNCTION__, rotation);
         }
     }
