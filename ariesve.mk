@@ -120,7 +120,6 @@ PRODUCT_PACKAGES += \
     lights.msm7x30 \
     power.msm7x30 \
     audio.primary.msm7x30 \
-    audio_policy.msm7x30 \
     audio.a2dp.default \
     audio.usb.default \
     libaudio-resampler \
@@ -148,8 +147,7 @@ PRODUCT_PACKAGES += \
 
 # Usb accessory and Wifi
 PRODUCT_PACKAGES += \
-    com.android.future.usb.accessory \
-    libnetcmdiface
+    com.android.future.usb.accessory
 
 # Device-specific packages
 PRODUCT_PACKAGES += \
@@ -158,7 +156,6 @@ PRODUCT_PACKAGES += \
 
 # Other apps
 PRODUCT_PACKAGES += \
-    PhotoTable \
     qcmediaplayer \
     LiveWallpapersPicker
 
@@ -170,6 +167,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.locale.language=en \
     ro.product.locale.region=GB
+
+# WPA supplicant
+PRODUCT_PACKAGES += \
+    dhcpcd.conf \
+    hostapd \
+    libwpa_client \
+    wpa_supplicant \
+    wpa_supplicant.conf
 
 # Build properties
 ADDITIONAL_DEFAULT_PROPERTIES += \
@@ -183,12 +188,9 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.low_ram=true
 
-#disable preloading of EGL/GL drivers in Zygote at boot time
+# Disable preloading of EGL/GL drivers in Zygote at boot time
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.zygote.disable_gl_preload=true
-
-# We have enough storage space to hold precise GC data
-PRODUCT_TAGS += dalvik.gc.type-precise
 
 # WiFi
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4329/device-bcm.mk)
