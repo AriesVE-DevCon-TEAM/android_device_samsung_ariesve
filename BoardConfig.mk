@@ -51,6 +51,9 @@ BOARD_KERNEL_PAGESIZE := 2048
 TARGET_KERNEL_SOURCE := kernel/samsung/msm7x30/
 TARGET_KERNEL_CONFIG := ariesve_defconfig
 
+# Enable dex-preoptimization to speed up first boot sequence
+WITH_DEXPREOPT := true
+
 # WiFi
 BOARD_HAVE_SAMSUNG_WIFI          := true
 WIFI_BAND                        := 802_11_ABG
