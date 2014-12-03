@@ -45,6 +45,9 @@ TARGET_CPU_ABI2 := armeabi
 # Use dlmalloc instead of jemalloc for mallocs on low-ram target kernels
 MALLOC_IMPL := dlmalloc
 
+# Legacy MMAP for pre-lollipop blobs
+BOARD_USES_LEGACY_MMAP := true
+
 # Kernel
 BOARD_KERNEL_BASE := 0x00400000
 BOARD_KERNEL_PAGESIZE := 2048
