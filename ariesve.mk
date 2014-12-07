@@ -162,6 +162,11 @@ PRODUCT_PACKAGES += \
     qcmediaplayer \
     LiveWallpapersPicker
 
+# IPv6 tethering
+PRODUCT_PACKAGES += \
+    ebtables \
+    ethertypes
+
 # Build properties
 ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.secure=0 \
