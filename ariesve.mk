@@ -60,8 +60,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ramdisk/init.qcom.usb.rc:recovery/root/init.qcom.usb.rc \
     $(LOCAL_PATH)/ramdisk/fstab.qcom:recovery/root/fstab.qcom \
-    $(LOCAL_PATH)/recovery/twrp.fstab:recovery/root/etc/twrp.fstab \
-    $(LOCAL_PATH)/recovery/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh
+    $(LOCAL_PATH)/recovery/twrp.fstab:recovery/root/etc/twrp.fstab
 
 # BT stuff
 PRODUCT_COPY_FILES += \
@@ -165,10 +164,8 @@ PRODUCT_PACKAGES += \
 
 # Build properties
 ADDITIONAL_DEFAULT_PROPERTIES += \
-    ro.secure=0
-
-# Enable for debugging
-PRODUCT_PROPERTY_OVERRIDES += \
+    ro.secure=0 \
+    ro.adb.secure=0 \
     ro.debuggable=1 \
     persist.service.adb.enable=1
 
