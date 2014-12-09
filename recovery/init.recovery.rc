@@ -12,7 +12,6 @@ on init
 
     symlink /system/etc /etc
 
-    mkdir /sdcard
     mkdir /usbdisk
     mkdir /external_sd
     mkdir /system
