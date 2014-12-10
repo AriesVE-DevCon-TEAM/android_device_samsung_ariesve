@@ -167,6 +167,10 @@ PRODUCT_PACKAGES += \
     ebtables \
     ethertypes
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.product.locale.language=en \
+    ro.product.locale.region=GB
+
 # Build properties
 ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.secure=0 \
