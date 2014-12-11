@@ -39,9 +39,6 @@ use.non-omx.mp3.decoder=true
 # Low Power Audio
 lpa.decode=false
 
-# Resampler quality 
-af.resampler.quality=4
-
 # Set default USB interface
 persist.sys.usb.config=mass_storage
 
