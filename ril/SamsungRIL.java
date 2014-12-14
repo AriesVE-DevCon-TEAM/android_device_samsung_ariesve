@@ -64,7 +64,6 @@ public class SamsungRIL extends RIL implements CommandsInterface {
     private boolean mSignalbarCount = SystemProperties.getInt("ro.telephony.sends_barcount", 0) == 1 ? true : false;
     private boolean mIsSamsungCdma = SystemProperties.getBoolean("ro.ril.samsung_cdma", false);
     private Object mCatProCmdBuffer;
-    private Message mPendingGetSimStatus;
 
     public SamsungRIL(Context context, int preferredNetworkType,
             int cdmaSubscription, Integer instanceId) {
@@ -621,31 +620,6 @@ public class SamsungRIL extends RIL implements CommandsInterface {
         }
 
         return response;
-    }
-
-    // Hack for Lollipop
-    // The system now queries for SIM status before radio on, resulting
-    // in getting an APPSTATE_DETECTED state. The RIL does not send an
-    // RIL_UNSOL_RESPONSE_SIM_STATUS_CHANGED message after the SIM is
-    // initialized, so delay the message until the radio is on.
-    @Override
-    public void
-    getIccCardStatus(Message result) {
-        if (mState != RadioState.RADIO_ON) {
-            mPendingGetSimStatus = result;
-        } else {
-            super.getIccCardStatus(result);
-        }
-    }
-
-    @Override
-    protected void switchToRadioState(RadioState newState) {
-        super.switchToRadioState(newState);
-
-        if (newState == RadioState.RADIO_ON && mPendingGetSimStatus != null) {
-            super.getIccCardStatus(mPendingGetSimStatus);
-            mPendingGetSimStatus = null;
-        }
     }
 
     @Override
