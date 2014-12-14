@@ -158,10 +158,8 @@ PRODUCT_PACKAGES += \
     sensors.ariesve \
     AriesParts
 
-# Other apps
-PRODUCT_PACKAGES += \
-    qcmediaplayer \
-    LiveWallpapersPicker
+# qcmediaplayer
+PRODUCT_PACKAGES += qcmediaplayer
 
 # IPv6 tethering
 PRODUCT_PACKAGES += \
