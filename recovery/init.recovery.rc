@@ -8,13 +8,10 @@ on init
     export ANDROID_ROOT /system
     export ANDROID_DATA /data
     export EXTERNAL_STORAGE /sdcard
-    export SECONDARY_STORAGE /external_sd
-
     symlink /system/etc /etc
 
     mkdir /sdcard
     mkdir /usbdisk
-    mkdir /external_sd
     mkdir /system
     mkdir /data
     mkdir /data/data
