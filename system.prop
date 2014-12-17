@@ -43,9 +43,6 @@ ro.sys.usb.default.config=mtp
 # Increase speed for UMS transfer
 ro.vold.umsdirtyratio=20
 
-# Enable repeatable keys in recovery
-ro.cwm.enable_key_repeat=true
-
 # Reduce background apps limit to 16 on low-tier devices
 ro.sys.fw.bg_apps_limit=16
 
