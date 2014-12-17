@@ -7,7 +7,7 @@ rild.libargs=-d /dev/smd0
 ro.ril.hsxpa=2
 ro.ril.gprsclass=12
 ro.telephony.ril_class=SamsungRIL
-ro.telephony.ril.v3=datacall,icccardstatus,facilitylock
+ro.telephony.ril.config=datacall,icccardstatus,facilitylock
 
 # Connectivity Engine (CnE)
 persist.cne.override.memlimit=1
