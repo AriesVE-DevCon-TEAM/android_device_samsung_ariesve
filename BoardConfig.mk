@@ -34,7 +34,6 @@ TARGET_BOOTLOADER_BOARD_NAME := ariesve
 TARGET_OTA_ASSERT_DEVICE := ariesve,GT-I9001
 TARGET_BOARD_PLATFORM := msm7x30
 TARGET_NO_BOOTLOADER := true
-TARGET_NO_RADIOIMAGE := true
 
 # Architecture
 TARGET_ARCH := arm
@@ -135,7 +134,6 @@ BOARD_USES_LEGACY_ALSA_AUDIO := true
 EXTENDED_FONT_FOOTPRINT := true
 
 # Partitions
-# For the Galaxy S Plus, these are calculated from /proc/partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 5242880
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 7864320
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 545259520
@@ -151,16 +149,9 @@ BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 
 # CWM Recovery
 TARGET_RECOVERY_DEVICE_DIRS += device/samsung/ariesve
-TARGET_RECOVERY_INITRC := device/samsung/ariesve/recovery/init.recovery.rc
 TARGET_RECOVERY_FSTAB := device/samsung/ariesve/ramdisk/fstab.qcom
-BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/ariesve/recovery/recovery_keys.c
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
 
 # TWRP recovery
-BOARD_HAS_SDCARD_INTERNAL := true
-BOARD_USES_MMCUTILS := true
-BOARD_HAS_NO_MISC_PARTITION := true
-BOARD_HAS_NO_SELECT_BUTTON := true
 DEVICE_RESOLUTION := 480x800
 TW_TARGET_USES_QCOM_BSP := true
 TW_SCREEN_BLANK_ON_BOOT := true
