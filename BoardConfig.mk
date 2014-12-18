@@ -134,6 +134,9 @@ BOARD_USES_LEGACY_ALSA_AUDIO := true
 # Include an expanded selection of fonts
 EXTENDED_FONT_FOOTPRINT := true
 
+# Logging
+TARGET_USES_LOGD := false
+
 # Partitions
 # For the Galaxy S Plus, these are calculated from /proc/partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 5242880
