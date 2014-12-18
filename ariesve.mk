@@ -19,6 +19,9 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
+# No sdcard
+PRODUCT_CHARACTERISTICS := nosdcard
+
 PRODUCT_BOOT_JARS += qcmediaplayer
 
 # Boot animation
