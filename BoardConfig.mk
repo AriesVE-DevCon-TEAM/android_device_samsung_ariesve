@@ -55,7 +55,13 @@ TARGET_KERNEL_SOURCE := kernel/samsung/msm7x30/
 TARGET_KERNEL_CONFIG := ariesve_defconfig
 
 # Enable dex-preoptimization to speed up first boot sequence
-WITH_DEXPREOPT := true
+ifeq ($(HOST_OS),linux)
+  ifeq ($(TARGET_BUILD_VARIANT),userdebug)
+    ifeq ($(WITH_DEXPREOPT),)
+      WITH_DEXPREOPT := true
+    endif
+  endif
+endif
 
 # WiFi
 BOARD_NO_WIFI_HAL                := true
@@ -118,6 +124,9 @@ TARGET_PROVIDES_LIBLIGHT := true
 
 # healthd HAL
 BOARD_HAL_STATIC_LIBRARIES := libhealthd.qcom
+
+# Logging
+TARGET_USES_LOGD := false
 
 # Camera
 COMMON_GLOBAL_CFLAGS += -DSAMSUNG_CAMERA_LEGACY
