@@ -60,3 +60,6 @@ config.disable_atlas=true
 
 # Enable smooth streaming
 mm.enable.smoothstreaming=true
+
+# Uncomment the following line to enable Bluetooth A2DP sink
+#persist.service.bt.a2dp.sink=true
