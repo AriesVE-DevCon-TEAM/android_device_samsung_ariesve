@@ -48,6 +48,7 @@ public class DeviceSettings extends Activity {
     public static final String KEY_FAST_CHARGE = "force_fast_charge";
     public static final String KEY_OTG_CHARGE = "otg_charge";
     public static final String KEY_LOW_RAM = "low_ram";
+    public static final String KEY_A2DP_SINK = "a2dp_sink";
     
     /* Tab TouchKey */
     public static final String KEY_BACKLIGHT_TIMEOUT = "backlight_timeout";

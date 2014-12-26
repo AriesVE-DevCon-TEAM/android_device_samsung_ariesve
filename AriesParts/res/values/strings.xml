@@ -41,6 +41,12 @@
     <string name="otg_charge_title_head">USB-OTG Charge</string>
     <string name="otg_charge_summary_head">Charge support in USB host mode.\nAttention: Make sure the connected power source (e.g. USB-Hub) can handle the power draw if charging is enabled to avoid damage.</string>
 
+    <string name="category_bluetooth_title">Bluetooth</string>
+    <string name="a2dp_sink_title">A2DP Sink</string>
+    <string name="a2dp_sink_summary_on">A2DP Sink is enabled, A2DP Source is disabled</string>
+    <string name="a2dp_sink_summary_off">A2DP Sink is disabled, A2DP Source is enabled</string>
+    <string name="a2dp_sink_error_bt_active">Bluetooth must be deactivated before changing A2DP mode.</string>
+
     <string name="category_performance_title">Performance</string>
     <string name="low_ram_title">Low RAM Switch</string>
     <string name="low_ram_summary_on">Low RAM is enabled, large-RAM features are disabled</string>
