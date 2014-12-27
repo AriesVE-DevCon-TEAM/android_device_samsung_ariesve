@@ -24,6 +24,7 @@ public class Startup extends BroadcastReceiver {
 
 	@Override
 	public void onReceive(final Context context, final Intent bootintent) {
+		GeneralFragmentActivity.restore(context);
 		TouchKeyFragmentActivity.restore(context);
 		BacklightNotificationFragmentActivity.restore(context);
 	}

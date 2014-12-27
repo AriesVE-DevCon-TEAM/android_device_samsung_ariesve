@@ -97,4 +97,16 @@
         <item>4000</item>
         <item>5000</item>
     </string-array>
+
+    <string-array name="otg_charge_entries">
+        <item>No charging (Default)</item>
+        <item>Slow (USB)</item>
+        <item>Fast (Wallcharger)</item>
+    </string-array>
+
+    <string-array name="otg_charge_entries_values" translatable="false">
+        <item>none</item>
+        <item>slow</item>
+        <item>fast</item>
+    </string-array>
 </resources>
