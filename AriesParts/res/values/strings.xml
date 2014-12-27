@@ -37,6 +37,10 @@
     <string name="force_fast_charge_head">Force Fast Charge</string>
     <string name="force_fast_charge_summary_head">Detect USB-connected PC as USB Wall Charger, for faster charging mode</string>
 
+    <string name="category_otg_title">USB-OTG</string>
+    <string name="otg_charge_title_head">USB-OTG Charge</string>
+    <string name="otg_charge_summary_head">Charge support in USB host mode.\nAttention: Make sure the connected power source (e.g. USB-Hub) can handle the power draw if charging is enabled to avoid damage.</string>
+
     <string name="category_performance_title">Performance</string>
     <string name="low_ram_title">Low RAM Switch</string>
     <string name="low_ram_summary_on">Low RAM is enabled, large-RAM features are disabled</string>
