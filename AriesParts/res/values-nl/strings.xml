@@ -41,10 +41,11 @@
     <string name="low_ram_summary_on">Weinig RAM is ingeschakeld, functionaliteit voor apparaten met veel RAM is niet beschikbaar</string>
     <string name="low_ram_summary_off">Weinig RAM is uitgeschakeld, functionaliteit voor apparaten met veel RAM is beschikbaar</string>
     <string name="low_ram_error">Onmogelijk om de instelling aan te passen, gelieve voor deze applicatie root-toegang toe te staan</string>
-    <string name="low_ram_reboot_alert">Om deze instelling toe te passen is opnieuw opstarten noodzakelijk.\nWilt u nu opnieuw opstarten?\n\nTik op Ja om nu opnieuw op te starten of op Nee als u dit later wilt doen.</string>
-    <string name="low_ram_reboot_wait">Het apparaat wordt opnieuw opgestart over %1$d seconden, even geduld.</string>
-    <string name="low_ram_reboot_yes">Ja</string>
-    <string name="low_ram_reboot_no">Nee</string>
+
+    <string name="reboot_alert">Om deze instelling toe te passen is opnieuw opstarten noodzakelijk.\nWilt u nu opnieuw opstarten?\n\nTik op Ja om nu opnieuw op te starten of op Nee als u dit later wilt doen.</string>
+    <string name="reboot_wait">Het apparaat wordt opnieuw opgestart over %1$d seconden, even geduld.</string>
+    <string name="reboot_yes">Ja</string>
+    <string name="reboot_no">Nee</string>
 
     <!-- Page TouchKey -->
     <string name="category_touchkey_title">Aanraakknoppen</string>

@@ -42,10 +42,11 @@
     <string name="low_ram_summary_on">Uso óptimo de RAM activado. Las funciones con gran consumo de RAM están desactivadas</string>
     <string name="low_ram_summary_off">Uso óptimo de RAM desactivado. Las funciones con gran consumo de RAM están activadas</string>
     <string name="low_ram_error">Imposible optimizar RAM. Por favor, establece permisos root para esta función</string>
-    <string name="low_ram_reboot_alert">Para aplicar la configuración es necesario reiniciar.\n¿Reiniciar ahora?\n\nPulsa Sí para reiniciar ahora, o pulsa No para reiniciar más tarde.</string>
-    <string name="low_ram_reboot_wait">El dispositivo se reiniciará en %1$d segundos. Espera, por favor.</string>
-    <string name="low_ram_reboot_yes">Sí</string>
-    <string name="low_ram_reboot_no">No</string>
+
+    <string name="reboot_alert">Para aplicar la configuración es necesario reiniciar.\n¿Reiniciar ahora?\n\nPulsa Sí para reiniciar ahora, o pulsa No para reiniciar más tarde.</string>
+    <string name="reboot_wait">El dispositivo se reiniciará en %1$d segundos. Espera, por favor.</string>
+    <string name="reboot_yes">Sí</string>
+    <string name="reboot_no">No</string>
 
     <!-- Page TouchKey -->
     <string name="category_touchkey_title">Teclas táctiles</string>

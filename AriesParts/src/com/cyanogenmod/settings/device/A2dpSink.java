@@ -16,16 +16,14 @@
 
 package com.cyanogenmod.settings.device;
 
-import android.app.AlertDialog;
+import android.bluetooth.BluetoothAdapter;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.SystemProperties;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceManager;
 import android.util.Log;
-import android.bluetooth.BluetoothAdapter;
 
 import com.cyanogenmod.settings.device.R;
 
@@ -78,18 +76,6 @@ public class A2dpSink implements OnPreferenceChangeListener {
 		return BuildProp.set(A2DPSINK_PROP_KEY, value);
 	}
 
-	/**
-	 * Shows the error dialog for an update failure
-	 * @param context The context of this Preference
-	 */
-	private void showErrorDialog(final Context context, int msgId) {
-		AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(context);
-		dialogBuilder.setTitle(R.string.a2dp_sink_title)
-			.setMessage(msgId)
-			.create()
-			.show();
-	}
-
 	@Override
 	public boolean onPreferenceChange(Preference preference, Object value) {
 		// Get the preference context
@@ -107,7 +93,7 @@ public class A2dpSink implements OnPreferenceChangeListener {
 			// bluetooth is off. This way we also prevent side effects which might occur if the property
 			// is changed while bluetooth is active.
 			// Note that for some reason Android does not allow sink and source at the same time.
-			showErrorDialog(context, R.string.a2dp_sink_error_bt_active);
+			Utils.showErrorDialog(context, R.string.a2dp_sink_title, R.string.a2dp_sink_error_bt_active);
 			return false;
 		}
 

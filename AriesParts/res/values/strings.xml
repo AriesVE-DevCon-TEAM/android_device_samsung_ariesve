@@ -52,10 +52,11 @@
     <string name="low_ram_summary_on">Low RAM is enabled, large-RAM features are disabled</string>
     <string name="low_ram_summary_off">Low RAM is disabled, large-RAM features are enabled</string>
     <string name="low_ram_error">Impossible to set LowRam setting, please grant the root permissions for this app.</string>
-    <string name="low_ram_reboot_alert">To apply the setting, a reboot is required.\nWould you like to reboot now?\n\nPress Yes to reboot now, No if you prefer to reboot later.</string>
-    <string name="low_ram_reboot_wait">The device will be rebooted in %1$d seconds, please wait.</string>
-    <string name="low_ram_reboot_yes">Yes</string>
-    <string name="low_ram_reboot_no">No</string>
+
+    <string name="reboot_alert">To apply the setting, a reboot is required.\nWould you like to reboot now?\n\nPress Yes to reboot now, No if you prefer to reboot later.</string>
+    <string name="reboot_wait">The device will be rebooted in %1$d seconds, please wait.</string>
+    <string name="reboot_yes">Yes</string>
+    <string name="reboot_no">No</string>
 
     <!-- Page TouchKey -->
     <string name="category_touchkey_title">Touch Keys</string>

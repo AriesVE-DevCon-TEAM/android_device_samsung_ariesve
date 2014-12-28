@@ -41,10 +41,11 @@
     <string name="low_ram_summary_on">Low RAM jest włączony, funkcje wymagające dużej ilości RAM-u są wyłączone</string>
     <string name="low_ram_summary_off">Low RAM jest wyłączony, funkcje wymagające dużej ilości RAM-u są włączone</string>
     <string name="low_ram_error">Nie udało się zmienić ustawień Low RAM. Proszę nadać uprawnienia root dla tej aplikacji.</string>
-    <string name="low_ram_reboot_alert">Aby zastosować ustawienia, wymagane jest ponowne uruchomienie telefonu.\nCzy chcesz uruchomić ponownie telefon teraz?\n\nNaciśnij TAK, aby uruchomić ponownie telefon. NIE, jeżeli chcesz uruchomić ponownie telefon później.</string>
-    <string name="low_ram_reboot_wait">Telefon zostanie ponownie uruchomiony za %1$d sekund, proszę czekać.</string>
-    <string name="low_ram_reboot_yes">Tak</string>
-    <string name="low_ram_reboot_no">Nie</string>
+
+    <string name="reboot_alert">Aby zastosować ustawienia, wymagane jest ponowne uruchomienie telefonu.\nCzy chcesz uruchomić ponownie telefon teraz?\n\nNaciśnij TAK, aby uruchomić ponownie telefon. NIE, jeżeli chcesz uruchomić ponownie telefon później.</string>
+    <string name="reboot_wait">Telefon zostanie ponownie uruchomiony za %1$d sekund, proszę czekać.</string>
+    <string name="reboot_yes">Tak</string>
+    <string name="reboot_no">Nie</string>
 
     <!-- Page TouchKey -->
     <string name="category_touchkey_title">Klawisze dotykowe</string>

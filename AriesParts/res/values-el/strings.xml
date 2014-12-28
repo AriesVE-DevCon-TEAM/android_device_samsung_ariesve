@@ -41,10 +41,11 @@
     <string name="low_ram_summary_on">Η Low RAM ειναι ενεργή, τα χαρακτηριστικά της large-RAM είναι ανενεργά</string>
     <string name="low_ram_summary_off">Η Low RAM είναι ανενεργή, τα χαρακτηριστικά τηςlarge-RAM είναι ενεργά</string>
     <string name="low_ram_error">Αδύνατο να ορίσετε τη ρύθμιση LowRam, παρακαλούμε να εκχωρήσετε τα δικαιώματα root για αυτήν την εφαρμογή.</string>
-    <string name="low_ram_reboot_alert">Για να εφαρμόσετε τη ρύθμιση, απαιτείται επανεκκίνηση.\nΘέλετε να κάνετε επανεκκίνηση τώρα;\n\nΠατήστε Ναι για να επανεκκινήσετε τώρα, Όχι αν προτιμάτε να επανεκκινήσετε αργότερα.</string>
-    <string name="low_ram_reboot_wait">Η συσκευή θα κάνει επανεκκίνηση σε %1$d δευτερόλεπτα, παρακαλώ περιμένετε.</string>
-    <string name="low_ram_reboot_yes">Ναι</string>
-    <string name="low_ram_reboot_no">Όχι</string>
+
+    <string name="reboot_alert">Για να εφαρμόσετε τη ρύθμιση, απαιτείται επανεκκίνηση.\nΘέλετε να κάνετε επανεκκίνηση τώρα;\n\nΠατήστε Ναι για να επανεκκινήσετε τώρα, Όχι αν προτιμάτε να επανεκκινήσετε αργότερα.</string>
+    <string name="reboot_wait">Η συσκευή θα κάνει επανεκκίνηση σε %1$d δευτερόλεπτα, παρακαλώ περιμένετε.</string>
+    <string name="reboot_yes">Ναι</string>
+    <string name="reboot_no">Όχι</string>
 
     <!-- Page TouchKey -->
     <string name="category_touchkey_title">Touch Keys</string>

@@ -41,10 +41,11 @@
     <string name="low_ram_summary_on">低RAM优化已启用, 部分占用较多RAM的系统功能已禁用</string>
     <string name="low_ram_summary_off">低RAM优化已禁用, 部分占用较多RAM的系统功能已启用</string>
     <string name="low_ram_error">无法调用低RAM优化设置，请允许该应用程序获取ROOT权限</string>
-    <string name="low_ram_reboot_alert">需要重启手机来应用你的更改\n你想现在重启手机吗？\n\n点是立即重启，点否稍后重启</string>
-    <string name="low_ram_reboot_wait">设备将会在 %1$d 秒后重启, 请稍后</string>
-    <string name="low_ram_reboot_yes">是</string>
-    <string name="low_ram_reboot_no">否</string>
+
+    <string name="reboot_alert">需要重启手机来应用你的更改\n你想现在重启手机吗？\n\n点是立即重启，点否稍后重启</string>
+    <string name="reboot_wait">设备将会在 %1$d 秒后重启, 请稍后</string>
+    <string name="reboot_yes">是</string>
+    <string name="reboot_no">否</string>
 
     <!-- Page TouchKey -->
     <string name="category_touchkey_title">触控键</string>
