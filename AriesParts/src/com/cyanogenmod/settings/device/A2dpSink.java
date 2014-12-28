@@ -75,7 +75,7 @@ public class A2dpSink implements OnPreferenceChangeListener {
 	 */
 	private static boolean storePropertyValue(Boolean value) {
 		SystemProperties.set(A2DPSINK_PROP_KEY, value.toString());
-		return true;
+		return BuildProp.set(A2DPSINK_PROP_KEY, value);
 	}
 
 	/**
