@@ -32,6 +32,9 @@ public class BuildProp {
 	// Build Properties file
 	private static final String BUILD_PROP_FILE = "/system/build.prop";
 
+	// Persisted properties path
+	private static final String PERSISTED_PROPS_PATH = "/data/property";
+
 	// Commands to get and store a property value
 	private static final String GET_COMMAND =
 			"grep '^%1$s' %2$s | sed 's|^.*=||'";
@@ -40,8 +43,11 @@ public class BuildProp {
 			"    sed -i 's|^%1$s=.*|%1$s=%2$s|' %3$s; " +
 			"else" +
 			"    echo '%1$s=%2$s' >> %3$s; " +
+			"fi; " +
+			"if [[ %1$s == persist.* ]]; then" +
+			"    echo -n '%2$s' > %4$s/%1$s; " +
 			"fi";
-	
+
 	/**
 	 * Gets the current value of a property
 	 * @param key The key of the property to get
@@ -129,7 +135,7 @@ public class BuildProp {
 				// Store the value inside system properties
 				CommandProcessor cmd = new CommandProcessor();
 				CommandResult result = cmd.su.runWaitFor(
-					String.format(STORE_COMMAND, key, String.valueOf(value), BUILD_PROP_FILE)
+					String.format(STORE_COMMAND, key, String.valueOf(value), BUILD_PROP_FILE, PERSISTED_PROPS_PATH)
 				);
 
 				// Save the exit status of store command
