@@ -48,6 +48,11 @@
     <string name="a2dp_sink_error_bt_active">Bluetooth must be deactivated before changing A2DP mode.</string>
 
     <string name="category_performance_title">Performance</string>
+    <string name="highend_gfx_title">High-End GFX Switch</string>
+    <string name="highend_gfx_summary_on">High-End graphic effects are enabled, features like transparent lock screen, status and notification bars are enabled</string>
+    <string name="highend_gfx_summary_off">High-End graphic effects are disabled, features like transparent lock screen, status and notification bars are disabled</string>
+    <string name="highend_gfx_error">Impossible to set High-End GFX setting, please grant the root permissions for this app.</string>
+
     <string name="low_ram_title">Low RAM Switch</string>
     <string name="low_ram_summary_on">Low RAM is enabled, large-RAM features are disabled</string>
     <string name="low_ram_summary_off">Low RAM is disabled, large-RAM features are enabled</string>
