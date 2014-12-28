@@ -42,18 +42,7 @@ public class LowRam implements OnPreferenceChangeListener {
 	 * @return True if the feature is supported, otherwise false
 	 */
 	public static boolean isSupported() {
-		// Get the system version
-		String versionString = BuildProp.get(SYSTEM_VERSION_PROP_KEY);
-
-		// Return true if the system is Android 4.4 (KitKat) or above
-		if (versionString != null && !versionString.isEmpty()) {
-			int index = versionString.indexOf(".");
-			float version = Float.parseFloat((index > 0 && versionString.length() >= index + 2) ?
-					versionString.substring(0, index + 2) : versionString);
-			return version >= MIN_VERSION_SUPPORTED;
-		} else {
-			return false;
-		}
+		return BuildProp.isSupportedSystem(MIN_VERSION_SUPPORTED);
 	}
 
 	/**

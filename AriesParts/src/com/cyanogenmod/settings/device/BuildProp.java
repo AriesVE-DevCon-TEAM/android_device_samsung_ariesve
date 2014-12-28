@@ -48,6 +48,9 @@ public class BuildProp {
 			"    echo -n '%2$s' > %4$s/%1$s; " +
 			"fi";
 
+	// Key for system version property
+	private static final String SYSTEM_VERSION_PROP_KEY = "ro.build.version.release";
+
 	/**
 	 * Gets the current value of a property
 	 * @param key The key of the property to get
@@ -154,6 +157,26 @@ public class BuildProp {
 
 			// Return the update result
 			return updated;
+		}
+	}
+
+	/**
+	 * Checks if the system is supported
+	 * @param minSystemVersion The minimum supported system
+	 * @return True if the feature is supported, otherwise false
+	 */
+	public static boolean isSupportedSystem(float minSystemVersion) {
+		// Get the system version
+		String versionString = get(SYSTEM_VERSION_PROP_KEY);
+
+		// Return true if the system is equal or above the version passed as argument
+		if (versionString != null && !versionString.isEmpty()) {
+			int index = versionString.indexOf(".");
+			float version = Float.parseFloat((index > 0 && versionString.length() >= index + 2) ?
+					versionString.substring(0, index + 2) : versionString);
+			return version >= minSystemVersion;
+		} else {
+			return false;
 		}
 	}
 }
