@@ -44,6 +44,7 @@ public class GeneralFragmentActivity extends PreferenceFragment {
     private Preference mGSensor;
     private ListPreference mOTGCharge;
     private CheckBoxPreference mFastCharge;
+    private CheckBoxPreference mHighEndGfxStatus;
     private CheckBoxPreference mLowRamStatus;
     private FileObserver mObserver;
 
@@ -93,6 +94,10 @@ public class GeneralFragmentActivity extends PreferenceFragment {
         mOTGCharge.setEnabled(OTGCharge.isSupported());
         mOTGCharge.setOnPreferenceChangeListener(new OTGCharge());
 
+        mHighEndGfxStatus = (CheckBoxPreference) findPreference(DeviceSettings.KEY_HIGHEND_GFX);
+        mHighEndGfxStatus.setEnabled(HighEndGfx.isSupported());
+        mHighEndGfxStatus.setOnPreferenceChangeListener(new HighEndGfx());
+
         mLowRamStatus = (CheckBoxPreference) findPreference(DeviceSettings.KEY_LOW_RAM);
         mLowRamStatus.setEnabled(LowRam.isSupported());
         mLowRamStatus.setOnPreferenceChangeListener(new LowRam());
@@ -101,6 +106,7 @@ public class GeneralFragmentActivity extends PreferenceFragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        mHighEndGfxStatus.setChecked(HighEndGfx.getPropertyValue());
         mLowRamStatus.setChecked(LowRam.getPropertyValue());
         mFastCharge.setChecked(FastCharge.isActive());
     }
