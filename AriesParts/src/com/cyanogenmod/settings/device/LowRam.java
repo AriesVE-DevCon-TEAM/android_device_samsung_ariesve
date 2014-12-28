@@ -16,17 +16,12 @@
 
 package com.cyanogenmod.settings.device;
 
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.SharedPreferences;
-import android.os.Handler;
-import android.os.PowerManager;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceManager;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.cyanogenmod.settings.device.R;
 
@@ -41,9 +36,6 @@ public class LowRam implements OnPreferenceChangeListener {
 
 	// LowRam property is supported starting from Android 4.4 (KitKat)
 	private static final float MIN_VERSION_SUPPORTED = 4.4f;
-
-	// Reboot timeout in seconds
-	private static final int REBOOT_TIMEOUT = 5;
 
 	/**
 	 * Checks if the feature is supported
@@ -81,52 +73,6 @@ public class LowRam implements OnPreferenceChangeListener {
 		return BuildProp.set(LOWRAM_PROP_KEY, value);
 	}
 
-	/**
-	 * Shows the confirm dialog to reboot the device
-	 * @param context The context of this Preference
-	 */
-	private void showRebootDialog(final Context context) {
-		// Create and show the reboot confirm dialog
-		AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(context);
-		dialogBuilder.setTitle(R.string.low_ram_title)
-			.setMessage(R.string.low_ram_reboot_alert)
-			.setPositiveButton(R.string.low_ram_reboot_yes, new DialogInterface.OnClickListener() {
-				public void onClick(DialogInterface dialog, int id) {
-					// Show wait message for reboot in progress
-					Toast.makeText(context,
-						String.format(context.getString(R.string.low_ram_reboot_wait), REBOOT_TIMEOUT),
-						Toast.LENGTH_LONG).show();
-					final Handler handler = new Handler();
-					handler.postDelayed(new Runnable() {
-						@Override
-						public void run() {
-							PowerManager pm = (PowerManager)context.getSystemService(Context.POWER_SERVICE);
-							pm.reboot(null);
-						}
-					}, REBOOT_TIMEOUT * 1000);
-				}
-			})
-			.setNegativeButton(R.string.low_ram_reboot_no, new DialogInterface.OnClickListener() {
-				public void onClick(DialogInterface dialog, int id) {
-					dialog.cancel();
-				}
-			})
-			.create()
-			.show();
-	}
-	
-	/**
-	 * Shows the error dialog for an update failure
-	 * @param context The context of this Preference
-	 */
-	private void showErrorDialog(final Context context) {
-		AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(context);
-		dialogBuilder.setTitle(R.string.low_ram_title)
-			.setMessage(R.string.low_ram_error)
-			.create()
-			.show();
-	}
-
 	@Override
 	public boolean onPreferenceChange(Preference preference, Object value) {
 		// Get the preference context
@@ -134,10 +80,10 @@ public class LowRam implements OnPreferenceChangeListener {
 
 		// Store the new value, if it fails abort Preference update
 		if (storePropertyValue((Boolean)value)) {
-			showRebootDialog(context);
+			Utils.showRebootDialog(context, R.string.low_ram_title);
 			return true;
 		} else {
-			showErrorDialog(context);
+			Utils.showErrorDialog(context, R.string.low_ram_title, R.string.low_ram_error);
 			return false;
 		}
 	}

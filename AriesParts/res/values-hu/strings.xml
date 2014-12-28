@@ -41,10 +41,11 @@
     <string name="low_ram_summary_on">Alacsony RAM-használat engedélyezve, ezzel járó memóriakezelési tiltásokkal együtt</string>
     <string name="low_ram_summary_off">Alacsony RAM-használat letiltva, memóriakezelési tiltások feloldva</string>
     <string name="low_ram_error">Hiba! Engedélyezd ennek az alkalmazásnak a root-jogokat!</string>
-    <string name="low_ram_reboot_alert">A beállítás engedélyezéséhez újra kell indítani a készüléket.\nSzeretnéd most megtenni?\n\nNyomj igent ha most, nem-et ha később indítanál újra.</string>
-    <string name="low_ram_reboot_wait">A készülék %1$d másodperc múlva újraindul, kis türelem...</string>
-    <string name="low_ram_reboot_yes">Igen</string>
-    <string name="low_ram_reboot_no">Nem</string>
+
+    <string name="reboot_alert">A beállítás engedélyezéséhez újra kell indítani a készüléket.\nSzeretnéd most megtenni?\n\nNyomj igent ha most, nem-et ha később indítanál újra.</string>
+    <string name="reboot_wait">A készülék %1$d másodperc múlva újraindul, kis türelem...</string>
+    <string name="reboot_yes">Igen</string>
+    <string name="reboot_no">Nem</string>
 
     <!-- Page TouchKey -->
     <string name="category_touchkey_title">Érintőgombok</string>

@@ -16,7 +16,13 @@
 
 package com.cyanogenmod.settings.device;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.os.Handler;
+import android.os.PowerManager;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -25,13 +31,19 @@ import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 
+import com.cyanogenmod.settings.device.R;
+
 /**
  * Utility class
  */
 public class Utils {
 
+	// Logging tag
 	private static final String TAG_READ = "DeviceSettings_Utils_Read";
 	private static final String TAG_WRITE = "DeviceSettings_Utils_Write";
+
+	// Reboot timeout in seconds
+	private static final int REBOOT_TIMEOUT = 5;
 
 	/**
 	 * Checks if the specified file path exists
@@ -115,4 +127,52 @@ public class Utils {
 		}
 	}
 
+	/**
+	 * Shows the confirm dialog to reboot the device
+	 * @param context The context where the dialog will be shown
+	 * @param titleID The resource ID for the title of the dialog
+	 */
+	public static void showRebootDialog(final Context context, int titleID) {
+		// Create and show the reboot confirm dialog
+		AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(context);
+		dialogBuilder.setTitle(titleID)
+			.setMessage(R.string.reboot_alert)
+			.setPositiveButton(R.string.reboot_yes, new DialogInterface.OnClickListener() {
+				public void onClick(DialogInterface dialog, int id) {
+					// Show wait message for reboot in progress
+					Toast.makeText(context,
+						String.format(context.getString(R.string.reboot_wait), REBOOT_TIMEOUT),
+						Toast.LENGTH_LONG).show();
+					final Handler handler = new Handler();
+					handler.postDelayed(new Runnable() {
+						@Override
+						public void run() {
+							PowerManager pm = (PowerManager)context.getSystemService(Context.POWER_SERVICE);
+							pm.reboot(null);
+						}
+					}, REBOOT_TIMEOUT * 1000);
+				}
+			})
+			.setNegativeButton(R.string.reboot_no, new DialogInterface.OnClickListener() {
+				public void onClick(DialogInterface dialog, int id) {
+					dialog.cancel();
+				}
+			})
+			.create()
+			.show();
+	}
+
+	/**
+	 * Shows the error dialog for an update failure
+	 * @param context The context where the dialog will be shown
+	 * @param titleID The resource ID for the title of the dialog
+	 * @param messageID The resource ID for the message of the dialog
+	 */
+	public static void showErrorDialog(final Context context, int titleID, int messageID) {
+		AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(context);
+		dialogBuilder.setTitle(titleID)
+			.setMessage(messageID)
+			.create()
+			.show();
+	}
 }

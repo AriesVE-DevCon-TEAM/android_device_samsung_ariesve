@@ -41,10 +41,11 @@
     <string name="low_ram_summary_on">L\'opzione Low RAM è abilitata, le funzionalità che richiedono molta memoria sono disabilitate</string>
     <string name="low_ram_summary_off">L\'opzione Low RAM è disabilitata, le funzionalità che richiedono molta memoria sono abilitate</string>
     <string name="low_ram_error">Impossibile impostare l\'opzione LowRam, per favore controllare che l\'app abbia i permessi di root.</string>
-    <string name="low_ram_reboot_alert">E\' necessario un riavvio per applicare l\'impostazione.\nVuoi riavviare adesso?\n\nPremi Sì per riavviare ora oppure No se preferisci riavviare più tardi.</string>
-    <string name="low_ram_reboot_wait">Il dispositivo verrà riavviato in %1$d secondi, per favore attendere.</string>
-    <string name="low_ram_reboot_yes">Sì</string>
-    <string name="low_ram_reboot_no">No</string>
+
+    <string name="reboot_alert">E\' necessario un riavvio per applicare l\'impostazione.\nVuoi riavviare adesso?\n\nPremi Sì per riavviare ora oppure No se preferisci riavviare più tardi.</string>
+    <string name="reboot_wait">Il dispositivo verrà riavviato in %1$d secondi, per favore attendere.</string>
+    <string name="reboot_yes">Sì</string>
+    <string name="reboot_no">No</string>
 
     <!-- Page TouchKey -->
     <string name="category_touchkey_title">Tasti a sfioramento</string>
