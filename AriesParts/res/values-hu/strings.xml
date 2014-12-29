@@ -18,6 +18,7 @@
 
     <!-- Page Headers -->
     <string name="tab_general_title">ÁLTALÁNOS</string>
+    <string name="tab_performance_title">TELJESÍTMÉNY</string>
     <string name="tab_touchkey_title">ÉRINTŐGOMBOK</string>
     <string name="tab_bln_title">BLN</string>
 
@@ -36,6 +37,7 @@
     <string name="force_fast_charge_head">Gyors töltés kényszerítése</string>
     <string name="force_fast_charge_summary_head">A PC-hez való USB csatlakozást érzékelje fali töltőként a gyorsabb töltés érdekében</string>
 
+    <!-- Page Performance -->
     <string name="category_performance_title">Teljesítmény</string>
     <string name="low_ram_title">Alacsony RAM-használat</string>
     <string name="low_ram_summary_on">Alacsony RAM-használat engedélyezve, ezzel járó memóriakezelési tiltásokkal együtt</string>

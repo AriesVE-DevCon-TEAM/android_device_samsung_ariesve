@@ -55,20 +55,4 @@
         </Preference>
     </PreferenceCategory>
 
-    <!-- Performance -->
-    <PreferenceCategory android:title="@string/category_performance_title" >
-        <CheckBoxPreference
-            android:key="highend_gfx"
-            android:title="@string/highend_gfx_title"
-            android:summaryOn="@string/highend_gfx_summary_on"
-            android:summaryOff="@string/highend_gfx_summary_off"
-            android:defaultValue="false" />
-        <CheckBoxPreference
-            android:key="low_ram"
-            android:title="@string/low_ram_title"
-            android:summaryOn="@string/low_ram_summary_on"
-            android:summaryOff="@string/low_ram_summary_off"
-            android:defaultValue="true" />
-    </PreferenceCategory>
-
 </PreferenceScreen>

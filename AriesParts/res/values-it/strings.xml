@@ -18,7 +18,9 @@
 
     <!-- Page Headers -->
     <string name="tab_general_title">VARIE</string>
+    <string name="tab_performance_title">PERFORMANCE</string>
     <string name="tab_touchkey_title">TOUCHKEY</string>
+    <string name="tab_bln_title">BLN</string>
 
     <!-- Page General -->
     <string name="category_screen_title">Display</string>
@@ -36,6 +38,7 @@
     <string name="force_fast_charge_head">Forza caricamento rapido</string>
     <string name="force_fast_charge_summary_head">Rileva i PC connessi alla porta USB come semplici caricatori USB, per un più rapido caricamento della batteria</string>
 
+    <!-- Page Performance -->
     <string name="category_performance_title">Performance</string>
     <string name="low_ram_title">Opzione Low RAM</string>
     <string name="low_ram_summary_on">L\'opzione Low RAM è abilitata, le funzionalità che richiedono molta memoria sono disabilitate</string>

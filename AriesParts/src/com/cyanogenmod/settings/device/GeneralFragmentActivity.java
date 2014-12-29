@@ -17,10 +17,8 @@
 package com.cyanogenmod.settings.device;
 
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.SystemProperties;
 import android.os.FileObserver;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
@@ -30,10 +28,6 @@ import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
 import android.preference.PreferenceScreen;
 import android.util.Log;
-import android.view.Gravity;
-import android.widget.Toast;
-import android.widget.CheckBox;
-import android.util.Log;
 
 import com.cyanogenmod.settings.device.R;
 
@@ -41,12 +35,10 @@ public class GeneralFragmentActivity extends PreferenceFragment {
 
     private static final String TAG = "DeviceSettings_General";
 
-    private Preference mGSensor;
-    private ListPreference mOTGCharge;
     private CheckBoxPreference mFastCharge;
-    private CheckBoxPreference mHighEndGfxStatus;
-    private CheckBoxPreference mLowRamStatus;
+    private ListPreference mOTGCharge;
     private CheckBoxPreference mA2dpSinkStatus;
+    private Preference mGSensor;
     private FileObserver mObserver;
 
     private Handler mHandler = new Handler();
@@ -98,23 +90,13 @@ public class GeneralFragmentActivity extends PreferenceFragment {
         mA2dpSinkStatus = (CheckBoxPreference) findPreference(DeviceSettings.KEY_A2DP_SINK);
         mA2dpSinkStatus.setEnabled(A2dpSink.isSupported());
         mA2dpSinkStatus.setOnPreferenceChangeListener(new A2dpSink());
-
-        mHighEndGfxStatus = (CheckBoxPreference) findPreference(DeviceSettings.KEY_HIGHEND_GFX);
-        mHighEndGfxStatus.setEnabled(HighEndGfx.isSupported());
-        mHighEndGfxStatus.setOnPreferenceChangeListener(new HighEndGfx());
-
-        mLowRamStatus = (CheckBoxPreference) findPreference(DeviceSettings.KEY_LOW_RAM);
-        mLowRamStatus.setEnabled(LowRam.isSupported());
-        mLowRamStatus.setOnPreferenceChangeListener(new LowRam());
     }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mHighEndGfxStatus.setChecked(HighEndGfx.getPropertyValue());
-        mLowRamStatus.setChecked(LowRam.getPropertyValue());
-        mA2dpSinkStatus.setChecked(A2dpSink.getPropertyValue());
         mFastCharge.setChecked(FastCharge.isActive());
+        mA2dpSinkStatus.setChecked(A2dpSink.getPropertyValue());
     }
 
     @Override
