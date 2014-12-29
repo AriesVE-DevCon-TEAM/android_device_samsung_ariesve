@@ -18,6 +18,7 @@
 
     <!-- Page Headers -->
     <string name="tab_general_title">GENERAL</string>
+    <string name="tab_performance_title">RENDIMENTO</string>
     <string name="tab_touchkey_title">TECLAS</string>
     <string name="tab_bln_title">BLN</string>
 
@@ -37,6 +38,7 @@
     <string name="force_fast_charge_head">Forzar carga rápida</string>
     <string name="force_fast_charge_summary_head">Detectar PC conectado al puerto USB como un cargador USB, para una carga más rápida</string>
 
+    <!-- Page Performance -->
     <string name="category_performance_title">Rendimento</string>
     <string name="low_ram_title">Optimizar RAM</string>
     <string name="low_ram_summary_on">Uso óptimo de RAM activado. Las funciones con gran consumo de RAM están desactivadas</string>

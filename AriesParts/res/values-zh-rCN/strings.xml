@@ -18,6 +18,7 @@
 
     <!-- Page Headers -->
     <string name="tab_general_title">调整</string>
+    <string name="tab_performance_title">性能</string>
     <string name="tab_touchkey_title">触控键</string>
     <string name="tab_bln_title">呼吸灯</string>
 
@@ -36,6 +37,7 @@
     <string name="force_fast_charge_head">启用快速充电</string>
     <string name="force_fast_charge_summary_head">若检测到USB线连接到电脑，充电会加快。（提醒：打开后无法使用大容量存储）</string>
 
+    <!-- Page Performance -->
     <string name="category_performance_title">性能</string>
     <string name="low_ram_title">低RAM切换</string>
     <string name="low_ram_summary_on">低RAM优化已启用, 部分占用较多RAM的系统功能已禁用</string>

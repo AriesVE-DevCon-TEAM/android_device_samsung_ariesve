@@ -18,6 +18,7 @@
 
     <!-- Page Headers -->
     <string name="tab_general_title">Γενικά</string>
+    <string name="tab_performance_title">Επίδοση</string>
     <string name="tab_touchkey_title">TOUCHKEY</string>
     <string name="tab_bln_title">BLN</string>
 
@@ -36,6 +37,7 @@
     <string name="force_fast_charge_head">Πολύ γρήγορη φόρτιση</string>
     <string name="force_fast_charge_summary_head">Εντοπισμός σύνδεσης USB-PC ως USB Wall Charger, για γρηγορότερη κατάσταση φόρτισης</string>
 
+    <!-- Page Performance -->
     <string name="category_performance_title">Επίδοση</string>
     <string name="low_ram_title">Αλλαγή σε Low RAM</string>
     <string name="low_ram_summary_on">Η Low RAM ειναι ενεργή, τα χαρακτηριστικά της large-RAM είναι ανενεργά</string>
