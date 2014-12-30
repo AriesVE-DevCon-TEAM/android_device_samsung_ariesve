@@ -151,6 +151,10 @@ PRODUCT_PACKAGES += \
 
 # Usb accessory and Wifi
 PRODUCT_PACKAGES += \
+    fsck.f2fs \
+    mkfs.f2fs
+
+PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
 
 # Device-specific packages
