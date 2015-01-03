@@ -25,7 +25,6 @@ ro.opengles.version=131072
 
 # QCOM
 debug.sf.hw=1
-debug.mdpcomp.logs=0
 debug.composition.type=dyn
 
 # Enable non-omx mp3 decode
