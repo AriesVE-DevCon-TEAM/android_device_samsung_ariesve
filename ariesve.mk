@@ -25,10 +25,9 @@ PRODUCT_BOOT_JARS += qcmediaplayer
 TARGET_SCREEN_HEIGHT := 800
 TARGET_SCREEN_WIDTH := 480
 
-# Bootsplash and charging image
+# Bootsplash image
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/ARIESVE.rle:root/ARIESVE.rle \
-    $(LOCAL_PATH)/lpm/charging.rle:root/charging.rle
+    $(LOCAL_PATH)/ARIESVE.rle:root/ARIESVE.rle
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -81,36 +80,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keyfiles/ariesve_keypad.kl:system/usr/keylayout/ariesve_keypad.kl \
     $(LOCAL_PATH)/keyfiles/sec_jack.kl:system/usr/keylayout/sec_jack.kl \
     $(LOCAL_PATH)/keyfiles/melfas_touchkey.kl:system/usr/keylayout/melfas_touchkey.kl
-
-# LPM
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/lpm/bin/charging_mode:system/bin/charging_mode \
-    $(LOCAL_PATH)/lpm/bin/playlpm:system/bin/playlpm \
-    $(LOCAL_PATH)/lpm/lib/libQmageDecoder.so:system/lib/libQmageDecoder.so \
-    $(LOCAL_PATH)/lpm/media/Disconnected.qmg:system/media/Disconnected.qmg \
-    $(LOCAL_PATH)/lpm/media/battery_batteryerror.qmg:system/media/battery_batteryerror.qmg \
-    $(LOCAL_PATH)/lpm/media/battery_charging_5.qmg:system/media/battery_charging_5.qmg \
-    $(LOCAL_PATH)/lpm/media/battery_charging_10.qmg:system/media/battery_charging_10.qmg \
-    $(LOCAL_PATH)/lpm/media/battery_charging_15.qmg:system/media/battery_charging_15.qmg \
-    $(LOCAL_PATH)/lpm/media/battery_charging_20.qmg:system/media/battery_charging_20.qmg \
-    $(LOCAL_PATH)/lpm/media/battery_charging_25.qmg:system/media/battery_charging_25.qmg \
-    $(LOCAL_PATH)/lpm/media/battery_charging_30.qmg:system/media/battery_charging_30.qmg \
-    $(LOCAL_PATH)/lpm/media/battery_charging_35.qmg:system/media/battery_charging_35.qmg \
-    $(LOCAL_PATH)/lpm/media/battery_charging_40.qmg:system/media/battery_charging_40.qmg \
-    $(LOCAL_PATH)/lpm/media/battery_charging_45.qmg:system/media/battery_charging_45.qmg \
-    $(LOCAL_PATH)/lpm/media/battery_charging_50.qmg:system/media/battery_charging_50.qmg \
-    $(LOCAL_PATH)/lpm/media/battery_charging_55.qmg:system/media/battery_charging_55.qmg \
-    $(LOCAL_PATH)/lpm/media/battery_charging_60.qmg:system/media/battery_charging_60.qmg \
-    $(LOCAL_PATH)/lpm/media/battery_charging_65.qmg:system/media/battery_charging_65.qmg \
-    $(LOCAL_PATH)/lpm/media/battery_charging_70.qmg:system/media/battery_charging_70.qmg \
-    $(LOCAL_PATH)/lpm/media/battery_charging_75.qmg:system/media/battery_charging_75.qmg \
-    $(LOCAL_PATH)/lpm/media/battery_charging_80.qmg:system/media/battery_charging_80.qmg \
-    $(LOCAL_PATH)/lpm/media/battery_charging_85.qmg:system/media/battery_charging_85.qmg \
-    $(LOCAL_PATH)/lpm/media/battery_charging_90.qmg:system/media/battery_charging_90.qmg \
-    $(LOCAL_PATH)/lpm/media/battery_charging_95.qmg:system/media/battery_charging_95.qmg \
-    $(LOCAL_PATH)/lpm/media/battery_charging_100.qmg:system/media/battery_charging_100.qmg \
-    $(LOCAL_PATH)/lpm/media/battery_error.qmg:system/media/battery_error.qmg \
-    $(LOCAL_PATH)/lpm/media/chargingwarning.qmg:system/media/chargingwarning.qmg
 
 # Build packages
 PRODUCT_PACKAGES += \
@@ -169,6 +138,10 @@ PRODUCT_PACKAGES += qcmediaplayer
 PRODUCT_PACKAGES += \
     ebtables \
     ethertypes
+
+# Charger images
+PRODUCT_PACKAGES += \
+    charger_res_images
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.locale.language=en \
