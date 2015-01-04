@@ -70,3 +70,12 @@
 /dev/smd.*                     u:object_r:shared_memory_device:s0
 /dev/smem_log                  u:object_r:shared_log_device:s0
 /dev/rfkill                    u:object_r:rfkill_device:s0
+
+# Sysfs
+/sys/devices/virtual/input/input5/calibration             --  u:object_r:sysfs_custom:s0
+/sys/devices/virtual/sec/switch/otg_charger_type          --  u:object_r:sysfs_custom:s0
+/sys/devices/virtual/misc/notification(/.*)?              --  u:object_r:sysfs_custom:s0
+/sys/devices/virtual/misc/backlightnotification(/.*)?     --  u:object_r:sysfs_custom:s0
+/sys/devices/virtual/misc/phantom_kp_filter(/.*)?         --  u:object_r:sysfs_custom:s0
+/sys/devices/virtual/vibetonz/immDuty/pwmvalue_intensity  --  u:object_r:sysfs_custom:s0
+/sys/kernel/fast_charge/force_fast_charge                 --  u:object_r:sysfs_custom:s0

@@ -196,6 +196,7 @@ on boot
     # External SD scheduler
     chown system system /sys/block/mmcblk1/queue/scheduler
     chmod 0664 /sys/block/mmcblk1/queue/scheduler
+    restorecon /sys/block/mmcblk1/queue/scheduler
 
     # for silent reset
     chown system system /proc/dump_enable

@@ -198,10 +198,11 @@ BOARD_SEPOLICY_UNION += \
     rild.te \
     rmt.te \
     surfaceflinger.te \
-    system.te \
     system_app.te \
+    system_server.te \
     tee.te \
     ueventd.te \
+    untrusted_app.te \
     vold.te \
     wpa_supplicant.te
 
