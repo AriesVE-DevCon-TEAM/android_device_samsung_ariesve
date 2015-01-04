@@ -122,7 +122,6 @@ on boot
     chown system input /sys/class/input/event8/device/status
     chown system input /sys/class/input/event8/device/testmode
 
-
     chown system system /sys/devices/platform/msm_sdcc.1/polling
     chown system system /sys/devices/platform/msm_sdcc.2/polling
     chown system system /sys/devices/platform/msm_hsusb/gadget/wakeup
@@ -142,31 +141,60 @@ on boot
     chown system audio /sys/devices/virtual/misc/amp/save
 
      # Permissions for kernel
-    chown radio system sys/devices/virtual/graphics/fb1/video_mode
-    chown radio radio sys/devices/virtual/gammaset/switch_gammaset/gammaset_file_cmd
-    chown radio radio sys/devices/virtual/aclset/switch_aclset/aclset_file_cmd
-    chown radio system sys/devices/virtual/sec/sec_lcd/lcd_power
-    chown radio system sys/devices/virtual/sec/sec_lcd/lcdtype_file_cmd
-    chown radio system sys/devices/virtual/misc/melfas_touchkey/enable_disable
-    chown radio system sys/devices/virtual/misc/melfas_touchkey/brightness
-    chown radio system sys/devices/virtual/misc/melfas_touchkey/touch_update
-    chown radio system sys/devices/virtual/misc/melfas_touchkey/touch_version
-    chown radio system sys/devices/virtual/sec/switch/usb_state
-    chown radio system sys/devices/virtual/sec/switch/disable_vbus
-    chown radio system sys/devices/virtual/sec/switch/usb_sel
-    chown radio system sys/devices/platform/msm_sdcc.2/polling
-    chown radio system sys/devices/platform/msm_sdcc.1/polling
-    chown radio system sys/devices/platform/android_usb/tethering
-    chown radio system sys/devices/virtual/graphics/fb1/hpd
-    chown system system sys/class/misc/notification/led
-    chown system system sys/class/misc/notification/bl_timeout
-    chown system system sys/class/misc/notification/wakelock
-    chown system system sys/class/vibetonz/immDuty/pwmvalue_intensity
+    chown radio system /sys/devices/virtual/graphics/fb1/video_mode
+    chown radio system /sys/devices/virtual/sec/sec_lcd/lcd_power
+    chown radio system /sys/devices/virtual/sec/sec_lcd/lcd_type
+    chown radio system /sys/devices/virtual/misc/melfas_touchkey/enable_disable
+    chown radio system /sys/devices/virtual/misc/melfas_touchkey/brightness
+    chown radio system /sys/devices/virtual/misc/melfas_touchkey/touch_update
+    chown radio system /sys/devices/virtual/misc/melfas_touchkey/touch_version
+    chown radio system /sys/devices/virtual/sec/switch/usb_state
+    chown radio system /sys/devices/virtual/sec/switch/disable_vbus
+    chown radio system /sys/devices/virtual/sec/switch/usb_sel
+    chown radio system /sys/devices/platform/msm_sdcc.2/polling
+    chown radio system /sys/devices/platform/msm_sdcc.1/polling
+    chown radio system /sys/devices/platform/android_usb/tethering
+    chown radio system /sys/devices/virtual/graphics/fb1/hpd
 
-    # Kernel Samepage Merging (KSM)
-    write /sys/kernel/mm/ksm/pages_to_scan 100
-    write /sys/kernel/mm/ksm/sleep_millisecs 500
-    write /sys/kernel/mm/ksm/run 0
+    # Fast Charge and USB-Host charging mode
+    chown system system /sys/kernel/fast_charge/force_fast_charge
+    chown system system /sys/class/sec/switch/otg_charger_type
+
+    # Touchkeys
+    chown system system /sys/class/misc/notification/bl_timeout
+    chown system system /sys/class/misc/notification/touchlight_enabled
+
+    # Backlight Notification
+    chown system system /sys/class/misc/backlightnotification/enabled
+    chown system system /sys/class/misc/backlightnotification/blink_control
+    chown system system /sys/class/misc/backlightnotification/blink_interval
+    chown system system /sys/class/misc/backlightnotification/blink_interval_off
+    chown system system /sys/class/misc/backlightnotification/blink_interval_on
+    chown system system /sys/class/misc/backlightnotification/blink_maxtime
+    chown system system /sys/class/misc/backlightnotification/in_kernel_blink
+    chown system system /sys/class/misc/backlightnotification/in_kernel_static
+    chown system system /sys/class/misc/backlightnotification/notification_led
+    chown system system /sys/class/misc/backlightnotification/static_maxtime
+    chown system system /sys/class/misc/backlightnotification/status_after_blinking
+
+    # Phantom Key Presses Filter
+    chown system system /sys/class/misc/phantom_kp_filter/home_enabled
+    chown system system /sys/class/misc/phantom_kp_filter/home_allowed_irqs
+    chown system system /sys/class/misc/phantom_kp_filter/home_ignored_kp
+    chown system system /sys/class/misc/phantom_kp_filter/home_report_wait
+    chown system system /sys/class/misc/phantom_kp_filter/menuback_enabled
+    chown system system /sys/class/misc/phantom_kp_filter/menuback_first_err_wait
+    chown system system /sys/class/misc/phantom_kp_filter/menuback_ignored_kp
+    chown system system /sys/class/misc/phantom_kp_filter/menuback_interrupt_checks
+    chown system system /sys/class/misc/phantom_kp_filter/menuback_last_err_wait
+
+    # Vibrator
+    chown system system /sys/class/vibetonz/immDuty/pwmvalue_intensity
+    chmod 0664 /sys/class/vibetonz/immDuty/pwmvalue_intensity
+
+    # External SD scheduler
+    chown system system /sys/block/mmcblk1/queue/scheduler
+    chmod 0664 /sys/block/mmcblk1/queue/scheduler
 
     # for silent reset
     chown system system /proc/dump_enable
