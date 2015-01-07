@@ -58,7 +58,7 @@ ro.cwm.enable_key_repeat=true
 ro.sys.fw.bg_apps_limit=16
 
 # Set max background services
-ro.config.max_starting_bg=4
+ro.config.max_starting_bg=8
 
 # Disable metadata mode
 debug.camcorder.disablemeta=1
