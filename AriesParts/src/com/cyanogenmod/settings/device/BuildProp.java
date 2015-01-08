@@ -16,7 +16,6 @@
 
 package com.cyanogenmod.settings.device;
 
-import android.os.SystemProperties;
 import android.util.Log;
 
 import com.cyanogenmod.settings.device.CommandProcessor.CommandResult;
@@ -72,10 +71,10 @@ public class BuildProp {
 		} catch(Exception exc) {
 			// Log a detailed error in case of exception
 			Log.e(TAG, String.format("Failed to get '%s' property, an exception occured.", key), exc);
-		} finally {
-			// Return the value currently set
-			return value;
 		}
+
+		// Return the value currently set
+		return value;
 	}
 
 	/**
@@ -154,10 +153,10 @@ public class BuildProp {
 		} finally {
 			// Mount the system partition readonly
 			CommandProcessor.getMount("ro");
-
-			// Return the update result
-			return updated;
 		}
+
+		// Return the update result
+		return updated;
 	}
 
 	/**

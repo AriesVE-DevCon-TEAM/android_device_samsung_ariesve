@@ -1,13 +1,11 @@
 package com.cyanogenmod.settings.device;
 
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.BatteryManager;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
-import android.preference.PreferenceManager;
 import android.widget.Toast;
 
 public class FastCharge implements OnPreferenceChangeListener {

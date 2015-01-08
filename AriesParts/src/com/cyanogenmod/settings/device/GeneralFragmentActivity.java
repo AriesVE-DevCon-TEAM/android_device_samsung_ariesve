@@ -23,17 +23,11 @@ import android.os.FileObserver;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
-import android.preference.PreferenceActivity;
 import android.preference.PreferenceFragment;
-import android.preference.PreferenceManager;
-import android.preference.PreferenceScreen;
-import android.util.Log;
 
 import com.cyanogenmod.settings.device.R;
 
 public class GeneralFragmentActivity extends PreferenceFragment {
-
-    private static final String TAG = "DeviceSettings_General";
 
     private CheckBoxPreference mFastCharge;
     private ListPreference mOTGCharge;
@@ -64,7 +58,6 @@ public class GeneralFragmentActivity extends PreferenceFragment {
 
         addPreferencesFromResource(R.xml.general_preferences);
 
-        PreferenceScreen prefSet = getPreferenceScreen();
         Context mContext = getActivity();
 
         mGSensor = (Preference) findPreference(DeviceSettings.KEY_GSENSOR);

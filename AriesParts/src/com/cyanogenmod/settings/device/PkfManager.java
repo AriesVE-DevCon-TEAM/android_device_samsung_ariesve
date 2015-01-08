@@ -10,7 +10,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceClickListener;
-import android.preference.PreferenceActivity;
 
 public class PkfManager implements OnPreferenceClickListener {
 

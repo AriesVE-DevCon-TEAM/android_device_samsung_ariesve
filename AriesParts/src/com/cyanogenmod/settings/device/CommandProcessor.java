@@ -17,12 +17,9 @@
 package com.cyanogenmod.settings.device;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.DataInputStream;
-import java.io.DataOutputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.InputStream;
 import java.io.IOException;
 
@@ -168,23 +165,24 @@ public class CommandProcessor {
 
 
     public static String[] getMounts(final String path) {
+        String[] result = null;
+
         try {
             BufferedReader br = new BufferedReader(new FileReader("/proc/mounts"), 256);
             String line = null;
-            while ((line = br.readLine()) != null) {
+            while (result == null && (line = br.readLine()) != null) {
                 if (line.contains(path)) {
-                    return line.split(" ");
+                    result = line.split(" ");
                 }
             }
             br.close();
-        }
-        catch (FileNotFoundException e) {
+        } catch (FileNotFoundException e) {
             Log.d(TAG, "/proc/mounts does not exist");
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
             Log.d(TAG, "Error reading /proc/mounts");
         }
-        return null;
+
+        return result;
     }
 
 }

@@ -16,21 +16,13 @@
 
 package com.cyanogenmod.settings.device;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
-import android.preference.Preference;
-import android.preference.PreferenceActivity;
 import android.preference.PreferenceFragment;
-import android.preference.PreferenceManager;
-import android.preference.PreferenceScreen;
-import android.util.Log;
 
 import com.cyanogenmod.settings.device.R;
 
 public class PerformanceFragmentActivity extends PreferenceFragment {
-
-    private static final String TAG = "DeviceSettings_Performance";
 
     private CheckBoxPreference mHighEndGfxStatus;
     private CheckBoxPreference mLowRamStatus;
@@ -47,9 +39,6 @@ public class PerformanceFragmentActivity extends PreferenceFragment {
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.performance_preferences);
-
-        PreferenceScreen prefSet = getPreferenceScreen();
-        Context mContext = getActivity();
 
         mHighEndGfxStatus = (CheckBoxPreference) findPreference(DeviceSettings.KEY_HIGHEND_GFX);
         mHighEndGfxStatus.setEnabled(HighEndGfx.isSupported());

@@ -17,21 +17,14 @@
 package com.cyanogenmod.settings.device;
 
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
-import android.preference.PreferenceManager;
-import android.util.Log;
 
 import com.cyanogenmod.settings.device.R;
 
 public class LowRam implements OnPreferenceChangeListener {
 
-	// Logging tag
-	private static final String TAG = "DeviceSettings_LowRam";
-
 	// Keys of used system properties
-	private static final String SYSTEM_VERSION_PROP_KEY = "ro.build.version.release";
 	private static final String LOWRAM_PROP_KEY = "ro.config.low_ram";
 
 	// LowRam property is supported starting from Android 4.4 (KitKat)
