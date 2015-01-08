@@ -17,26 +17,17 @@
 package com.cyanogenmod.settings.device;
 
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
-import android.preference.PreferenceActivity;
 import android.preference.PreferenceFragment;
-import android.preference.PreferenceManager;
-import android.preference.PreferenceScreen;
-import android.util.Log;
-import android.view.Gravity;
-import android.widget.Toast;
 
 import com.cyanogenmod.settings.device.R;
 
 public class TouchKeyFragmentActivity extends PreferenceFragment {
 
-    private static final String TAG = "DeviceSettings_TouchKey";
-
-	private ListPreference mBacklightTimeout;
+    private ListPreference mBacklightTimeout;
     private CheckBoxPreference mTouchLightStatus;
     private Preference mPkfManager;
 
@@ -46,9 +37,8 @@ public class TouchKeyFragmentActivity extends PreferenceFragment {
 
         addPreferencesFromResource(R.xml.touchkey_preferences);
 
-        PreferenceScreen prefSet = getPreferenceScreen();
         Context mContext = getActivity();
-        
+
         mBacklightTimeout = (ListPreference) findPreference(DeviceSettings.KEY_BACKLIGHT_TIMEOUT);
         mBacklightTimeout.setEnabled(TouchKeyBacklightTimeout.isSupported());
         mBacklightTimeout.setOnPreferenceChangeListener(new TouchKeyBacklightTimeout());

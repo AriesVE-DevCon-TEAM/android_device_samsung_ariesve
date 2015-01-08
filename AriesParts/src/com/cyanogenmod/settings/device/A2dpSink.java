@@ -18,22 +18,15 @@ package com.cyanogenmod.settings.device;
 
 import android.bluetooth.BluetoothAdapter;
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.SystemProperties;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
-import android.preference.PreferenceManager;
-import android.util.Log;
 
 import com.cyanogenmod.settings.device.R;
 
 public class A2dpSink implements OnPreferenceChangeListener {
 
-	// Logging tag
-	private static final String TAG = "DeviceSettings_A2dpSink";
-
 	// Keys of used system properties
-	private static final String SYSTEM_VERSION_PROP_KEY = "ro.build.version.release";
 	private static final String A2DPSINK_PROP_KEY = "persist.service.bt.a2dp.sink";
 
 	// A2dpSink property is supported starting from Android 5.0 (Lollipop)
