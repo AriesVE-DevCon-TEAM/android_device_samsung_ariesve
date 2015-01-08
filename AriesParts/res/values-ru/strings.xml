@@ -31,7 +31,7 @@
     <string name="gsensor_end">Откалибровано</string>
     <string name="gsensor_button1">Завершено</string>
     <string name="gsensor_button2">Калибровка</string>
-	
+
     <string name="category_fast_charge_title">Поддержка быстрой зарядки</string>
     <string name="force_fast_charge_head">Быстрая зарядка</string>
     <string name="force_fast_charge_summary_head">Определяет компьютер, подключенный через USB-порт, как зарядное устройство для более быстрого режима зарядки.</string>

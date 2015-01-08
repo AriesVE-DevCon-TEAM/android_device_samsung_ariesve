@@ -25,51 +25,51 @@ import com.cyanogenmod.settings.device.R;
 
 public class HighEndGfx implements OnPreferenceChangeListener {
 
-	// Keys of used system properties
-	private static final String HIGHEND_GFX_PROP_KEY = "persist.sys.force_highendgfx";
+    // Keys of used system properties
+    private static final String HIGHEND_GFX_PROP_KEY = "persist.sys.force_highendgfx";
 
-	// HighEnd Gfx property is supported starting from Android 4.4 (KitKat)
-	private static final float MIN_VERSION_SUPPORTED = 4.4f;
+    // HighEnd Gfx property is supported starting from Android 4.4 (KitKat)
+    private static final float MIN_VERSION_SUPPORTED = 4.4f;
 
-	/**
-	 * Checks if the feature is supported
-	 * @return True if the feature is supported, otherwise false
-	 */
-	public static boolean isSupported() {
-		return BuildProp.isSupportedSystem(MIN_VERSION_SUPPORTED);
-	}
+    /**
+     * Checks if the feature is supported
+     * @return True if the feature is supported, otherwise false
+     */
+    public static boolean isSupported() {
+        return BuildProp.isSupportedSystem(MIN_VERSION_SUPPORTED);
+    }
 
-	/**
-	 * Gets the current value of HighEndGfx property inside system properties
-	 * @return The HighEndGfx value currently set
-	 */
-	public static boolean getPropertyValue() {
-		return SystemProperties.getBoolean(HIGHEND_GFX_PROP_KEY, false);
-	}
+    /**
+     * Gets the current value of HighEndGfx property inside system properties
+     * @return The HighEndGfx value currently set
+     */
+    public static boolean getPropertyValue() {
+        return SystemProperties.getBoolean(HIGHEND_GFX_PROP_KEY, false);
+    }
 
-	/**
-	 * Stores the value of HighEndGfx property inside system properties
-	 * @param value The value to store
-	 * @return True if the store succeeded, otherwise false
-	 */
-	private static boolean storePropertyValue(Boolean value) {
-		SystemProperties.set(HIGHEND_GFX_PROP_KEY, value.toString());
-		return BuildProp.set(HIGHEND_GFX_PROP_KEY, value);
-	}
+    /**
+     * Stores the value of HighEndGfx property inside system properties
+     * @param value The value to store
+     * @return True if the store succeeded, otherwise false
+     */
+    private static boolean storePropertyValue(Boolean value) {
+        SystemProperties.set(HIGHEND_GFX_PROP_KEY, value.toString());
+        return BuildProp.set(HIGHEND_GFX_PROP_KEY, value);
+    }
 
-	@Override
-	public boolean onPreferenceChange(Preference preference, Object value) {
-		// Get the preference context
-		final Context context = preference.getContext();
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object value) {
+        // Get the preference context
+        final Context context = preference.getContext();
 
-		// Store the new value, if it fails abort Preference update
-		if (storePropertyValue((Boolean)value)) {
-			Utils.showRebootDialog(context, R.string.highend_gfx_title);
-			return true;
-		} else {
-			Utils.showErrorDialog(context, R.string.highend_gfx_title, R.string.highend_gfx_error);
-			return false;
-		}
-	}
+        // Store the new value, if it fails abort Preference update
+        if (storePropertyValue((Boolean)value)) {
+            Utils.showRebootDialog(context, R.string.highend_gfx_title);
+            return true;
+        } else {
+            Utils.showErrorDialog(context, R.string.highend_gfx_title, R.string.highend_gfx_error);
+            return false;
+        }
+    }
 
 }
