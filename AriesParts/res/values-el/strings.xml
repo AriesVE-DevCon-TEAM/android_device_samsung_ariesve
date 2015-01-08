@@ -34,8 +34,8 @@
     <string name="gsensor_button2">Βαθμονόμησε</string>
 
     <string name="category_fast_charge_title">Υποστήριξη γρήγορης φόρτισης</string>
-    <string name="force_fast_charge_head">Πολύ γρήγορη φόρτιση</string>
-    <string name="force_fast_charge_summary_head">Εντοπισμός σύνδεσης USB-PC ως USB Wall Charger, για γρηγορότερη κατάσταση φόρτισης</string>
+    <string name="force_fast_charge">Πολύ γρήγορη φόρτιση</string>
+    <string name="force_fast_charge_summary">Εντοπισμός σύνδεσης USB-PC ως USB Wall Charger, για γρηγορότερη κατάσταση φόρτισης</string>
 
     <!-- Page Performance -->
     <string name="category_performance_title">Επίδοση</string>
@@ -51,25 +51,25 @@
 
     <!-- Page TouchKey -->
     <string name="category_touchkey_title">Touch Keys</string>
-    <string name="backlight_timeout_title_head">Χρονικό περιθώριο Backlight </string>
-    <string name="backlight_timeout_summary_head">Προσαρμογή της καθυστέρησης πριν κλείσει αυτόματο το touch key backlight</string>
-    <string name="touchlight_status_title_head">Backlight στην Οθόνη τύπου αφής</string>
-    <string name="touchlight_status_summary_head">Ενεργοποίηση κατάστασης των touchkeys backlight στην οθόνη τύπου αφής</string>
+    <string name="backlight_timeout_title">Χρονικό περιθώριο Backlight </string>
+    <string name="backlight_timeout_summary">Προσαρμογή της καθυστέρησης πριν κλείσει αυτόματο το touch key backlight</string>
+    <string name="touchlight_status_title">Backlight στην Οθόνη τύπου αφής</string>
+    <string name="touchlight_status_summary">Ενεργοποίηση κατάστασης των touchkeys backlight στην οθόνη τύπου αφής</string>
 
     <string name="category_pkfmanager_title">Phantom key presses</string>
-    <string name="pkfmanager_title_head">Phantom key presses filter</string>
-    <string name="pkfmanager_summary_head">Φιλτράρισμα των ανεπιθύμητων πατημάτων πλήκτρων εξαιτίας της παρεμβολής της κεραίας (εξωτερική εφαρμογή)</string>
+    <string name="pkfmanager_title">Phantom key presses filter</string>
+    <string name="pkfmanager_summary">Φιλτράρισμα των ανεπιθύμητων πατημάτων πλήκτρων εξαιτίας της παρεμβολής της κεραίας (εξωτερική εφαρμογή)</string>
 
     <!-- Page BLN -->
     <string name="category_bln_title">Ειδοποίηση Backlight</string>
-    <string name="bln_type_title_head">Τύπος Ειδοποίησης</string>
-    <string name="bln_type_summary_head">Ρύθμιση του τρόπου που θα αναφέρεται μια ειδοποίηση από τα touchkey lights</string>
-    <string name="bln_blink_timeout_title_head">Χρονικό περιθώριο Blinking Lights</string>
-    <string name="bln_blink_timeout_summary_head">Ρύθμιση της διάρκειας χρόνου των blinking lights</string>
-    <string name="bln_blink_interval_on_title_head">Blink ON Interval</string>
-    <string name="bln_blink_interval_on_summary_head">Ρύθμιση της διάρκειας διαστήματος για κάθε ενεργό blink</string>
-    <string name="bln_blink_interval_off_title_head">Blink OFF Interval</string>
-    <string name="bln_blink_interval_off_summary_head">Ρύθμιση της διάρκειας διαστήματος για κάθε κλείσιμο του blink</string>
-    <string name="bln_static_timeout_title_head">Χρονικό περιθώριο των Static Lights</string>
-    <string name="bln_static_timeout_summary_head">Ρύθμιση της χρονικής διάρκειας των στατικών φώτων</string>
+    <string name="bln_type_title">Τύπος Ειδοποίησης</string>
+    <string name="bln_type_summary">Ρύθμιση του τρόπου που θα αναφέρεται μια ειδοποίηση από τα touchkey lights</string>
+    <string name="bln_blink_timeout_title">Χρονικό περιθώριο Blinking Lights</string>
+    <string name="bln_blink_timeout_summary">Ρύθμιση της διάρκειας χρόνου των blinking lights</string>
+    <string name="bln_blink_interval_on_title">Blink ON Interval</string>
+    <string name="bln_blink_interval_on_summary">Ρύθμιση της διάρκειας διαστήματος για κάθε ενεργό blink</string>
+    <string name="bln_blink_interval_off_title">Blink OFF Interval</string>
+    <string name="bln_blink_interval_off_summary">Ρύθμιση της διάρκειας διαστήματος για κάθε κλείσιμο του blink</string>
+    <string name="bln_static_timeout_title">Χρονικό περιθώριο των Static Lights</string>
+    <string name="bln_static_timeout_summary">Ρύθμιση της χρονικής διάρκειας των στατικών φώτων</string>
 </resources>

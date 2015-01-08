@@ -17,10 +17,10 @@
     <string name="app_name">Setari Avansate</string>
 
     <string name="category_touchkey_title">Tastele Sensibile la atingere</string>
-    <string name="backlight_timeout_title_head">Durata iluminarii de fundal</string>
-    <string name="backlight_timeout_summary_head">Reglarea unei intarzieri inainte ca lumina de fundal a tastelor tactile sa se opreasca</string>
-    <string name="touchlight_status_title_head">Iluminare tastelor la atingerea ecranului</string>
-    <string name="touchlight_status_summary_head">Activarea starii luminei de fundal a tastelor tactile la atingerea ecranului </string>
+    <string name="backlight_timeout_title">Durata iluminarii de fundal</string>
+    <string name="backlight_timeout_summary">Reglarea unei intarzieri inainte ca lumina de fundal a tastelor tactile sa se opreasca</string>
+    <string name="touchlight_status_title">Iluminare tastelor la atingerea ecranului</string>
+    <string name="touchlight_status_summary">Activarea starii luminei de fundal a tastelor tactile la atingerea ecranului </string>
 
     <string name="category_screen_title">Ecran</string>
     <string name="g_sensor_title">Calibrare orizontala</string>
@@ -33,10 +33,10 @@
     <string name="gsensor_button2">Calibreaza</string>
 
     <string name="category_fast_charge_title">Suport pentru Incarcarea Rapida</string>
-    <string name="force_fast_charge_head">Fortarea Incarcarii Rapide</string>
-    <string name="force_fast_charge_summary_head">Detectarea USB--ului conectat la PC ca un incarcator, pentru o incarcare mai rapida</string>
+    <string name="force_fast_charge">Fortarea Incarcarii Rapide</string>
+    <string name="force_fast_charge_summary">Detectarea USB--ului conectat la PC ca un incarcator, pentru o incarcare mai rapida</string>
 
     <string name="category_pkfmanager_title">Atingerile "fantoma"</string>
-    <string name="pkfmanager_title_head">Filtru pentru atingerile "fantoma"</string>
-    <string name="pkfmanager_summary_head">Filtrarea atingerilor nedorite cauzate de interferenta antenei (folosind o aplicatie externa)</string>
+    <string name="pkfmanager_title">Filtru pentru atingerile "fantoma"</string>
+    <string name="pkfmanager_summary">Filtrarea atingerilor nedorite cauzate de interferenta antenei (folosind o aplicatie externa)</string>
 </resources>
