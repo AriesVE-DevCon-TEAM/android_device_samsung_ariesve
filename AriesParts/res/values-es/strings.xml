@@ -35,8 +35,8 @@
 
     <string name="category_fast_charge_title">Carga rápida</string>
     <string name="force_fast_charge_usbwarning">Desconecta el cable USB</string>
-    <string name="force_fast_charge_head">Forzar carga rápida</string>
-    <string name="force_fast_charge_summary_head">Detectar PC conectado al puerto USB como un cargador USB, para una carga más rápida</string>
+    <string name="force_fast_charge">Forzar carga rápida</string>
+    <string name="force_fast_charge_summary">Detectar PC conectado al puerto USB como un cargador USB, para una carga más rápida</string>
 
     <!-- Page Performance -->
     <string name="category_performance_title">Rendimento</string>
@@ -52,25 +52,25 @@
 
     <!-- Page TouchKey -->
     <string name="category_touchkey_title">Teclas táctiles</string>
-    <string name="backlight_timeout_title_head">Duración de retroiluminación</string>
-    <string name="backlight_timeout_summary_head">"Configurar la duración de la iluminacion de las teclas"</string>
-    <string name="touchlight_status_title_head">Retroiluminación al pulsar en la pantalla</string>
-    <string name="touchlight_status_summary_head">Iluminar teclas táctiles al pulsar en la pantalla</string>
+    <string name="backlight_timeout_title">Duración de retroiluminación</string>
+    <string name="backlight_timeout_summary">"Configurar la duración de la iluminacion de las teclas"</string>
+    <string name="touchlight_status_title">Retroiluminación al pulsar en la pantalla</string>
+    <string name="touchlight_status_summary">Iluminar teclas táctiles al pulsar en la pantalla</string>
 
     <string name="category_pkfmanager_title">Pulsaciones fantasmas</string>
-    <string name="pkfmanager_title_head">Filtro de las pulsaciones fantasma</string>
-    <string name="pkfmanager_summary_head">"Filtra las pulsaciones fantasma de las teclas, causadas por la interferencia de la antena (aplicación externa)"</string>
+    <string name="pkfmanager_title">Filtro de las pulsaciones fantasma</string>
+    <string name="pkfmanager_summary">"Filtra las pulsaciones fantasma de las teclas, causadas por la interferencia de la antena (aplicación externa)"</string>
 
     <!-- Page BLN -->
     <string name="category_bln_title">Notificaciones luminosas</string>
-    <string name="bln_type_title_head">Tipo de notificación</string>
-    <string name="bln_type_summary_head">Configurar notificaciones luminosas</string>
-    <string name="bln_blink_timeout_title_head">Duración del parpadeo</string>
-    <string name="bln_blink_timeout_summary_head">Configurar la duración del parpadeo</string>
-    <string name="bln_blink_interval_on_title_head">LED encendido</string>
-    <string name="bln_blink_interval_on_summary_head">Tiempo que estará el LED encendido en cada parpadeo</string>
-    <string name="bln_blink_interval_off_title_head">LED apagado</string>
-    <string name="bln_blink_interval_off_summary_head">Tiempo que estará el LED apagado en cada parpadeo</string>
-    <string name="bln_static_timeout_title_head">Duración de LED encendido estático</string>
-    <string name="bln_static_timeout_summary_head">Tiempo que estará el LED encendido estático</string>
+    <string name="bln_type_title">Tipo de notificación</string>
+    <string name="bln_type_summary">Configurar notificaciones luminosas</string>
+    <string name="bln_blink_timeout_title">Duración del parpadeo</string>
+    <string name="bln_blink_timeout_summary">Configurar la duración del parpadeo</string>
+    <string name="bln_blink_interval_on_title">LED encendido</string>
+    <string name="bln_blink_interval_on_summary">Tiempo que estará el LED encendido en cada parpadeo</string>
+    <string name="bln_blink_interval_off_title">LED apagado</string>
+    <string name="bln_blink_interval_off_summary">Tiempo que estará el LED apagado en cada parpadeo</string>
+    <string name="bln_static_timeout_title">Duración de LED encendido estático</string>
+    <string name="bln_static_timeout_summary">Tiempo que estará el LED encendido estático</string>
 </resources>

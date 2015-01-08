@@ -34,8 +34,8 @@
     <string name="gsensor_button2">Kalibruj</string>
 
     <string name="category_fast_charge_title">Wsparcie dla szybkiego ładowania</string>
-    <string name="force_fast_charge_head">Wymuś szybkie ładowanie</string>
-    <string name="force_fast_charge_summary_head">Podłącz telefon do komputera przez port USB w celu włączenia szybkiego ładowania</string>
+    <string name="force_fast_charge">Wymuś szybkie ładowanie</string>
+    <string name="force_fast_charge_summary">Podłącz telefon do komputera przez port USB w celu włączenia szybkiego ładowania</string>
 
     <!-- Page Performance -->
     <string name="category_performance_title">Wydajność</string>
@@ -51,25 +51,25 @@
 
     <!-- Page TouchKey -->
     <string name="category_touchkey_title">Klawisze dotykowe</string>
-    <string name="backlight_timeout_title_head">Czas trwania podświetlenia</string>
-    <string name="backlight_timeout_summary_head">Ustaw czas po jakim zgaśnie podświetlenie klawiszy dotykowych</string>
-    <string name="touchlight_status_title_head">Wyłączenie podświetlenia po kliknięciu w ekran dotykowy</string>
-    <string name="touchlight_status_summary_head">Aktywuj wyłączenie podświetlania po kliknięciu w ekran dotykowy</string>
+    <string name="backlight_timeout_title">Czas trwania podświetlenia</string>
+    <string name="backlight_timeout_summary">Ustaw czas po jakim zgaśnie podświetlenie klawiszy dotykowych</string>
+    <string name="touchlight_status_title">Wyłączenie podświetlenia po kliknięciu w ekran dotykowy</string>
+    <string name="touchlight_status_summary">Aktywuj wyłączenie podświetlania po kliknięciu w ekran dotykowy</string>
 
     <string name="category_pkfmanager_title">Przypadkowe kliknięcia</string>
-    <string name="pkfmanager_title_head">Filtr przypadkowych kliknięć</string>
-    <string name="pkfmanager_summary_head">Filtr przypadkowych kliknięć spowodowanych zakłóceniami (zewnętrzna aplikacja)</string>
+    <string name="pkfmanager_title">Filtr przypadkowych kliknięć</string>
+    <string name="pkfmanager_summary">Filtr przypadkowych kliknięć spowodowanych zakłóceniami (zewnętrzna aplikacja)</string>
 
     <!-- Page BLN -->
     <string name="category_bln_title">Powiadomienia podświetleniem</string>
-    <string name="bln_type_title_head">Typ powiadomienia</string>
-    <string name="bln_type_summary_head">Wybierz w jaki sposób będziesz powiadamiany poprzez podświetlanie klawiszy funkcyjnych</string>
-    <string name="bln_blink_timeout_title_head">Długość migania światła</string>
-    <string name="bln_blink_timeout_summary_head">Ustaw czas trwania migania</string>
-    <string name="bln_blink_interval_on_title_head">Przerwa po zapaleniu światła</string>
-    <string name="bln_blink_interval_on_summary_head">Ustaw czas trwania przerwy po każdym zapaleniu światła</string>
-    <string name="bln_blink_interval_off_title_head">Przerwa po zgaszeniu światła</string>
-    <string name="bln_blink_interval_off_summary_head">Ustaw czas trwania przerwy po każdym zgaszeniu światła</string>
-    <string name="bln_static_timeout_title_head">Długość świecenia ciągłego światła</string>
-    <string name="bln_static_timeout_summary_head">Ustaw długość trwania świecenia ciągłego światła</string>
+    <string name="bln_type_title">Typ powiadomienia</string>
+    <string name="bln_type_summary">Wybierz w jaki sposób będziesz powiadamiany poprzez podświetlanie klawiszy funkcyjnych</string>
+    <string name="bln_blink_timeout_title">Długość migania światła</string>
+    <string name="bln_blink_timeout_summary">Ustaw czas trwania migania</string>
+    <string name="bln_blink_interval_on_title">Przerwa po zapaleniu światła</string>
+    <string name="bln_blink_interval_on_summary">Ustaw czas trwania przerwy po każdym zapaleniu światła</string>
+    <string name="bln_blink_interval_off_title">Przerwa po zgaszeniu światła</string>
+    <string name="bln_blink_interval_off_summary">Ustaw czas trwania przerwy po każdym zgaszeniu światła</string>
+    <string name="bln_static_timeout_title">Długość świecenia ciągłego światła</string>
+    <string name="bln_static_timeout_summary">Ustaw długość trwania świecenia ciągłego światła</string>
 </resources>

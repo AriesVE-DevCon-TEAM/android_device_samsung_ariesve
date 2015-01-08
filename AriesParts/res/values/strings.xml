@@ -35,12 +35,12 @@
 
     <string name="category_fast_charge_title">Fast Charge Support</string>
     <string name="force_fast_charge_usbwarning">Remove the USB cable</string>
-    <string name="force_fast_charge_head">Force Fast Charge</string>
-    <string name="force_fast_charge_summary_head">Detect USB-connected PC as USB Wall Charger, for faster charging mode</string>
+    <string name="force_fast_charge">Force Fast Charge</string>
+    <string name="force_fast_charge_summary">Detect USB-connected PC as USB Wall Charger, for faster charging mode</string>
 
     <string name="category_otg_title">USB-OTG</string>
-    <string name="otg_charge_title_head">USB-OTG Charge</string>
-    <string name="otg_charge_summary_head">Charge support in USB host mode.\nAttention: Make sure the connected power source (e.g. USB-Hub) can handle the power draw if charging is enabled to avoid damage.</string>
+    <string name="otg_charge_title">USB-OTG Charge</string>
+    <string name="otg_charge_summary">Charge support in USB host mode.\nAttention: Make sure the connected power source (e.g. USB-Hub) can handle the power draw if charging is enabled to avoid damage.</string>
 
     <string name="category_bluetooth_title">Bluetooth</string>
     <string name="a2dp_sink_title">A2DP Sink</string>
@@ -67,25 +67,25 @@
 
     <!-- Page TouchKey -->
     <string name="category_touchkey_title">Touch Keys</string>
-    <string name="backlight_timeout_title_head">Backlight Timeout</string>
-    <string name="backlight_timeout_summary_head">Adjust the delay before the touch key backlight automatically turns off</string>
-    <string name="touchlight_status_title_head">Backlight on Touchscreen Press</string>
-    <string name="touchlight_status_summary_head">Activation status of touchkeys backlight on touchscreen press</string>
+    <string name="backlight_timeout_title">Backlight Timeout</string>
+    <string name="backlight_timeout_summary">Adjust the delay before the touch key backlight automatically turns off</string>
+    <string name="touchlight_status_title">Backlight on Touchscreen Press</string>
+    <string name="touchlight_status_summary">Activation status of touchkeys backlight on touchscreen press</string>
 
     <string name="category_pkfmanager_title">Phantom key presses</string>
-    <string name="pkfmanager_title_head">Phantom key presses filter</string>
-    <string name="pkfmanager_summary_head">Filter the unwanted key presses caused by antenna interference (external application)</string>
+    <string name="pkfmanager_title">Phantom key presses filter</string>
+    <string name="pkfmanager_summary">Filter the unwanted key presses caused by antenna interference (external application)</string>
 
     <!-- Page BLN -->
     <string name="category_bln_title">Backlight Notification</string>
-    <string name="bln_type_title_head">Notification Type</string>
-    <string name="bln_type_summary_head">Set the way a notification will be reported by touchkey lights</string>
-    <string name="bln_blink_timeout_title_head">Blinking Lights Timeout</string>
-    <string name="bln_blink_timeout_summary_head">Set the duration time of blinking lights</string>
-    <string name="bln_blink_interval_on_title_head">Blink ON Interval</string>
-    <string name="bln_blink_interval_on_summary_head">Set the duration interval of each blink ON</string>
-    <string name="bln_blink_interval_off_title_head">Blink OFF Interval</string>
-    <string name="bln_blink_interval_off_summary_head">Set the duration interval of each blink OFF</string>
-    <string name="bln_static_timeout_title_head">Static Lights Timeout</string>
-    <string name="bln_static_timeout_summary_head">Set the duration time of static lights</string>
+    <string name="bln_type_title">Notification Type</string>
+    <string name="bln_type_summary">Set the way a notification will be reported by touchkey lights</string>
+    <string name="bln_blink_timeout_title">Blinking Lights Timeout</string>
+    <string name="bln_blink_timeout_summary">Set the duration time of blinking lights</string>
+    <string name="bln_blink_interval_on_title">Blink ON Interval</string>
+    <string name="bln_blink_interval_on_summary">Set the duration interval of each blink ON</string>
+    <string name="bln_blink_interval_off_title">Blink OFF Interval</string>
+    <string name="bln_blink_interval_off_summary">Set the duration interval of each blink OFF</string>
+    <string name="bln_static_timeout_title">Static Lights Timeout</string>
+    <string name="bln_static_timeout_summary">Set the duration time of static lights</string>
 </resources>

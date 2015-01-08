@@ -19,23 +19,23 @@
     <PreferenceCategory android:title="@string/category_touchkey_title" >
         <ListPreference
             android:key="backlight_timeout"
-            android:title="@string/backlight_timeout_title_head"
-            android:summary="@string/backlight_timeout_summary_head"
+            android:title="@string/backlight_timeout_title"
+            android:summary="@string/backlight_timeout_summary"
             android:entries="@array/backlight_timeout_entries"
             android:entryValues="@array/backlight_timeout_entries_values"
             android:defaultValue="1600" />
         <CheckBoxPreference
             android:defaultValue="true"
             android:key="touchlight_status"
-            android:summary="@string/touchlight_status_summary_head"
-            android:title="@string/touchlight_status_title_head" />
+            android:summary="@string/touchlight_status_summary"
+            android:title="@string/touchlight_status_title" />
     </PreferenceCategory>
 
     <!-- PKF Manager -->
     <PreferenceCategory android:title="@string/category_pkfmanager_title" >
         <Preference
             android:key="pkfmanager"
-            android:summary="@string/pkfmanager_summary_head"
-            android:title="@string/pkfmanager_title_head" />
+            android:summary="@string/pkfmanager_summary"
+            android:title="@string/pkfmanager_title" />
     </PreferenceCategory>
 </PreferenceScreen>

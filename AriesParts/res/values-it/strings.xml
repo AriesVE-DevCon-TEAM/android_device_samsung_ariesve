@@ -35,8 +35,8 @@
 
     <string name="category_fast_charge_title">Supporto caricamento rapido</string>
     <string name="force_fast_charge_usbwarning">Rimuovi il cavo USB</string>
-    <string name="force_fast_charge_head">Forza caricamento rapido</string>
-    <string name="force_fast_charge_summary_head">Rileva i PC connessi alla porta USB come semplici caricatori USB, per un più rapido caricamento della batteria</string>
+    <string name="force_fast_charge">Forza caricamento rapido</string>
+    <string name="force_fast_charge_summary">Rileva i PC connessi alla porta USB come semplici caricatori USB, per un più rapido caricamento della batteria</string>
 
     <!-- Page Performance -->
     <string name="category_performance_title">Performance</string>
@@ -52,25 +52,25 @@
 
     <!-- Page TouchKey -->
     <string name="category_touchkey_title">Tasti a sfioramento</string>
-    <string name="backlight_timeout_title_head">Timer retroilluminazione</string>
-    <string name="backlight_timeout_summary_head">Imposta l\'intervallo dopo cui la retroilluminazione dei tasti si spegne</string>
-    <string name="touchlight_status_title_head">Retroilluminazione pressioni touchscreen</string>
-    <string name="touchlight_status_summary_head">Attiva/disattiva la retroilluminazione dei touchkey in caso di pressioni del touchscreen</string>
+    <string name="backlight_timeout_title">Timer retroilluminazione</string>
+    <string name="backlight_timeout_summary">Imposta l\'intervallo dopo cui la retroilluminazione dei tasti si spegne</string>
+    <string name="touchlight_status_title">Retroilluminazione pressioni touchscreen</string>
+    <string name="touchlight_status_summary">Attiva/disattiva la retroilluminazione dei touchkey in caso di pressioni del touchscreen</string>
 
     <string name="category_pkfmanager_title">Pressioni fantasma</string>
-    <string name="pkfmanager_title_head">Filtro delle pressioni fantasma</string>
-    <string name="pkfmanager_summary_head">Filtra le pressioni dei tasti causate dall\'interferenza dell\'antenna (applicazione esterna)</string>
+    <string name="pkfmanager_title">Filtro delle pressioni fantasma</string>
+    <string name="pkfmanager_summary">Filtra le pressioni dei tasti causate dall\'interferenza dell\'antenna (applicazione esterna)</string>
 
     <!-- Page BLN -->
     <string name="category_bln_title">Notifiche luminose</string>
-    <string name="bln_type_title_head">Modalità di notifica</string>
-    <string name="bln_type_summary_head">Imposta la modalità con cui una notifica verrà segnalata dai pulsanti luminosi</string>
-    <string name="bln_blink_timeout_title_head">Durata del lampeggiamento</string>
-    <string name="bln_blink_timeout_summary_head">Imposta la durata del lampeggiamento dei pulsanti</string>
-    <string name="bln_blink_interval_on_title_head">Durata illuminazione accesa</string>
-    <string name="bln_blink_interval_on_summary_head">Imposta la durata di illuminazione accesa durante il lampeggiamento</string>
-    <string name="bln_blink_interval_off_title_head">Durata illuminazione spenta</string>
-    <string name="bln_blink_interval_off_summary_head">Imposta la durata di illuminazione spenta durante il lampeggiamento</string>
-    <string name="bln_static_timeout_title_head">Durata dell\'illuminazione fissa</string>
-    <string name="bln_static_timeout_summary_head">Imposta la durata dell\'illuminazione fissa dei pulsanti</string>
+    <string name="bln_type_title">Modalità di notifica</string>
+    <string name="bln_type_summary">Imposta la modalità con cui una notifica verrà segnalata dai pulsanti luminosi</string>
+    <string name="bln_blink_timeout_title">Durata del lampeggiamento</string>
+    <string name="bln_blink_timeout_summary">Imposta la durata del lampeggiamento dei pulsanti</string>
+    <string name="bln_blink_interval_on_title">Durata illuminazione accesa</string>
+    <string name="bln_blink_interval_on_summary">Imposta la durata di illuminazione accesa durante il lampeggiamento</string>
+    <string name="bln_blink_interval_off_title">Durata illuminazione spenta</string>
+    <string name="bln_blink_interval_off_summary">Imposta la durata di illuminazione spenta durante il lampeggiamento</string>
+    <string name="bln_static_timeout_title">Durata dell\'illuminazione fissa</string>
+    <string name="bln_static_timeout_summary">Imposta la durata dell\'illuminazione fissa dei pulsanti</string>
 </resources>

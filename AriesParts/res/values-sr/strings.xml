@@ -17,10 +17,10 @@
     <string name="app_name">Напредна подешавања</string>
 
     <string name="category_touchkey_title">Додирни тастери</string>
-    <string name="backlight_timeout_title_head">Осветљеност тастера</string>
-    <string name="backlight_timeout_summary_head">Подеси дужину трајања осветљености</string>
-    <string name="touchlight_status_title_head">Осветљеност тастера при додиру екрана</string>
-    <string name="touchlight_status_summary_head">Укључује осветљеност приликом додира екрана</string>
+    <string name="backlight_timeout_title">Осветљеност тастера</string>
+    <string name="backlight_timeout_summary">Подеси дужину трајања осветљености</string>
+    <string name="touchlight_status_title">Осветљеност тастера при додиру екрана</string>
+    <string name="touchlight_status_summary">Укључује осветљеност приликом додира екрана</string>
 
     <string name="category_screen_title">Екран</string>
     <string name="g_sensor_title">Хоризонтална калибрација</string>
@@ -33,10 +33,10 @@
     <string name="gsensor_button2">Калибриши</string>
 
     <string name="category_fast_charge_title">Брзо пуњење</string>
-    <string name="force_fast_charge_head">Укључи брзо пуњење</string>
-    <string name="force_fast_charge_summary_head">Препознај USB конекцију рачунара као зидни прикључак за брже пуњење</string>
+    <string name="force_fast_charge">Укључи брзо пуњење</string>
+    <string name="force_fast_charge_summary">Препознај USB конекцију рачунара као зидни прикључак за брже пуњење</string>
 
     <string name="category_pkfmanager_title">Нежељени притисци тастера</string>
-    <string name="pkfmanager_title_head">Одбацивање нежељених притисака</string>
-    <string name="pkfmanager_summary_head">Одбацивање нежељених притисака тастера, узрокованих сметњама антене (екстерна апликација)</string>
+    <string name="pkfmanager_title">Одбацивање нежељених притисака</string>
+    <string name="pkfmanager_summary">Одбацивање нежељених притисака тастера, узрокованих сметњама антене (екстерна апликација)</string>
 </resources>
