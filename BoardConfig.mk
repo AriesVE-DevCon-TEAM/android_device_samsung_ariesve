@@ -197,6 +197,7 @@ BOARD_SEPOLICY_UNION += \
     property.te \
     rild.te \
     rmt.te \
+    su.te \
     surfaceflinger.te \
     system_app.te \
     system_server.te \
