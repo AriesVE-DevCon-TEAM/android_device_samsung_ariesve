@@ -54,6 +54,15 @@
     <string name="low_ram_summary_off">Low RAM is disabled, large-RAM features are enabled</string>
     <string name="low_ram_error">Impossible to set LowRam setting, please grant the root permissions for this app.</string>
 
+    <string name="category_apps_services_title">Apps and Services</string>
+    <string name="max_bg_apps_title">Max background apps</string>
+    <string name="max_bg_apps_summary">Set the max number of apps that can run in background at the same time</string>
+    <string name="max_bg_apps_error">Impossible to set max background apps, please grant the root permissions for this app.</string>
+
+    <string name="max_bg_services_title">Max background services</string>
+    <string name="max_bg_services_summary">Set the max number of services that can run in background at the same time</string>
+    <string name="max_bg_services_error">Impossible to set max background services, please grant the root permissions for this app.</string>
+
     <string name="reboot_alert">To apply the setting, a reboot is required.\nWould you like to reboot now?\n\nPress Yes to reboot now, No if you prefer to reboot later.</string>
     <string name="reboot_wait">The device will be rebooted in %1$d seconds, please wait.</string>
     <string name="reboot_yes">Yes</string>

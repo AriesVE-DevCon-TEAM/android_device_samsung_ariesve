@@ -44,6 +44,8 @@ public class DeviceSettings extends Activity {
     /* Tab Performance */
     public static final String KEY_HIGHEND_GFX = "highend_gfx";
     public static final String KEY_LOW_RAM = "low_ram";
+    public static final String KEY_MAX_BG_APPS = "max_bg_apps";
+    public static final String KEY_MAX_BG_SERVICES = "max_bg_services";
 
     /* Tab TouchKey */
     public static final String KEY_BACKLIGHT_TIMEOUT = "backlight_timeout";
