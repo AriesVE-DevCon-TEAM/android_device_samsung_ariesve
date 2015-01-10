@@ -16,6 +16,7 @@
 
 package com.cyanogenmod.settings.device;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
 import android.preference.PreferenceFragment;
@@ -26,13 +27,8 @@ public class PerformanceFragmentActivity extends PreferenceFragment {
 
     private CheckBoxPreference mHighEndGfxStatus;
     private CheckBoxPreference mLowRamStatus;
-
-    /**
-     * subclasses can override onFileChanged() to hook
-     * into the FileObserver onEvent() callback
-     */
-
-    protected void onFileChanged(boolean featureState){}
+    private SeekBarPreference mMaxBackgroundApps;
+    private SeekBarPreference mMaxBackgroundServices;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -47,6 +43,14 @@ public class PerformanceFragmentActivity extends PreferenceFragment {
         mLowRamStatus = (CheckBoxPreference) findPreference(DeviceSettings.KEY_LOW_RAM);
         mLowRamStatus.setEnabled(LowRam.isSupported());
         mLowRamStatus.setOnPreferenceChangeListener(new LowRam());
+
+        mMaxBackgroundApps = (SeekBarPreference) findPreference(DeviceSettings.KEY_MAX_BG_APPS);
+        mMaxBackgroundApps.setEnabled(MaxBackgroundApps.isSupported());
+        mMaxBackgroundApps.setOnPreferenceChangeListener(new MaxBackgroundApps());
+
+        mMaxBackgroundServices = (SeekBarPreference) findPreference(DeviceSettings.KEY_MAX_BG_SERVICES);
+        mMaxBackgroundServices.setEnabled(MaxBackgroundServices.isSupported());
+        mMaxBackgroundServices.setOnPreferenceChangeListener(new MaxBackgroundServices());
     }
 
     @Override
@@ -54,5 +58,12 @@ public class PerformanceFragmentActivity extends PreferenceFragment {
         super.onActivityCreated(savedInstanceState);
         mHighEndGfxStatus.setChecked(HighEndGfx.getPropertyValue());
         mLowRamStatus.setChecked(LowRam.getPropertyValue());
+        mMaxBackgroundApps.setValue(MaxBackgroundApps.getPropertyValue());
+        mMaxBackgroundServices.setValue(MaxBackgroundServices.getPropertyValue());
+    }
+
+    public static void restore(Context context) {
+        MaxBackgroundApps.restore(context);
+        MaxBackgroundServices.restore(context);
     }
 }
