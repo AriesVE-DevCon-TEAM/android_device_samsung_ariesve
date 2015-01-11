@@ -37,12 +37,30 @@
     <string name="force_fast_charge">Schnelles Laden</string>
     <string name="force_fast_charge_summary">Den über USB angeschlossenen PC als Aufladestecker erkennen, um schneller zu laden</string>
 
+    <string name="category_otg_title">USB-OTG</string>
+    <string name="otg_charge_title">USB-OTG Laden</string>
+    <string name="otg_charge_summary">Laden im USB-Host Modus.\nAchtung: Um Schäden zu vermeiden, muss die Stromquelle (z.B. USB-Hub) hierzu geeignet sein.</string>
+
     <!-- Page Performance -->
     <string name="category_performance_title">Performance</string>
+    <string name="highend_gfx_title">High-End GFX Schalter</string>
+    <string name="highend_gfx_summary_on">High-End Grafikeffekte sind aktiviert, z. B. Transparenz des Sperrbildschirms, der Status- und Benachrichtigungszeile</string>
+    <string name="highend_gfx_summary_off">High-End Grafikeffekte sind deaktiviert, keine Transparenz des Sperrbildschirms, der Status- und Benachrichtigungszeile</string>
+    <string name="highend_gfx_error">High-End Grafikeffekte lassen sich nicht aktivieren. Stelle sicher, dass die App Root-Rechte hat.</string>
+
     <string name="low_ram_title">Low RAM Schalter</string>
     <string name="low_ram_summary_on">Low RAM ist aktiviert, large-RAM ist deaktiviert.</string>
     <string name="low_ram_summary_off">Low RAM ist deaktiviert, large-RAM ist aktiviert</string>
     <string name="low_ram_error">LowRAM Einstellung kann nicht übernommen werden, stelle sicher, dass die App Root Berechtigungen hat.</string>
+
+    <string name="category_apps_services_title">Apps und Dienste</string>
+    <string name="max_bg_apps_title">Max Hintergrund Apps</string>
+    <string name="max_bg_apps_summary">Legt die maximale Anzahl der gleichzeitig im Hintergrund laufenden Apps fest</string>
+    <string name="max_bg_apps_error">Änderung des Limits der im Hintergrund laufenden Apps nicht möglich, die App benötigt Root-Berechtigung.</string>
+
+    <string name="max_bg_services_title">Max Hintergrund Dienste</string>
+    <string name="max_bg_services_summary">Legt die maximale Anzahl der gleichzeitig im Hintergrund laufenden Dienste fest</string>
+    <string name="max_bg_services_error">Änderung des Limits der im Hintergrund laufenden Dienste nicht möglich, die App benötigt Root-Berechtigung.</string>
 
     <string name="reboot_alert">Zur Übernahme der Einstellungen ist ein Neustart notwendig.\nMöchtest Du jetzt neu starten?\n\nDrücke Ja um neu zu starten, Nein wenn Du später neu starten willst.</string>
     <string name="reboot_wait">Das Gerät startet in %1$d Sekunden neu, bitte warten.</string>
