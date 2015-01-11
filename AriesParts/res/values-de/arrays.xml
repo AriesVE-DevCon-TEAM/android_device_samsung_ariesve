@@ -55,4 +55,10 @@
         <item>4 Sekunden</item>
         <item>5 Sekunden</item>
     </string-array>
+
+    <string-array name="otg_charge_entries">
+        <item>Nicht laden (Default)</item>
+        <item>Langsam (USB)</item>
+        <item>Schnell (Ladegerät)</item>
+    </string-array>
 </resources>
