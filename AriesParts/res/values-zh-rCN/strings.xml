@@ -38,12 +38,36 @@
     <string name="force_fast_charge">启用快速充电</string>
     <string name="force_fast_charge_summary">若检测到USB线连接到电脑，充电会加快。（提醒：打开后无法使用大容量存储）</string>
 
+    <string name="category_otg_title">USB-OTG</string>
+    <string name="otg_charge_title">USB-OTG 充电</string>
+    <string name="otg_charge_summary">充电支持USB主机模式.\n注意: 请确认连接的带电源线缆 (例如 USB-Hub) 可以调控功耗，以避免充电时的危险性</string>
+
+    <string name="category_bluetooth_title">蓝牙</string>
+    <string name="a2dp_sink_title">A2DP Sink</string>
+    <string name="a2dp_sink_summary_on">A2DP Sink 已启用, A2DP Source 已禁用</string>
+    <string name="a2dp_sink_summary_off">A2DP Sink 已禁用, A2DP Source 已启用</string>
+    <string name="a2dp_sink_error_bt_active">更改 A2DP 模式前请先关闭蓝牙</string>
+
     <!-- Page Performance -->
     <string name="category_performance_title">性能</string>
+    <string name="highend_gfx_title">高品质图形效果切换</string>
+    <string name="highend_gfx_summary_on">高品质图形效果已启用，状态栏、通知栏等透明特效已启用</string>
+    <string name="highend_gfx_summary_off">高品质图形效果已禁用，状态栏、通知栏等透明特效已禁用</string>
+    <string name="highend_gfx_error">无法设置，请先允许该应用程序获取ROOT权限</string>
+
     <string name="low_ram_title">低RAM切换</string>
     <string name="low_ram_summary_on">低RAM优化已启用, 部分占用较多RAM的系统功能已禁用</string>
     <string name="low_ram_summary_off">低RAM优化已禁用, 部分占用较多RAM的系统功能已启用</string>
     <string name="low_ram_error">无法调用低RAM优化设置，请先允许该应用程序获取ROOT权限</string>
+
+    <string name="category_apps_services_title">应用程序与服务</string>
+    <string name="max_bg_apps_title">最多后台进程数量</string>
+    <string name="max_bg_apps_summary">设置最多可同时在后台运行的应用程序数量</string>
+    <string name="max_bg_apps_error">无法设置后台进程数量，请先授予ROOT权限</string>
+
+    <string name="max_bg_services_title">最多后台服务数量</string>
+    <string name="max_bg_services_summary">设置最多可同时在后台运行的服务数量</string>
+    <string name="max_bg_services_error">无法设置后台服务数量，请先授予ROOT权限</string>
 
     <string name="reboot_alert">需要重启手机来应用你的更改\n你想现在重启手机吗？\n\n点是立即重启，点否稍后重启</string>
     <string name="reboot_wait">设备将会在 %1$d 秒后重启, 请稍后</string>
