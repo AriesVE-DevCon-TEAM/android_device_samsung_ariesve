@@ -39,15 +39,13 @@ on early-boot
     setrlimit 8 67108864 67108864
 
 on boot
-    chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
+    # Bluetooth
+    chown bluetooth bluetooth /proc/bluetooth/sleep/proto
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
-    chown bluetooth bluetooth /proc/bluetooth/sleep/proto
-    chown system system /sys/module/sco/parameters/disable_esco
-    chmod 0660 /sys/module/bluetooth_power/parameters/power
-    chmod 0660 /sys/class/rfkill/rfkill0/state
-    chmod 0660 /proc/bluetooth/sleep/proto
     chown bluetooth bluetooth /sys/devices/platform/msm_serial_hs.0/clock
+    chmod 0660 /proc/bluetooth/sleep/proto
+    chmod 0660 /sys/class/rfkill/rfkill0/state
     chmod 0660 /sys/devices/platform/msm_serial_hs.0/clock
 
     setprop ro.bt.bdaddr_path "/data/.bt.info"

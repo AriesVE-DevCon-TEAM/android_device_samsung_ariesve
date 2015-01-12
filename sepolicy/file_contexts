@@ -79,3 +79,7 @@
 /sys/devices/virtual/misc/phantom_kp_filter(/.*)?         --  u:object_r:sysfs_custom:s0
 /sys/devices/virtual/vibetonz/immDuty/pwmvalue_intensity  --  u:object_r:sysfs_custom:s0
 /sys/kernel/fast_charge/force_fast_charge                 --  u:object_r:sysfs_custom:s0
+
+# Sysfs Bluetooth
+/sys/devices/platform/bt_power.0/rfkill/rfkill0/state     --  u:object_r:sysfs_bluetooth_writable:s0
+/sys/devices/platform/msm_serial_hs.0/clock               --  u:object_r:sysfs_bluetooth_writable:s0
