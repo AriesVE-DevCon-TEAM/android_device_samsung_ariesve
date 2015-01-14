@@ -81,6 +81,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keyfiles/sec_jack.kl:system/usr/keylayout/sec_jack.kl \
     $(LOCAL_PATH)/keyfiles/melfas_touchkey.kl:system/usr/keylayout/melfas_touchkey.kl
 
+# GPS config
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/gps/etc/gps.conf:system/etc/gps.conf
+
 # Build packages
 PRODUCT_PACKAGES += \
     camera.msm7x30 \

@@ -15,9 +15,6 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(LOCAL_PATH)/ariesve.mk)
 
-# The gps config appropriate for this device
-$(call inherit-product, device/common/gps/gps_eu_supl.mk)
-
 # Set those variables here to overwrite the inherited values.
 PRODUCT_NAME := full_ariesve
 PRODUCT_DEVICE := ariesve
