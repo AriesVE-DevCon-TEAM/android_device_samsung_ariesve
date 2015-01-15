@@ -53,7 +53,6 @@ public class HighEndGfx implements OnPreferenceChangeListener {
      * @return True if the store succeeded, otherwise false
      */
     private static boolean storePropertyValue(Boolean value) {
-        SystemProperties.set(HIGHEND_GFX_PROP_KEY, value.toString());
         return BuildProp.set(HIGHEND_GFX_PROP_KEY, value);
     }
 
