@@ -153,6 +153,10 @@ TARGET_USERIMAGES_USE_EXT4 := true
 # Vold
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 
+# Charger
+BOARD_CHARGER_DISABLE_INIT_BLANK := true
+BOARD_CHARGER_ENABLE_SUSPEND := true
+
 # CWM Recovery
 TARGET_RECOVERY_DEVICE_DIRS += device/samsung/ariesve
 TARGET_RECOVERY_FSTAB := device/samsung/ariesve/ramdisk/fstab.qcom
