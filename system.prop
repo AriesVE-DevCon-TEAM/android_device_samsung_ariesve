@@ -68,3 +68,6 @@ dalvik.vm.dexopt-data-only=0
 
 # Enable smooth streaming
 mm.enable.smoothstreaming=true
+
+# Enable High-End graphic effects
+persist.sys.force_highendgfx=true
