@@ -65,7 +65,6 @@ ifeq ($(HOST_OS),linux)
 endif
 
 # WiFi
-BOARD_NO_WIFI_HAL                := true
 BOARD_HAVE_SAMSUNG_WIFI          := true
 WIFI_BAND                        := 802_11_ABG
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
