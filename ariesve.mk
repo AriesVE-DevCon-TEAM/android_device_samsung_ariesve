@@ -15,10 +15,6 @@
 # Overlay path
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
-# Pixel density
-PRODUCT_AAPT_CONFIG := normal hdpi
-PRODUCT_AAPT_PREF_CONFIG := hdpi
-
 PRODUCT_BOOT_JARS += qcmediaplayer
 
 # Boot animation
