@@ -198,6 +198,7 @@ BOARD_SEPOLICY_UNION += \
     geomagneticd.te \
     healthd.te \
     init.te \
+    kernel.te \
     mac_update.te \
     mediaserver.te \
     netd.te \
