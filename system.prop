@@ -56,3 +56,6 @@ mm.enable.smoothstreaming=true
 
 # Enable High-End graphic effects
 persist.sys.force_highendgfx=true
+
+# USB-OTG
+persist.sys.isUsbOtgEnabled=true
