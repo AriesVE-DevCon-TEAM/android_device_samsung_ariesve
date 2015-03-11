@@ -27,6 +27,9 @@ ro.opengles.version=131072
 debug.sf.hw=1
 debug.composition.type=dyn
 
+# Disable offload audio
+audio.offload.disable=1
+
 # Set default USB interface
 persist.sys.usb.config=mtp
 
