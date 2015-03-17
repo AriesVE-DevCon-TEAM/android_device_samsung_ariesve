@@ -77,38 +77,31 @@ void load_settings()
     }
 }
 
-static int
-rgb_to_brightness(struct light_state_t const* state)
-{
-    int color = state->color & 0x00ffffff;
-
-    return ((77*((color>>16) & 0x00ff))
-        + (150*((color>>8) & 0x00ff)) + (29*(color & 0x00ff))) >> 8;
-}
-
 static int is_lit(struct light_state_t const* state)
 {
     return state->color & 0x00ffffff;
 }
 
-static int set_light_notifications(struct light_device_t* dev,
-			struct light_state_t const* state)
+static int
+rgb_to_brightness(struct light_state_t const* state)
 {
-	int brightness =  rgb_to_brightness(state);
-	int v = 0;
-	int err = 0;
+    int color = is_lit(state);
+
+    return ((77*((color>>16) & 0x00ff)) +
+            (150*((color>>8) & 0x00ff)) +
+            (29*(color & 0x00ff))) >> 8;
+}
+
+static int set_light_notifications(struct light_device_t* dev,
+            struct light_state_t const* state)
+{
+    int err = 0;
     int on = is_lit(state);
+
     pthread_mutex_lock(&g_lock);
-
-	if (brightness+state->color == 0 || brightness > 100) {
-		if (state->color & 0x00ffffff)
-			v = 1;
-	} else
-		v = 0;
-
-	ALOGI("color %u fm %u status %u is lit %u brightness", state->color, state->flashMode, v, (state->color & 0x00ffffff), brightness);
-    err = write_int(NOTIFICATION_FILE, on?1:0);
+    err = write_int(NOTIFICATION_FILE, on ? 1 : 0);
     pthread_mutex_unlock(&g_lock);
+
     return err;
 }
 
@@ -131,7 +124,7 @@ static int
 set_light_buttons(struct light_device_t* dev,
         struct light_state_t const* state)
 {
-    int touch_led_control = state->color & 0x00ffffff ? 1 : 2;
+    int touch_led_control = is_lit(state) ? 1 : 2;
     int res = 0;
 
     pthread_mutex_lock(&g_lock);
@@ -162,8 +155,8 @@ static int open_lights(const struct hw_module_t* module, char const* name,
 
     if (0 == strcmp(LIGHT_ID_BACKLIGHT, name))
         set_light = set_light_backlight;
-	else if (0 == strcmp(LIGHT_ID_NOTIFICATIONS, name))
-		set_light = set_light_notifications;
+    else if (0 == strcmp(LIGHT_ID_NOTIFICATIONS, name))
+        set_light = set_light_notifications;
     else if (0 == strcmp(LIGHT_ID_BUTTONS, name))
         set_light = set_light_buttons;
     else
@@ -174,7 +167,7 @@ static int open_lights(const struct hw_module_t* module, char const* name,
     struct light_device_t* dev = malloc(sizeof(struct light_device_t));
 
     if(!dev)
-	return -ENOMEM;
+        return -ENOMEM;
 
     memset(dev, 0, sizeof(*dev));
 
