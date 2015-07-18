@@ -162,6 +162,7 @@ BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_CHARGER_SHOW_PERCENTAGE := true
 
 # CWM Recovery
+TARGET_RECOVERY_DENSITY := hdpi
 TARGET_RECOVERY_DEVICE_DIRS += device/samsung/ariesve
 TARGET_RECOVERY_FSTAB := device/samsung/ariesve/ramdisk/fstab.qcom
 
